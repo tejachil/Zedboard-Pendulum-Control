@@ -1,0 +1,9 @@
+#-----------------------------------------------------------
+# Vivado v2013.2 (64-bit)
+# Build 272601 by xbuild on Sat Jun 15 11:11:11 MDT 2013
+# Start of session at: Tue Dec  3 14:28:54 2013
+# Process ID: 6757
+# Log file: /home/teja/tejachil-gdrive/Fall_2013/ECE_4994-Undergraduate_Research/SPI_pendulum_working_freertos_queue_led/SPI_pendulum.runs/impl_1/system_wrapper.rdi
+# Journal file: /home/teja/tejachil-gdrive/Fall_2013/ECE_4994-Undergraduate_Research/SPI_pendulum_working_freertos_queue_led/SPI_pendulum.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source system_wrapper.tcl -notrace

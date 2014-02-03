@@ -1,0 +1,303 @@
+
+
+/*
+ * File:   		main.c
+ * Author: 		Vivek Gopal
+ * Description: Source code for controlling inverted pendulum
+ * Date:		September 21, 2013
+*/
+
+/*************************** Header Files ***************************/
+
+#include "SPI.h"
+#include "adc_dac.h"
+#include "encoder.h"
+#include "sleep.h"
+#include "xil_printf.h"
+
+#define LED_DEBUG 0
+#define mainLED_TASK_PRIORITY		( tskIDLE_PRIORITY + 1 )
+static void prvLed_Task( void *pvParameters );
+
+#if LED_DEBUG == 1
+	#include "xgpiops.h"
+	#define GPIO_DEVICE_ID	XPAR_XGPIOPS_0_DEVICE_ID
+	#define OUTPUT_PIN		7	/* Pin connected to LED/Output */
+	#define mainLED_TASK_PRIORITY		( tskIDLE_PRIORITY + 1 )
+	XGpioPs Gpio;	/* The driver instance for GPIO Device. */
+	XGpioPs_Config *ConfigPtr; /* The driver config instance for GPIO Device. */
+	void prvSetLEDHardware(void);
+#endif
+
+/*************************** Global variables ***************************/
+
+volatile unsigned sec1000; // This is updated 1000 times per second by interrupt handler
+volatile float output_V,theta_R,alpha_R,theta_des;
+volatile float thetaDot=0.,alphaDot=0.;
+
+#define pi ((float)3.14125926535)
+const float Kr2d=180./pi;        //radians to degrees
+const float Kpot=-352.*pi/180/10;    //radians/V for pot
+const float Kenc=pi/(2.*1024.);     //radians/count for encoder
+
+
+/*************************** Function Prototypes ***************************/
+
+void update_value(xTimerHandle pxTimer);
+
+//INVERTED PENDULUM STABILIZATION
+
+//*************************** main() ***************************
+
+int main(void)
+{
+	prvInitializeExceptions();
+
+	//Teja added these lines
+	SpiStruct mySpi;
+	xTaskCreate( prvLed_Task, ( signed char * ) "LED_TASK",
+	     			configMINIMAL_STACK_SIZE, NULL,
+	    			mainLED_TASK_PRIORITY, NULL );
+	//startSpiTask(&mySpi);
+
+
+	//xil_printf("\nEncoder Value");
+	writeDAC(0);
+    theta_des=0.;
+    initEncoder();
+
+	#if LED_DEBUG == 1
+    prvSetLEDHardware();
+    while(1){
+    	XGpioPs_WritePin(&Gpio, OUTPUT_PIN, 0x01);
+    	sleep(1);
+    	XGpioPs_WritePin(&Gpio, OUTPUT_PIN, 0x00);
+    	sleep(1);
+    }
+	#endif
+
+	xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,update_value);
+	xTimerStart(ControllerTimerHandle,portMAX_DELAY);
+
+	/* Start the tasks and timer running. */
+	vTaskStartScheduler();
+
+	/* If all is well, the scheduler will now be running, and the following line
+	will never be reached.  If the following line does execute, then there was
+	insufficient FreeRTOS heap memory available for the idle and/or timer tasks
+	to be created.  See the memory management section on the FreeRTOS web site
+	for more details. */
+	for( ;; );
+}
+
+static void prvLed_Task( void *pvParameters )
+{
+  	unsigned int uiLedFlag = 0;
+  	uiLedFlag = uiLedFlag +  2;
+	for (;;)
+		{
+			taskYIELD();
+			if (uiLedFlag < 100)
+				uiLedFlag++;
+		}
+}
+
+
+//************************** update_value() ***************************
+
+void update_value(xTimerHandle pxTimer)
+{
+	#if LED_DEBUG == 1
+	XGpioPs_WritePin(&Gpio, OUTPUT_PIN, 0x01);
+	#endif
+
+/*   int temp;
+   float u;
+   static float thetaOld=0.,alphaOld=0.;
+   sec1000++;            // Update global variable
+// code for simple rotary position control
+//      input_V=readADC();
+//      encoder_C=encoderRead();
+//      error=desired_V-input_V;
+//      output_V=4*error;
+//      if (output_V>9) output_V=9;
+//      else if (output_V<-9) output_V=-9;
+//      writeDAC(output_V);
+//
+//      if((sec1000%5000)<2500) desired_V=0;
+//      else desired_V=2;
+
+
+//  code for simple inverted pendulum control -- follows Quanser, no Kalman Filter
+      //read positions and compute velocities by filtering
+      theta_R=readADC()*Kpot;
+      temp=encoderRead()%4096;  //force encoder reading to be between 0 and 4096(2pi)
+      //xil_printf("\nEncoder Value = %d", temp);
+      if (temp<0) temp+=4096;
+      alpha_R=(temp)*Kenc-pi;  //convert to up => alpha=0
+      //alpha_R=encoderRead();
+      thetaDot=0.9391*thetaDot+60.92*(theta_R-thetaOld);
+      alphaDot=0.9391*alphaDot+60.92*(alpha_R-alphaOld);
+      //need to negate u, so just use positive feedback, u=K*x
+      u=-5.28*(theta_R-theta_des)+30.14*alpha_R-2.65*thetaDot+3.55*alphaDot;
+      if ((alpha_R>=0?alpha_R:-alpha_R)>(10.*pi/180)) u=0;
+      if (u>5.) u=5.;
+      else if (u<-5.) u=-5.;
+      writeDAC(u);
+      output_V=u;
+      alphaOld=alpha_R;
+      thetaOld=theta_R;
+      if((sec1000%10000)<5000) theta_des=20*pi/180;
+      else theta_des=-20*pi/180;
+
+	#if LED_DEBUG == 1
+	XGpioPs_WritePin(&Gpio, OUTPUT_PIN, 0x00);
+	#endif*/
+}
+
+//NORMAL PENDULUM STABILIZATION
+/*
+void stabilize(int value);
+
+int main(void)
+{
+	writeDAC(0);
+	initEncoder();
+
+    while(1)
+    {
+		//write to motor
+		writeDAC(0);
+		int angle = encoderRead();
+		stabilize(angle);
+
+	}
+	return 0; // Unreachable, but main() requires a return code
+}
+
+void stabilize(int value){
+   xil_printf("\nEncoder: %d", value);
+   	   if(value > 100 && value < 1000){
+	   	   xil_printf("\n-ve");
+           writeDAC(-3);
+           usleep(30000);
+       }
+   	   else if(value > 50 && value < 100){
+    	   xil_printf("\n-ve");
+    	   writeDAC(-2);
+           usleep(30000);
+       }
+   	   else if(value > 20 && value < 50){
+    	   xil_printf("\n-ve");
+    	   writeDAC(-1);
+           usleep(30000);
+       }
+   	else if(value > 10 && value < 20){
+    	   xil_printf("\n-ve");
+    	   writeDAC(-0.5);
+           usleep(30000);
+       }
+   	else if(value >5 && value < 10){
+    	   xil_printf("\n-ve");
+    	   writeDAC(-0.25);
+           usleep(30000);
+       }
+
+   	else if(value > 65000 && value < 65435){
+    	   xil_printf("\n+ve");
+    	   writeDAC(3);
+           usleep(30000);
+       }
+   	else if(value > 65435 && value < 65485){
+    	   xil_printf("\n+ve");
+    	   writeDAC(2);
+           usleep(30000);
+       }
+   	else if(value > 65485 && value < 65515){
+    	   xil_printf("\n+ve");
+    	   writeDAC(1);
+           usleep(30000);
+       }
+   	else if(value > 65515 && value < 65525){
+    	   xil_printf("\n+ve");
+    	   writeDAC(0.5);
+           usleep(30000);
+       }
+   	else if(value > 65525 && value < 65530){
+    	   xil_printf("\n+ve");
+    	   writeDAC(0.25);
+           usleep(30000);
+       }
+   	else {
+   	    	   xil_printf("\n+ve");
+   	    	   writeDAC(0);
+   	           usleep(30000);
+   	}
+
+
+}
+
+*/
+
+
+/*-----------------------------------------------------------*/
+void vApplicationMallocFailedHook( void )
+{
+	/* vApplicationMallocFailedHook() will only be called if
+	configUSE_MALLOC_FAILED_HOOK is set to 1 in FreeRTOSConfig.h.  It is a hook
+	function that will get called if a call to pvPortMalloc() fails.
+	pvPortMalloc() is called internally by the kernel whenever a task, queue or
+	semaphore is created.  It is also called by various parts of the demo
+	application.  If heap_1.c or heap_2.c are used, then the size of the heap
+	available to pvPortMalloc() is defined by configTOTAL_HEAP_SIZE in
+	FreeRTOSConfig.h, and the xPortGetFreeHeapSize() API function can be used
+	to query the size of free heap space that remains (although it does not
+	provide information on how the remaining heap might be fragmented). */
+	taskDISABLE_INTERRUPTS();
+	for( ;; );
+}
+
+/*-----------------------------------------------------------*/
+void vApplicationStackOverflowHook( xTaskHandle *pxTask, signed char *pcTaskName )
+{
+	( void ) pcTaskName;
+	( void ) pxTask;
+
+	/* vApplicationStackOverflowHook() will only be called if
+	configCHECK_FOR_STACK_OVERFLOW is set to either 1 or 2.  The handle and name
+	of the offending task will be passed into the hook function via its
+	parameters.  However, when a stack has overflowed, it is possible that the
+	parameters will have been corrupted, in which case the pxCurrentTCB variable
+	can be inspected directly. */
+	taskDISABLE_INTERRUPTS();
+	for( ;; );
+}
+
+
+#if LED_DEBUG == 1
+void prvSetLEDHardware( void )
+{
+ 	int Status;
+ 	/*
+ 	 * Initialize the GPIO driver.
+ 	 */
+ 	ConfigPtr = XGpioPs_LookupConfig(GPIO_DEVICE_ID);
+ 	Status = XGpioPs_CfgInitialize(&Gpio, ConfigPtr,
+ 					ConfigPtr->BaseAddr);
+ 	if (Status != XST_SUCCESS) {
+ 		xil_printf("GPIO Initialize failed\n");
+ 	}
+
+ 	/*
+ 	 * Set the direction for the pin to be output and
+ 	 * Enable the Output enable for the LED Pin.
+ 	 */
+ 	XGpioPs_SetDirectionPin(&Gpio, OUTPUT_PIN, 1);
+ 	XGpioPs_SetOutputEnablePin(&Gpio, OUTPUT_PIN, 1);
+
+ 	/*
+ 	 * Set the GPIO output to be low.
+ 	 */
+ 	XGpioPs_WritePin(&Gpio, OUTPUT_PIN, 0x0);
+}
+#endif

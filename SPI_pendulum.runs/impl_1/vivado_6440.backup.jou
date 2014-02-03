@@ -1,0 +1,9 @@
+#-----------------------------------------------------------
+# Vivado v2013.2 (64-bit)
+# Build 272601 by xbuild on Sat Jun 15 11:27:26 MDT 2013
+# Start of session at: Sat Sep 21 15:04:44 2013
+# Process ID: 5728
+# Log file: C:/Xilinx/Projects/Vivado/SPI_pendulum/SPI_pendulum.runs/impl_1/system_wrapper.rdi
+# Journal file: C:/Xilinx/Projects/Vivado/SPI_pendulum/SPI_pendulum.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source system_wrapper.tcl -notrace

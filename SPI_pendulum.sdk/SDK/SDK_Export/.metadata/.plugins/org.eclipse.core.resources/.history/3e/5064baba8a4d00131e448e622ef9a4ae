@@ -1,0 +1,179 @@
+/*
+ * File:   		main.c
+ * Author: 		Vivek Gopal
+ * Description: Source code for controlling inverted pendulum
+ * Date:		September 21, 2013
+*/
+
+/*************************** Header Files ***************************/
+
+#include "SPI.h"
+#include "adc_dac.h"
+#include "encoder.h"
+#include "sleep.h"
+#include "xil_printf.h"
+
+/*************************** Global variables ***************************/
+
+volatile unsigned sec1000; // This is updated 1000 times per second by interrupt handler
+volatile float output_V,theta_R,alpha_R,theta_des;
+volatile float thetaDot=0.,alphaDot=0.;
+
+#define pi ((float)3.14125926535)
+const float Kr2d=180./pi;        //radians to degrees
+const float Kpot=-352.*pi/180/10;    //radians/V for pot
+const float Kenc=pi/(2.*1024.);     //radians/count for encoder
+
+/*************************** Function Prototypes ***************************/
+/*
+void update_value();
+
+//INVERTED PENDULUM STABILIZATION
+
+//*************************** main() ***************************
+
+int main(void)
+{
+	xil_printf("\nEncoder Value");
+	writeDAC(0);
+    theta_des=0.;
+    initEncoder();
+
+	while(1)
+	{
+		usleep(1000);
+		update_value();
+	}
+
+	return 0;
+}
+
+//************************** update_value() ***************************
+
+void update_value()
+{
+   int temp;
+   float u;
+   static float thetaOld=0.,alphaOld=0.;
+   sec1000++;            // Update global variable
+// code for simple rotary position control
+//      input_V=readADC();
+//      encoder_C=encoderRead();
+//      error=desired_V-input_V;
+//      output_V=4*error;
+//      if (output_V>9) output_V=9;
+//      else if (output_V<-9) output_V=-9;
+//      writeDAC(output_V);
+//
+//      if((sec1000%5000)<2500) desired_V=0;
+//      else desired_V=2;
+
+
+//  code for simple inverted pendulum control -- follows Quanser, no Kalman Filter
+      //read positions and compute velocities by filtering
+      theta_R=readADC()*Kpot;
+      temp=encoderRead()%4096;  //force encoder reading to be between 0 and 4096(2pi)
+      //xil_printf("\nEncoder Value = %d", temp);
+      if (temp<0) temp+=4096;
+      alpha_R=(temp)*Kenc-pi;  //convert to up => alpha=0
+      //alpha_R=encoderRead();
+      thetaDot=0.9391*thetaDot+60.92*(theta_R-thetaOld);
+      alphaDot=0.9391*alphaDot+60.92*(alpha_R-alphaOld);
+      //need to negate u, so just use positive feedback, u=K*x
+      u=-5.28*(theta_R-theta_des)+30.14*alpha_R-2.65*thetaDot+3.55*alphaDot;
+      if ((alpha_R>=0?alpha_R:-alpha_R)>(10.*pi/180)) u=0;
+      if (u>5.) u=5.;
+      else if (u<-5.) u=-5.;
+      writeDAC(u);
+      output_V=u;
+      alphaOld=alpha_R;
+      thetaOld=theta_R;
+      if((sec1000%10000)<5000) theta_des=20*pi/180;
+      else theta_des=-20*pi/180;
+}
+*/
+//NORMAL PENDULUM STABILIZATION
+
+void stabilize(int value);
+
+int main(void)
+{
+	writeDAC(0);
+	initEncoder();
+
+    while(1)
+    {
+		//write to motor
+		//writeDAC(0);
+		//int angle = encoderRead();
+		//stabilize(angle);
+    	writeDAC(2);
+    	sleep(3);
+    	writeDAC(-2);
+    	sleep(3);
+	}
+	return 0; // Unreachable, but main() requires a return code
+}
+
+void stabilize(int value){
+   xil_printf("\nEncoder: %d", value);
+   	   if(value > 100 && value < 1000){
+	   	   xil_printf("\n-ve");
+           writeDAC(-3);
+           usleep(30000);
+       }
+   	   else if(value > 50 && value < 100){
+    	   xil_printf("\n-ve");
+    	   writeDAC(-2);
+           usleep(30000);
+       }
+   	   else if(value > 20 && value < 50){
+    	   xil_printf("\n-ve");
+    	   writeDAC(-1);
+           usleep(30000);
+       }
+   	else if(value > 10 && value < 20){
+    	   xil_printf("\n-ve");
+    	   writeDAC(-0.5);
+           usleep(30000);
+       }
+   	else if(value >5 && value < 10){
+    	   xil_printf("\n-ve");
+    	   writeDAC(-0.25);
+           usleep(30000);
+       }
+
+   	else if(value > 65000 && value < 65435){
+    	   xil_printf("\n+ve");
+    	   writeDAC(3);
+           usleep(30000);
+       }
+   	else if(value > 65435 && value < 65485){
+    	   xil_printf("\n+ve");
+    	   writeDAC(2);
+           usleep(30000);
+       }
+   	else if(value > 65485 && value < 65515){
+    	   xil_printf("\n+ve");
+    	   writeDAC(1);
+           usleep(30000);
+       }
+   	else if(value > 65515 && value < 65525){
+    	   xil_printf("\n+ve");
+    	   writeDAC(0.5);
+           usleep(30000);
+       }
+   	else if(value > 65525 && value < 65530){
+    	   xil_printf("\n+ve");
+    	   writeDAC(0.25);
+           usleep(30000);
+       }
+   	else {
+   	    	   xil_printf("\n+ve");
+   	    	   writeDAC(0);
+   	           usleep(30000);
+   	}
+
+
+}
+

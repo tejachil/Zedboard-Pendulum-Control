@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;freertos_app_pendulum&apos;" deleteContents="true" description="Delete resource &apos;freertos_app_pendulum&apos;" element1="/freertos_app_pendulum" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1391459477384"/>
+</session>
