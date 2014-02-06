@@ -192,7 +192,7 @@ portBASE_TYPE xPortStartScheduler( void )
 		Interrupts are disabled here already. */
 		prvSetupTimerInterrupt();
 
-		vApplicationSetupHardware();
+		//vApplicationSetupHardware();
 
 		flag = 1;
 

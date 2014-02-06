@@ -1148,88 +1148,183 @@ Could not detect MDM peripheral on hardware. Please check:
 	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
 
 18:06:45.001 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
-15:21:45.800 INFO  - Processing command line option -hwspec /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/system.xml. 
-15:21:47.172 INFO  - The hardware specification for project 'hw_platform_0' is different from /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/system.xml. 
-15:21:47.189 INFO  - Copied contents of /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/system.xml into /hw_platform_0/system.xml. 
-15:21:47.199 INFO  - Copied contents of /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/system_wrapper.bit into /hw_platform_0/system_wrapper.bit. 
-15:21:47.291 INFO  - Copied contents of /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/ps7_init.c into /hw_platform_0/ps7_init.c. 
-15:21:47.291 INFO  - Copied contents of /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/ps7_init.h into /hw_platform_0/ps7_init.h. 
-15:21:47.295 INFO  - Copied contents of /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/ps7_init.html into /hw_platform_0/ps7_init.html. 
-15:21:47.296 INFO  - Copied contents of /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/ps7_summary.html into /hw_platform_0/ps7_summary.html. 
-15:21:47.297 INFO  - Copied contents of /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/ps7_init.tcl into /hw_platform_0/ps7_init.tcl. 
-15:21:47.410 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
-15:21:48.212 INFO  - Restoring local repository preferences: 
+12:56:22.565 INFO  - Restoring local repository preferences: 
 		 /home/teja/tejachil-gdrive/Fall_2013/ECE_4994-Undergraduate_Research/Xilinx_Zynq/sw/repo 
-15:23:04.960 INFO  - Processing command line option -hwspec /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/system.xml. 
-15:23:10.253 INFO  - Restoring local repository preferences: 
-		 /home/teja/tejachil-gdrive/Fall_2013/ECE_4994-Undergraduate_Research/Xilinx_Zynq/sw/repo 
-15:23:10.268 ERROR - Unable to read in MSS file /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_zynq_bsp_0/system.mss. 
-15:23:16.587 ERROR - Unable to read in MSS file /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_zynq_bsp_0/system.mss. 
-15:23:40.682 INFO  - Saving repository preferences. 
-15:23:40.690 INFO  - Reading in cores from local repositories: 
+12:56:37.277 INFO  - Saving repository preferences. 
+12:56:37.285 INFO  - Reading in cores from local repositories: 
 		 /home/controls/Documents/Zedboard-Pendulum-Control/repo 
-15:23:40.691 INFO  - Updating libgen.options on all BSP projects. 
-15:23:40.692 INFO  - Cleaning BSP projects in the workspace. 
-15:23:41.797 INFO  - Saving repository preferences. 
-15:25:25.204 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
-15:26:03.809 INFO  - ps7_init.tcl file does not exists in HwPlatform 
-15:26:03.910 INFO  - Processor reset is completed for ps7_cortexa9_0 
-15:26:03.912 INFO  - PS initialization will be done as it is not done before. 
-15:26:03.912 INFO  - Running PS initialization.... 
-15:26:04.014 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+12:56:37.287 INFO  - Updating libgen.options on all BSP projects. 
+12:56:37.877 INFO  - Cleaning BSP projects in the workspace. 
+12:56:38.935 INFO  - Saving repository preferences. 
+12:57:13.692 ERROR - Unable to read in MSS file /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_zynq_bsp_0/system.mss. 
+12:57:24.115 ERROR - Unable to read in MSS file /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_zynq_bsp_0/system.mss. 
+12:58:35.781 ERROR - Unable to read in MSS file /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_zynq_bsp_0/system.mss. 
+12:58:42.639 ERROR - Unable to read in MSS file /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_zynq_bsp_0/system.mss. 
+13:00:34.415 ERROR - Unable to read in MSS file /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_zynq_bsp_0/system.mss. 
+13:00:34.438 ERROR - Unable to read in MSS file /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_zynq_bsp_0/system.mss. 
+13:00:50.762 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+13:00:50.862 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:00:50.962 INFO  - PS initialization will be done as it is not done before. 
+13:00:50.962 INFO  - Running PS initialization.... 
+13:00:51.064 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
 invalid command name "ps7_init"
 	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
 	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
 
-15:26:56.222 INFO  - ps7_init.tcl file does not exists in HwPlatform 
-15:26:56.322 INFO  - Processor reset is completed for ps7_cortexa9_0 
-15:26:56.423 INFO  - PS initialization will be done as it is not done before. 
-15:26:56.423 INFO  - Running PS initialization.... 
-15:26:56.425 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+13:07:55.019 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+13:07:55.119 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:07:55.219 INFO  - PS initialization will be done as it is not done before. 
+13:07:55.219 INFO  - Running PS initialization.... 
+13:07:55.221 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
 invalid command name "ps7_init"
 	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
 	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
 
-15:27:22.820 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
-15:28:40.005 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
-15:28:47.820 INFO  - ps7_init.tcl file does not exists in HwPlatform 
-15:28:47.920 INFO  - Processor reset is completed for ps7_cortexa9_0 
-15:28:48.020 INFO  - PS initialization will be done as it is not done before. 
-15:28:48.020 INFO  - Running PS initialization.... 
-15:28:48.122 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+13:15:57.668 INFO  - Successfully generated /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_app_pendulum/src/lscript.ld. 
+13:15:57.673 INFO  - Applying linker script to all configurations of project freertos_app_pendulum. 
+13:15:57.674 INFO  - Setting rebuild state to true for all configurations of project freertos_app_pendulum. 
+13:19:55.010 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+13:19:55.023 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:19:55.123 INFO  - PS initialization will be done as it is not done before. 
+13:19:55.124 INFO  - Running PS initialization.... 
+13:19:55.226 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
 invalid command name "ps7_init"
 	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
 	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
 
-15:29:04.019 INFO  - ps7_init.tcl file does not exists in HwPlatform 
-15:29:04.119 INFO  - Processor reset is completed for ps7_cortexa9_0 
-15:29:04.219 INFO  - PS initialization will be done as it is not done before. 
-15:29:04.220 INFO  - Running PS initialization.... 
-15:29:04.320 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+13:20:55.081 INFO  - Successfully generated /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_app_pendulum/src/lscript.ld. 
+13:20:55.086 INFO  - Applying linker script to all configurations of project freertos_app_pendulum. 
+13:20:55.087 INFO  - Setting rebuild state to true for all configurations of project freertos_app_pendulum. 
+13:28:15.573 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:15:02.651 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+14:15:02.751 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:15:02.851 INFO  - PS initialization will be done as it is not done before. 
+14:15:02.851 INFO  - Running PS initialization.... 
+14:15:02.953 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
 invalid command name "ps7_init"
 	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
 	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
 
-15:29:17.247 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
-15:30:03.717 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
-15:30:11.155 INFO  - ps7_init.tcl file does not exists in HwPlatform 
-15:30:11.255 INFO  - Processor reset is completed for ps7_cortexa9_0 
-15:30:11.355 INFO  - PS initialization will be done as it is not done before. 
-15:30:11.356 INFO  - Running PS initialization.... 
-15:30:11.457 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+14:15:40.954 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: 
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+14:16:29.374 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: 
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+14:16:58.615 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: 
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+14:17:39.589 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+14:17:39.689 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:17:39.789 INFO  - PS initialization will be done as it is not done before. 
+14:17:39.789 INFO  - Running PS initialization.... 
+14:17:39.889 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
 invalid command name "ps7_init"
 	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
 	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
 
-15:30:38.861 INFO  - Restoring local repository preferences: 
+14:27:36.808 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:31:43.152 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+14:32:26.405 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+14:32:28.711 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:32:28.811 INFO  - PS initialization will be done as it is not done before. 
+14:32:28.811 INFO  - Running PS initialization.... 
+14:32:28.913 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+invalid command name "ps7_init"
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
+
+14:33:25.603 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+14:33:39.361 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+14:33:39.373 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:33:39.474 INFO  - PS initialization will be done as it is not done before. 
+14:33:39.474 INFO  - Running PS initialization.... 
+14:33:39.574 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+invalid command name "ps7_init"
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
+
+14:39:37.451 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:16:04.661 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+15:19:54.119 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+15:20:06.148 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+15:20:06.248 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:20:06.348 INFO  - PS initialization will be done as it is not done before. 
+15:20:06.348 INFO  - Running PS initialization.... 
+15:20:06.450 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+invalid command name "ps7_init"
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
+
+15:20:51.828 ERROR - Unexpected error while opening JTAG UART:  java.lang.RuntimeException: Error while opening JTAG UART server: MDM Uart NOT Present in the System
+Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.startJTAGUARTServer(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.comm.JTAGUARTStreamsProxy.<init>(Unknown Source)
+
+15:20:51.830 WARN  - The current launch is configured to reset the entire system. However, the design contains multiple processors, and resetting the system will reset the other processors as well. If you would like to avoid this, please update the launch configuration to reset the processor only. 
+15:21:04.747 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+15:21:05.771 INFO  - System reset is completed. 
+15:21:05.871 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+15:21:26.251 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+15:21:57.062 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:23:33.412 INFO  - Restoring local repository preferences: 
 		 /home/controls/Documents/Zedboard-Pendulum-Control/repo 
-15:31:06.574 INFO  - ps7_init.tcl file does not exists in HwPlatform 
-15:31:06.674 INFO  - Processor reset is completed for ps7_cortexa9_0 
-15:31:06.774 INFO  - PS initialization will be done as it is not done before. 
-15:31:06.774 INFO  - Running PS initialization.... 
-15:31:06.874 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+15:23:35.851 INFO  - Saving repository preferences. 
+15:23:59.703 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+15:24:08.217 ERROR - Unexpected error while opening JTAG UART:  java.lang.RuntimeException: Error while opening JTAG UART server: MDM Uart NOT Present in the System
+Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.startJTAGUARTServer(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.comm.JTAGUARTStreamsProxy.<init>(Unknown Source)
+
+15:24:08.223 WARN  - The current launch is configured to reset the entire system. However, the design contains multiple processors, and resetting the system will reset the other processors as well. If you would like to avoid this, please update the launch configuration to reset the processor only. 
+15:24:11.920 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+15:24:12.949 INFO  - System reset is completed. 
+15:24:13.049 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access DDR: the controller is held in reset
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+15:24:52.480 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+15:24:52.580 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:24:52.680 INFO  - PS initialization will be done as it is not done before. 
+15:24:52.681 INFO  - Running PS initialization.... 
+15:24:52.781 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
 invalid command name "ps7_init"
 	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
 	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
 
-15:31:50.405 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:38:38.561 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

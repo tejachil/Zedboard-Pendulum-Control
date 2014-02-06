@@ -58,20 +58,7 @@
 * Ver   Who    Date     Changes
 * ----- -----  -------- -----------------------------------------------------
 * 1.00a ssb    12/22/11 First release based on the XPS/AXI xadc driver
-* 1.01a asa    9/16/13  Hash defines are removed and replaced with hard-coded
-*					    values. This is non-standard, however is being done
-*						after a new version of BSP (v3_11a) and new version of
-*						xadcps driver (v1_02a) is released. If people use
-*					    standalone BSP versions v3_11a onwards and xadcps
-*						driver versions v1_02a onwards there will not be any
-*						issues. However if someone tries with BSP versions
-*						3_11a onwards with the xadcps driver v1_01a or lower
-*						there will be compilation issues with the driver. The
-*						macros earlier defined in this file and now being
-*						removed will lead to compilation issues as the the
-*						definitions for them are removed from file
-*						xparameters_ps.h in BSP version v3_11a onwards. This
-*						fixes the CR #737338.
+*
 * </pre>
 *
 ******************************************************************************/
@@ -95,10 +82,10 @@
  * This table contains configuration information for each XADC Monitor/ADC
  * device in the system.
  */
-XAdcPs_Config XAdcPs_ConfigTable[1] =
+XAdcPs_Config XAdcPs_ConfigTable[XPAR_XADCPS_NUM_INSTANCES] =
 {
 	{
-		0,				/**< Unique ID of device */
-		0xF8007000		/**< Base address of device */
+		XPAR_XADCPS_0_DEVICE_ID,	/**< Unique ID of device */
+		XPAR_XADCPS_0_BASEADDR		/**< Base address of device */
 	}
 };

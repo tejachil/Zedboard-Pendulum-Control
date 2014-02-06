@@ -92,7 +92,7 @@ void *pvReturn;
 		if( pvReturn == NULL )
 		{
 			extern void vApplicationMallocFailedHook( void );
-			vApplicationMallocFailedHook();
+			//vApplicationMallocFailedHook();
 		}
 	}
 	#endif
