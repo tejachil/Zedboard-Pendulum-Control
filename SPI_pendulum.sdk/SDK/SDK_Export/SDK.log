@@ -1471,3 +1471,4 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 17:02:15.239 INFO  - Running PS initialization.... 
 17:02:15.433 INFO  - ps7_init is completed. 
 17:02:15.533 INFO  - PS Initialization is complete. 
+17:09:30.349 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
