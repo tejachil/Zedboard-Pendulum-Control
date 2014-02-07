@@ -50,17 +50,17 @@ Starting synthesis...
 xc7z0202default:defaultZ17-349
 œ
 %s*synth2Œ
-xStarting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 789.672 ; gain = 169.047
+xStarting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 808.789 ; gain = 170.141
 2default:default
-õ
+ï
 synthesizing module '%s'638*oasys2"
-system_wrapper2default:default2
-k/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/imports/hdl/system_wrapper.v2default:default2
+system_wrapper2default:default2|
+f/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/imports/hdl/system_wrapper.v2default:default2
 112default:default8@Z8-638
-å
+à
 synthesizing module '%s'638*oasys2
-system2default:default2{
-e/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/hdl/system.v2default:default2
+system2default:default2v
+`/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/hdl/system.v2default:default2
 42default:default8@Z8-638
 ·
 synthesizing module '%s'638*oasys2
@@ -74,15 +74,15 @@ e/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/
 12default:default2M
 7/opt/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 41762default:default8@Z8-256
-¹
+´
 synthesizing module '%s'638*oasys21
-system_processing_system7_1_02default:default2¶
-Ÿ/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/synth/system_processing_system7_1_0.v2default:default2
+system_processing_system7_1_02default:default2±
+š/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/synth/system_processing_system7_1_0.v2default:default2
 572default:default8@Z8-638
-Ú
+Õ
 synthesizing module '%s'638*oasys2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 1532default:default8@Z8-638
 f
 %s*synth2W
@@ -256,9 +256,9 @@ V
 12default:default2M
 7/opt/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 6122default:default8@Z8-256
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21712default:default8@Z8-4446
 ¸
 synthesizing module '%s'638*oasys2
@@ -272,401 +272,401 @@ Fall outputs are unconnected for this instance and logic may be removed3605*
 12default:default2M
 7/opt/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 2682default:default8@Z8-256
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21722default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21732default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21742default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21752default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21762default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21772default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21782default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21792default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21802default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21812default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21822default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21832default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21842default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21892default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21952default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21952default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 21952default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22012default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22072default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22072default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22072default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22072default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22132default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22132default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22132default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22132default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22132default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22132default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22132default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22132default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22132default:default8@Z8-4446
-Ë
-Fall outputs are unconnected for this instance and logic may be removed3605*oasys2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+Æ
+Fall outputs are unconnected for this instance and logic may be removed3605*oasys2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 22132default:default8@Z8-4446
 Ô
 Message '%s' appears more than %s times and has been disabled. User can change this message limit to see more message instances.
@@ -685,167 +685,167 @@ Fall outputs are unconnected for this instance and logic may be removed3605*
 12default:default2M
 7/opt/Xilinx/Vivado/2013.4/scripts/rt/data/unisim_comp.v2default:default2
 267372default:default8@Z8-256
-š
+•
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET0_GMII_TX_EN2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 2102default:default8@Z8-3848
-š
+•
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET0_GMII_TX_ER2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 2112default:default8@Z8-3848
-˜
+“
 0Net %s in module/entity %s does not have driver.3422*oasys2"
 ENET0_GMII_TXD2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 2272default:default8@Z8-3848
-š
+•
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET1_GMII_TX_EN2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 2412default:default8@Z8-3848
-š
+•
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET1_GMII_TX_ER2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 2422default:default8@Z8-3848
-˜
+“
 0Net %s in module/entity %s does not have driver.3422*oasys2"
 ENET1_GMII_TXD2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 2562default:default8@Z8-3848
-›
+–
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET0_GMII_COL_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10332default:default8@Z8-3848
-›
+–
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET0_GMII_CRS_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10342default:default8@Z8-3848
-›
+–
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET0_GMII_RXD_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10372default:default8@Z8-3848
-
+˜
 0Net %s in module/entity %s does not have driver.3422*oasys2&
 ENET0_GMII_RX_DV_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10352default:default8@Z8-3848
-
+˜
 0Net %s in module/entity %s does not have driver.3422*oasys2&
 ENET0_GMII_RX_ER_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10362default:default8@Z8-3848
-›
+–
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET1_GMII_COL_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10422default:default8@Z8-3848
-›
+–
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET1_GMII_CRS_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10432default:default8@Z8-3848
-›
+–
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET1_GMII_RXD_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10462default:default8@Z8-3848
-
+˜
 0Net %s in module/entity %s does not have driver.3422*oasys2&
 ENET1_GMII_RX_DV_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10442default:default8@Z8-3848
-
+˜
 0Net %s in module/entity %s does not have driver.3422*oasys2&
 ENET1_GMII_RX_ER_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10452default:default8@Z8-3848
-ž
+™
 0Net %s in module/entity %s does not have driver.3422*oasys2'
 FTMD_TRACEIN_ATID_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10552default:default8@Z8-3848
-ž
+™
 0Net %s in module/entity %s does not have driver.3422*oasys2'
 FTMD_TRACEIN_DATA_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10532default:default8@Z8-3848
-Ÿ
+š
 0Net %s in module/entity %s does not have driver.3422*oasys2(
 FTMD_TRACEIN_VALID_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10542default:default8@Z8-3848
-•
+
 %done synthesizing module '%s' (%s#%s)256*oasys2>
 *processing_system7_v5_3_processing_system72default:default2
 52default:default2
-12default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+12default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 1532default:default8@Z8-256
-Â
+½
 Ginstance '%s' of module '%s' requires %s connections, but only %s given350*oasys2
 inst2default:default2>
 *processing_system7_v5_3_processing_system72default:default2
 6732default:default2
-6602default:default2¶
-Ÿ/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/synth/system_processing_system7_1_0.v2default:default2
+6602default:default2±
+š/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/synth/system_processing_system7_1_0.v2default:default2
 3512default:default8@Z8-350
-ô
+ï
 %done synthesizing module '%s' (%s#%s)256*oasys21
 system_processing_system7_1_02default:default2
 62default:default2
-12default:default2¶
-Ÿ/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/synth/system_processing_system7_1_0.v2default:default2
+12default:default2±
+š/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/synth/system_processing_system7_1_0.v2default:default2
 572default:default8@Z8-256
-‡
+‚
 Ginstance '%s' of module '%s' requires %s connections, but only %s given350*oasys2(
 processing_system7_12default:default21
 system_processing_system7_1_02default:default2
 852default:default2
-532default:default2{
-e/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/hdl/system.v2default:default2
+532default:default2v
+`/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/hdl/system.v2default:default2
 1342default:default8@Z8-350
- 
+›
 %done synthesizing module '%s' (%s#%s)256*oasys2
 system2default:default2
 72default:default2
-12default:default2{
-e/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/hdl/system.v2default:default2
+12default:default2v
+`/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/hdl/system.v2default:default2
 42default:default8@Z8-256
-°
+ª
 %done synthesizing module '%s' (%s#%s)256*oasys2"
 system_wrapper2default:default2
 82default:default2
-12default:default2
-k/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/imports/hdl/system_wrapper.v2default:default2
+12default:default2|
+f/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/imports/hdl/system_wrapper.v2default:default2
 112default:default8@Z8-256
 œ
 %s*synth2Œ
-xFinished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 824.492 ; gain = 203.867
+xFinished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 843.609 ; gain = 204.961
 2default:default
 ;
 %s*synth2,
@@ -900,47 +900,47 @@ B/opt/Xilinx/Vivado/2013.4/data/./parts/xilinx/zynq/IOStandards.xml2default:de
 
 Processing XDC Constraints
 244*projectZ1-262
-­
+¨
 $Parsing XDC File [%s] for cell '%s'
-848*designutils2°
-›/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/system_processing_system7_1_0.xdc2default:default26
+848*designutils2«
+–/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/system_processing_system7_1_0.xdc2default:default26
 "system_i/processing_system7_1/inst2default:defaultZ20-848
-¶
+±
 -Finished Parsing XDC File [%s] for cell '%s'
-847*designutils2°
-›/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/system_processing_system7_1_0.xdc2default:default26
+847*designutils2«
+–/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/system_processing_system7_1_0.xdc2default:default26
 "system_i/processing_system7_1/inst2default:defaultZ20-847
-ª
+Ÿ
 ÙImplementation specific constraints were found while reading constraint file [%s]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [%s].
-233*project2°
-›/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/system_processing_system7_1_0.xdc2default:default2
-m/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/.Xil/system_wrapper_propImpl.xdc2default:defaultZ1-236
-¯
+233*project2«
+–/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/system_processing_system7_1_0.xdc2default:default2|
+h/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/.Xil/system_wrapper_propImpl.xdc2default:defaultZ1-236
+ª
 Parsing XDC File [%s]
-179*designutils2y
-e/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/constrs_1/new/system_wrapper.xdc2default:defaultZ20-179
-¸
+179*designutils2t
+`/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/constrs_1/new/system_wrapper.xdc2default:defaultZ20-179
+³
 Finished Parsing XDC File [%s]
-178*designutils2y
-e/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/constrs_1/new/system_wrapper.xdc2default:defaultZ20-178
-ò
+178*designutils2t
+`/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/constrs_1/new/system_wrapper.xdc2default:defaultZ20-178
+ç
 ÙImplementation specific constraints were found while reading constraint file [%s]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [%s].
-233*project2y
-e/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/constrs_1/new/system_wrapper.xdc2default:default2
-m/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/.Xil/system_wrapper_propImpl.xdc2default:defaultZ1-236
-¥
+233*project2t
+`/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/constrs_1/new/system_wrapper.xdc2default:default2|
+h/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/.Xil/system_wrapper_propImpl.xdc2default:defaultZ1-236
+ 
 Parsing XDC File [%s]
-179*designutils2o
-[/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/dont_touch.xdc2default:defaultZ20-179
-®
+179*designutils2j
+V/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/dont_touch.xdc2default:defaultZ20-179
+©
 Finished Parsing XDC File [%s]
-178*designutils2o
-[/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/dont_touch.xdc2default:defaultZ20-178
-è
+178*designutils2j
+V/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/dont_touch.xdc2default:defaultZ20-178
+Ý
 ÙImplementation specific constraints were found while reading constraint file [%s]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [%s].
-233*project2o
-[/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/dont_touch.xdc2default:default2
-m/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/.Xil/system_wrapper_propImpl.xdc2default:defaultZ1-236
+233*project2j
+V/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/dont_touch.xdc2default:default2|
+h/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/.Xil/system_wrapper_propImpl.xdc2default:defaultZ1-236
 ?
 &Completed Processing XDC Constraints
 
@@ -955,125 +955,125 @@ u
 2default:defaultZ1-111
 ¶
 %s*synth2¦
-‘Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1113.266 ; gain = 492.641
+‘Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1132.383 ; gain = 493.734
 2default:default
 ž
 %s*synth2Ž
-zFinished RTL Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1113.266 ; gain = 492.641
+zFinished RTL Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1132.383 ; gain = 493.734
 2default:default
-š
+•
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET0_GMII_TX_EN2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 2102default:default8@Z8-3848
-š
+•
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET0_GMII_TX_ER2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 2112default:default8@Z8-3848
-˜
+“
 0Net %s in module/entity %s does not have driver.3422*oasys2"
 ENET0_GMII_TXD2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 2272default:default8@Z8-3848
-š
+•
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET1_GMII_TX_EN2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 2412default:default8@Z8-3848
-š
+•
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET1_GMII_TX_ER2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 2422default:default8@Z8-3848
-˜
+“
 0Net %s in module/entity %s does not have driver.3422*oasys2"
 ENET1_GMII_TXD2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 2562default:default8@Z8-3848
-›
+–
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET0_GMII_COL_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10332default:default8@Z8-3848
-›
+–
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET0_GMII_CRS_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10342default:default8@Z8-3848
-›
+–
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET0_GMII_RXD_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10372default:default8@Z8-3848
-
+˜
 0Net %s in module/entity %s does not have driver.3422*oasys2&
 ENET0_GMII_RX_DV_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10352default:default8@Z8-3848
-
+˜
 0Net %s in module/entity %s does not have driver.3422*oasys2&
 ENET0_GMII_RX_ER_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10362default:default8@Z8-3848
-›
+–
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET1_GMII_COL_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10422default:default8@Z8-3848
-›
+–
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET1_GMII_CRS_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10432default:default8@Z8-3848
-›
+–
 0Net %s in module/entity %s does not have driver.3422*oasys2$
 ENET1_GMII_RXD_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10462default:default8@Z8-3848
-
+˜
 0Net %s in module/entity %s does not have driver.3422*oasys2&
 ENET1_GMII_RX_DV_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10442default:default8@Z8-3848
-
+˜
 0Net %s in module/entity %s does not have driver.3422*oasys2&
 ENET1_GMII_RX_ER_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10452default:default8@Z8-3848
-ž
+™
 0Net %s in module/entity %s does not have driver.3422*oasys2'
 FTMD_TRACEIN_ATID_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10552default:default8@Z8-3848
-ž
+™
 0Net %s in module/entity %s does not have driver.3422*oasys2'
 FTMD_TRACEIN_DATA_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10532default:default8@Z8-3848
-Ÿ
+š
 0Net %s in module/entity %s does not have driver.3422*oasys2(
 FTMD_TRACEIN_VALID_i2default:default2>
-*processing_system7_v5_3_processing_system72default:default2É
-²/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
+*processing_system7_v5_3_processing_system72default:default2Ä
+­/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/ip/system_processing_system7_1_0/hdl/verilog/processing_system7_v5_3_processing_system7.v2default:default2
 10542default:default8@Z8-3848
 <
 %s*synth2-
@@ -1104,7 +1104,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 2default:default
 ²
 %s*synth2¢
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1154.605 ; gain = 533.980
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 1174.723 ; gain = 536.074
 2default:default
 B
 %s*synth23
@@ -1148,7 +1148,7 @@ B
 2default:default
 ª
 %s*synth2š
-…Finished Cross Boundary Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1154.605 ; gain = 533.980
+…Finished Cross Boundary Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 1174.723 ; gain = 536.074
 2default:default
 ¢
 %s*synth2’
@@ -1170,19 +1170,19 @@ R-------------------------------------------------------------------------------
 2default:default
 Ÿ
 %s*synth2
-{Finished Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1176.633 ; gain = 556.008
+{Finished Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 1196.750 ; gain = 558.102
 2default:default
 ®
 %s*synth2ž
-‰Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1328.633 ; gain = 708.008
+‰Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1349.750 ; gain = 711.102
 2default:default
 ¡
 %s*synth2‘
-}Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1347.641 ; gain = 727.016
+}Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1368.758 ; gain = 730.109
 2default:default
  
 %s*synth2
-|Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1355.648 ; gain = 735.023
+|Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 1376.766 ; gain = 738.117
 2default:default
 D
 %s*synth25
@@ -1190,7 +1190,7 @@ D
 2default:default
 š
 %s*synth2Š
-vFinished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1355.648 ; gain = 735.023
+vFinished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1376.766 ; gain = 738.117
 2default:default
 ;
 %s*synth2,
@@ -1219,11 +1219,11 @@ I+------+------------------+-------+---------+-------+------------------+
 2default:default
 «
 %s*synth2›
-†Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1355.648 ; gain = 735.023
+†Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1376.766 ; gain = 738.117
 2default:default
 ¨
 %s*synth2˜
-ƒFinished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1355.648 ; gain = 735.023
+ƒFinished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1376.766 ; gain = 738.117
 2default:default
 ¢
 %s*synth2’
@@ -1356,7 +1356,7 @@ V+------+-------------------------+-------------------------------------------+-
 2default:default
 §
 %s*synth2—
-‚Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1355.648 ; gain = 735.023
+‚Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1376.766 ; gain = 738.117
 2default:default
 j
 %s*synth2[
@@ -1364,7 +1364,7 @@ GSynthesis finished with 0 errors, 0 critical warnings and 19 warnings.
 2default:default
 ¥
 %s*synth2•
-€Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1355.648 ; gain = 735.023
+€Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 1376.766 ; gain = 738.117
 2default:default
 \
 -Analyzing %s Unisim elements for replacement
@@ -1411,18 +1411,18 @@ U
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2"
 synth_design: 2default:default2
-00:00:372default:default2
-00:00:382default:default2
-1714.1332default:default2
-969.4572default:defaultZ17-268
+00:00:412default:default2
+00:00:462default:default2
+1733.2502default:default2
+970.4572default:defaultZ17-268
 <
 %Done setting XDC timing constraints.
 35*timingZ38-35
 ‚
-vreport_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1714.137 ; gain = 0.000
+vreport_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1733.254 ; gain = 0.000
 *common
 w
 Exiting %s at %s...
 206*common2
 Vivado2default:default2,
-Wed Feb  5 12:53:26 20142default:defaultZ17-206
+Fri Feb  7 16:09:04 20142default:defaultZ17-206

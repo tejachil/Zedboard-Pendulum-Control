@@ -3,19 +3,12 @@
 <stringAttribute key="org.eclipse.cdt.debug.mi.core.HOST" value="localhost"/>
 <stringAttribute key="org.eclipse.cdt.debug.mi.core.PORT" value="1234"/>
 <booleanAttribute key="org.eclipse.cdt.debug.mi.core.REMOTE_TCP" value="true"/>
-<booleanAttribute key="org.eclipse.cdt.debug.mi.core.verboseMode" value="false"/>
-<intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="2"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.xilinx.sdk.debug.core.XMDDebuggerId"/>
-<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_REGISTER_GROUPS" value=""/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run"/>
 <booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
-<stringAttribute key="org.eclipse.cdt.launch.FORMAT" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&lt;contentList/&gt;"/>
-<stringAttribute key="org.eclipse.cdt.launch.GLOBAL_VARIABLES" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;globalVariableList/&gt;&#10;"/>
-<stringAttribute key="org.eclipse.cdt.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;memoryBlockExpressionList/&gt;&#10;"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug/freertos_app_pendulum.elf"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="freertos_app_pendulum"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="xilinx.gnu.arm.exe.debug.2048027048"/>
-<booleanAttribute key="org.eclipse.cdt.launch.use_terminal" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="xilinx.gnu.arm.exe.debug.1988397074"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/freertos_app_pendulum"/>
 </listAttribute>
@@ -25,17 +18,6 @@
 <mapAttribute key="org.eclipse.debug.core.preferred_launchers">
 <mapEntry key="[run]" value="com.xilinx.sdk.debug.ui.launchConfigurationWrapper"/>
 </mapAttribute>
-<stringAttribute key="xilinx.data.files.list" value=""/>
-<booleanAttribute key="xilinx.elf.verify" value="false"/>
-<stringAttribute key="xilinx.init.tcl" value="/home/teja/tejachil-gdrive/Fall_2013/ECE_4994-Undergraduate_Research/SPI_pendulum_working_freertos/SPI_pendulum.sdk/SDK/SDK_Export/hw_platform_0/ps7_init.tcl"/>
-<booleanAttribute key="xilinx.no.download.program" value="false"/>
-<booleanAttribute key="xilinx.profile.enable" value="false"/>
+<stringAttribute key="xilinx.init.tcl" value="/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw_platform_0/ps7_init.tcl"/>
 <intAttribute key="xilinx.reset.type" value="1"/>
-<stringAttribute key="xilinx.romem.base" value=""/>
-<stringAttribute key="xilinx.romem.size" value=""/>
-<stringAttribute key="xilinx.stdio.baud" value="9600"/>
-<booleanAttribute key="xilinx.stdio.connect" value="false"/>
-<stringAttribute key="xilinx.stdio.port" value="JTAG UART"/>
-<booleanAttribute key="xilinx.xmd.crosstrigger" value="false"/>
-<booleanAttribute key="xilinx.xmd.safe.mode" value="false"/>
 </launchConfiguration>

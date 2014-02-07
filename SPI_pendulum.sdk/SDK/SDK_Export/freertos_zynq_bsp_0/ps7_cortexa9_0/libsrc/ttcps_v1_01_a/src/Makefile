@@ -5,6 +5,9 @@ COMPILER_FLAGS=
 EXTRA_COMPILER_FLAGS=
 LIB=libxil.a
 
+CC_FLAGS = $(COMPILER_FLAGS)
+ECC_FLAGS = $(EXTRA_COMPILER_FLAGS)
+
 RELEASEDIR=../../../lib
 INCLUDEDIR=../../../include
 INCLUDES=-I./. -I${INCLUDEDIR}
@@ -14,16 +17,25 @@ OUTS = *.o
 LIBSOURCES:=*.c
 INCLUDEFILES:=*.h
 
-libs:	$(LIBSOURCES)
+OBJECTS =	$(addsuffix .o, $(basename $(wildcard *.c)))
+
+libs: banner ttcps_libs clean
+
+%.o: %.c
+	${COMPILER} $(CC_FLAGS) $(ECC_FLAGS) $(INCLUDES) -o $@ $<
+
+banner:
 	echo "Compiling ttcps"
-	$(COMPILER) $(COMPILER_FLAGS) $(EXTRA_COMPILER_FLAGS) $(INCLUDES) $(LIBSOURCES)
-	$(ARCHIVER) -r ${RELEASEDIR}/${LIB} ${OUTS}
-	make clean
+
+ttcps_libs: ${OBJECTS}
+	$(ARCHIVER) -r ${RELEASEDIR}/${LIB} ${OBJECTS}
 
 .PHONY: include
-include: 
-	${CP} $(INCLUDEFILES) $(INCLUDEDIR)
+include: ttcps_includes
+
+ttcps_includes:
+	${CP} ${INCLUDEFILES} ${INCLUDEDIR}
 
 clean:
-	rm -rf ${OUTS}
+	rm -rf ${OBJECTS}
 

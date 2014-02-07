@@ -1328,3 +1328,146 @@ invalid command name "ps7_init"
 	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
 
 10:38:38.561 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:12:10.972 INFO  - Processing command line option -hwspec /home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/system.xml. 
+16:12:12.237 INFO  - The hardware specification for project 'hw_platform_0' is different from /home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/system.xml. 
+16:12:12.258 INFO  - Copied contents of /home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/system.xml into /hw_platform_0/system.xml. 
+16:12:12.269 INFO  - Copied contents of /home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/system_wrapper.bit into /hw_platform_0/system_wrapper.bit. 
+16:12:12.354 INFO  - Copied contents of /home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/ps7_init.c into /hw_platform_0/ps7_init.c. 
+16:12:12.355 INFO  - Copied contents of /home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/ps7_init.h into /hw_platform_0/ps7_init.h. 
+16:12:12.358 INFO  - Copied contents of /home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/ps7_init.html into /hw_platform_0/ps7_init.html. 
+16:12:12.360 INFO  - Copied contents of /home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/ps7_summary.html into /hw_platform_0/ps7_summary.html. 
+16:12:12.360 INFO  - Copied contents of /home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/ps7_init.tcl into /hw_platform_0/ps7_init.tcl. 
+16:12:12.705 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+16:12:13.515 INFO  - Restoring local repository preferences: 
+		 /home/controls/Documents/Zedboard-Pendulum-Control/repo 
+16:12:13.586 INFO  - Updating MSS for Board Support Package Project: freertos_zynq_bsp_0.
+		 The following new driver assignments were made:
+			Peripheral Instance: ps7_coresight_comp_0, driver: generic_v1_00_a.
+			Peripheral Instance: ps7_globaltimer_0, driver: generic_v1_00_a.
+			Peripheral Instance: ps7_gpio_0, driver: gpiops_v1_02_a.
+			Peripheral Instance: ps7_gpv_0, driver: generic_v1_00_a.
+			Peripheral Instance: ps7_intc_dist_0, driver: generic_v1_00_a.
+			Peripheral Instance: ps7_l2cachec_0, driver: generic_v1_00_a.
+			Peripheral Instance: ps7_ocmc_0, driver: generic_v1_00_a.
+			Peripheral Instance: ps7_scuc_0, driver: generic_v1_00_a.
+			Peripheral Instance: ps7_xadc_0, driver: xadcps_v1_03_a.
+ 
+16:12:14.718 INFO  - Updating hardware inferred compiler options for freertos_app_pendulum. 
+16:12:14.733 INFO  - Clearing existing target manager status. 
+16:12:17.901 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+16:13:09.725 INFO  - Saving repository preferences. 
+16:13:09.727 INFO  - Reading in cores from local repositories: 
+		 /home/xps/Documents/Zedboard-Pendulum-Control/repo 
+16:13:09.728 INFO  - Updating libgen.options on all BSP projects. 
+16:13:09.731 INFO  - Cleaning BSP projects in the workspace. 
+16:13:10.736 INFO  - Saving repository preferences. 
+16:15:03.292 INFO  - Project freertos_zynq_bsp_0 was a BSP project. Please update references. 
+16:15:03.292 ERROR - SDK has detected that project freertos_zynq_bsp_0 has been deleted (or renamed).
+If this project was a BSP referenced by other C/C++ applications, then those applications will fail to build now. Please right click on those applications and click 'Change Referenced BSP' to update those projects' BSP references. 
+16:15:21.265 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+16:16:41.656 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:17:16.615 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:17:16.619 INFO  - PS initialization will be done as it is not done before. 
+16:17:16.619 INFO  - Running PS initialization.... 
+16:17:16.818 INFO  - ps7_init is completed. 
+16:17:16.918 INFO  - PS Initialization is complete. 
+16:23:19.863 INFO  - Successfully generated /home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_app_helloworld/src/lscript.ld. 
+16:23:19.868 INFO  - Applying linker script to all configurations of project freertos_app_helloworld. 
+16:23:19.869 INFO  - Setting rebuild state to true for all configurations of project freertos_app_helloworld. 
+16:26:33.937 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:26:40.257 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:26:40.357 INFO  - PS initialization will be done as it is not done before. 
+16:26:40.357 INFO  - Running PS initialization.... 
+16:26:40.584 INFO  - ps7_init is completed. 
+16:26:40.684 INFO  - PS Initialization is complete. 
+16:28:12.634 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:28:12.734 INFO  - PS initialization will be done as it is not done before. 
+16:28:12.734 INFO  - Running PS initialization.... 
+16:28:12.946 INFO  - ps7_init is completed. 
+16:28:13.046 INFO  - PS Initialization is complete. 
+16:28:24.927 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:28:34.650 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:28:36.081 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+16:29:04.196 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:29:13.157 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:29:15.544 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+16:29:42.781 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:29:59.886 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:30:04.235 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+16:30:14.257 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:30:20.319 INFO  - Processing command line option -hwspec /home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/hw/system.xml. 
+16:30:40.765 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:30:57.217 WARN  - The current launch is configured to reset the entire system. However, the design contains multiple processors, and resetting the system will reset the other processors as well. If you would like to avoid this, please update the launch configuration to reset the processor only. 
+16:31:05.473 INFO  - System reset is completed. 
+16:31:05.473 INFO  - Running PS initialization.... 
+16:31:05.670 INFO  - ps7_init is completed. 
+16:31:05.770 INFO  - PS Initialization is complete. 
+16:31:33.658 INFO  - Restoring local repository preferences: 
+		 /home/xps/Documents/Zedboard-Pendulum-Control/repo 
+16:31:58.593 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+16:32:39.658 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:33:11.035 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:33:11.135 INFO  - PS initialization will be done as it is not done before. 
+16:33:11.135 INFO  - Running PS initialization.... 
+16:33:11.334 INFO  - ps7_init is completed. 
+16:33:11.434 INFO  - PS Initialization is complete. 
+16:34:13.177 INFO  - Successfully generated /home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_app_pendulum/src/lscript.ld. 
+16:34:13.178 INFO  - Applying linker script to all configurations of project freertos_app_pendulum. 
+16:34:13.179 INFO  - Setting rebuild state to true for all configurations of project freertos_app_pendulum. 
+16:34:44.614 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:34:46.699 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:35:30.732 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+16:36:22.550 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:36:33.103 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:36:33.203 INFO  - PS initialization will be done as it is not done before. 
+16:36:33.203 INFO  - Running PS initialization.... 
+16:36:33.402 INFO  - ps7_init is completed. 
+16:36:33.502 INFO  - PS Initialization is complete. 
+16:36:59.688 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:37:05.535 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:38:02.348 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:38:04.206 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:39:54.458 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:39:57.108 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:41:50.108 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:41:52.687 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:46:12.499 INFO  - Project freertos_zynq_bsp_0 was a BSP project. Please update references. 
+16:46:12.500 ERROR - SDK has detected that project freertos_zynq_bsp_0 has been deleted (or renamed).
+If this project was a BSP referenced by other C/C++ applications, then those applications will fail to build now. Please right click on those applications and click 'Change Referenced BSP' to update those projects' BSP references. 
+16:47:45.243 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+16:48:28.880 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:48:31.712 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:50:46.206 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:50:48.119 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:56:04.823 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:56:08.227 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:57:31.041 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:57:33.207 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:58:04.162 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+16:58:36.457 INFO  - Refreshed build settings on project freertos_app_pendulum 
+17:00:00.100 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:00:02.823 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:00:36.698 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+17:00:54.859 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:00:54.959 INFO  - PS initialization will be done as it is not done before. 
+17:00:54.959 INFO  - Running PS initialization.... 
+17:00:55.157 INFO  - ps7_init is completed. 
+17:00:55.257 INFO  - PS Initialization is complete. 
+17:02:09.254 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+17:02:15.139 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:02:15.239 INFO  - PS initialization will be done as it is not done before. 
+17:02:15.239 INFO  - Running PS initialization.... 
+17:02:15.433 INFO  - ps7_init is completed. 
+17:02:15.533 INFO  - PS Initialization is complete. 

@@ -2,9 +2,9 @@
 # Vivado v2013.4 (64-bit)
 # SW Build 353583 on Mon Dec  9 17:26:26 MST 2013
 # IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
-# Start of session at: Wed Feb  5 12:52:42 2014
-# Process ID: 1792
-# Log file: /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/system_wrapper.rds
-# Journal file: /home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/vivado.jou
+# Start of session at: Fri Feb  7 16:08:10 2014
+# Process ID: 13683
+# Log file: /home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/system_wrapper.rds
+# Journal file: /home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source system_wrapper.tcl
