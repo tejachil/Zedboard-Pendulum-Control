@@ -23160,3 +23160,12 @@ java.lang.NullPointerException
 	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:422)
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2014-02-10 15:11:03.509 -----------------------------------------------
+eclipse.buildId=Release 2013.4 Build SDK_2013.4.20131205
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-02-10 15:12:10.855
+!MESSAGE Indexed 'testing' (1 sources, 32 headers) in 0.76 sec: 710 declarations; 1,207 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)

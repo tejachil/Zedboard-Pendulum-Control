@@ -1472,3 +1472,8 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 17:02:15.433 INFO  - ps7_init is completed. 
 17:02:15.533 INFO  - PS Initialization is complete. 
 17:09:30.349 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:11:21.911 INFO  - Restoring local repository preferences: 
+		 /home/xps/Documents/Zedboard-Pendulum-Control/repo 
+12:45:43.427 INFO  - Restoring local repository preferences: 
+		 /home/xps/Documents/Zedboard-Pendulum-Control/repo 
+12:45:43.639 WARN  - Unable to determine location of documentation for OS freertos_zynq. 

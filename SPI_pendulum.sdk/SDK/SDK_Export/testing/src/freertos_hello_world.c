@@ -63,180 +63,70 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
-#include "semphr.h"
 #include "timers.h"
 #include "xil_printf.h"
 
-/* App includes. */
-#include "xgpiops.h"
-
-/*
- * The following constants map to the XPAR parameters created in the
- * xparameters.h file. They are defined here such that a user can easily
- * change all the needed parameters in one place.
- */
-#define GPIO_DEVICE_ID	XPAR_XGPIOPS_0_DEVICE_ID
-
-/*
- * Following constant define the Input and Output pins.
- */
-#define OUTPUT_PIN		54	/* Pin connected to LED/Output */
-
 /* Priorities at which the tasks are created. */
-#define mainLED_TASK_PRIORITY		( tskIDLE_PRIORITY + 1 )
-
-/* This example toggles the led for each TIMER_PERIOD.
- * Led_Task waits on the semaphore on each iteration, which is
- * signaled from the timer call back, each time the timer expires.
- * Configure timer period by changing the value against the
- * TIMER_PERIOD macro.
- * A safe shutdown function is provided which deletes all the
- * resources in case semaphore take/give fails or timer could not
- * be created.
- */
-#define TIMER_PERIOD	100 /* No of ticks before timer expires */
-#define TIMER_ID		123 /* Timer ID*/
-
-/*
- * The following are declared globally so they are zeroed.
- */
-XGpioPs Gpio;	/* The driver instance for GPIO Device. */
-XGpioPs_Config *ConfigPtr; /* The driver config instance for GPIO Device. */
-
-/* Timer handle */
-xTimerHandle xTimer;
-
-/* Task handle */
-xTaskHandle xTask;
-
-/* Semaphore handle */
-xSemaphoreHandle xSemaphore_led = NULL;
+#define mainHELLO_WORLD_TASK_PRIORITY		( tskIDLE_PRIORITY + 1 )
+#define	mainGOOD_BYE_TASK_PRIORITY		( tskIDLE_PRIORITY + 1 )
 
 /*-----------------------------------------------------------*/
-static void prvLed_Task( void *pvParameters );
-void prvSetGpioHardware(void);
-void prvShutdown(void);
+static void prvHelloWorld( void *pvParameters );
+static void prvGoodBye( void *pvParameters );
 
-/* Define timer callback function */
-void vTimerCallback( xTimerHandle pxTimer )
-{
-	if ( xSemaphoreGive( xSemaphore_led ) != pdTRUE )
-	{
-		xil_printf("xSemaphore_led give fail\r\n");
-		prvShutdown();
-	}
-}
+/*
+ * This example creates two tasks were each task prints a statement.
+ * Each task yields after it prints a message which apppears on
+ * console alternatively. Sometimes, due to scheduler algorithm the
+ * task might be pre-empted before print could complete.
+ */
+/*-----------------------------------------------------------*/
 
 int main( void )
 {
-	 prvInitializeExceptions();
+	prvInitializeExceptions();
 
-	 /* Create Binary Semaphore */
-	 vSemaphoreCreateBinary(xSemaphore_led);
-	 configASSERT( xSemaphore_led );
+	/* Start the two tasks */
+	xTaskCreate( prvHelloWorld, ( signed char * ) "HW",
+			configMINIMAL_STACK_SIZE, NULL,
+			mainHELLO_WORLD_TASK_PRIORITY, NULL );
+	xTaskCreate( prvGoodBye, ( signed char * ) "GB",
+			configMINIMAL_STACK_SIZE, NULL,
+			mainGOOD_BYE_TASK_PRIORITY, NULL );
 
-	 /* Setup the GPIO Hardware. */
-	 prvSetGpioHardware();
+	/* Start the tasks and timer running. */
+	vTaskStartScheduler();
 
-	 /* Create the task */
-     xTaskCreate( prvLed_Task, ( signed char * ) "LED_TASK",
-     			configMINIMAL_STACK_SIZE, NULL,
-    			mainLED_TASK_PRIORITY, &xTask );
+	/* If all is well, the scheduler will now be running, and the following line
+	will never be reached.  If the following line does execute, then there was
+	insufficient FreeRTOS heap memory available for the idle and/or timer tasks
+	to be created.  See the memory management section on the FreeRTOS web site
+	for more details. */
+	for( ;; );
+}
 
 
-	 /* Create timer.  Starting the timer before the scheduler
-     has been started means the timer will start running immediately that
-     the scheduler starts. */
-     xTimer = xTimerCreate ( (const signed char *) "LedTimer",
-        		 	 	 	 	 	   TIMER_PERIOD,
-        		 	 	 	 	 	   pdTRUE, /* auto-reload when expires */
-        		 	 	 	 	 	   (void *) TIMER_ID, /* unique id */
-        		 	 	 	 	 	   vTimerCallback	/* Callback */
-                           );
-
-     if ( xTimer == NULL ) {
-		 /* The timer was not created. */
-		 xil_printf("Failed to create timer\n\r");
-		 prvShutdown();
-		 return 0;
-	 } else {
-		 /* Start the timer */
-		 xTimerStart( xTimer, 0 );
-	 }
-
-     /* Starting the scheduler will start the timers running as it is already
-     been set into the active state. */
-     vTaskStartScheduler();
-
-     /* Should not reach here. */
-     for( ;; );
+/*-----------------------------------------------------------*/
+static void prvHelloWorld( void *pvParameters )
+{
+	for( ;; )
+	{
+		xil_printf("Hello World\r\n");
+		taskYIELD();
+	}
 }
 
 /*-----------------------------------------------------------*/
-static void prvLed_Task( void *pvParameters )
+static void prvGoodBye( void *pvParameters )
 {
-  	unsigned int uiLedFlag = 0;
 
-	for (;;)
-		{
-			if ( xSemaphoreTake( xSemaphore_led,
-						( portTickType ) portMAX_DELAY ) == pdTRUE )
-			{
-				uiLedFlag ^= 1;
-				if (uiLedFlag) {
-					/*
-					 * Set the GPIO Output to High.
-					 */
-					XGpioPs_WritePin(&Gpio, OUTPUT_PIN, 0x1);
-				 } else {
-					/*
-					 * Set the GPIO Output to Low.
-					 */
-					XGpioPs_WritePin(&Gpio, OUTPUT_PIN, 0x0);
-				 }
-			} else {
-				xil_printf("xSemaphore_led take fail\r\n");
-				/* Call shutdown */
-				prvShutdown();
-			}
-		}
+	for( ;; )
+	{
+		xil_printf("Good Bye\r\n");
+		taskYIELD();
+	}
 }
 
-/*-----------------------------------------------------------*/
-void prvSetGpioHardware( void )
-{
- 	int Status;
- 	/*
- 	 * Initialize the GPIO driver.
- 	 */
- 	ConfigPtr = XGpioPs_LookupConfig(0);
- 	Status = XGpioPs_CfgInitialize(&Gpio, ConfigPtr,
- 					ConfigPtr->BaseAddr);
- 	if (Status != XST_SUCCESS) {
- 		xil_printf("GPIO Initialize failed\n");
- 	}
-
- 	/*
- 	 * Set the direction for the pin to be output and
- 	 * Enable the Output enable for the LED Pin.
- 	 */
- 	XGpioPs_SetDirectionPin(&Gpio, OUTPUT_PIN, 1);
- 	XGpioPs_SetOutputEnablePin(&Gpio, OUTPUT_PIN, 1);
-
- 	/*
- 	 * Set the GPIO output to be low.
- 	 */
- 	XGpioPs_WritePin(&Gpio, OUTPUT_PIN, 0x0);
-}
-
-void prvShutdown( void )
-{
-	 /* Check if timer is created */
-	 if (xTimer)
-		 xTimerDelete(xTimer, 0);
-	 vSemaphoreDelete( xSemaphore_led );
-	 vTaskDelete( xTask );
-}
 
 /*-----------------------------------------------------------*/
 void vApplicationMallocFailedHook( void )

@@ -34,3 +34,6 @@ arm-xilinx-eabi-size testing.elf  |tee "testing.elf.size"
   69064	   3060	  23100	  95224	  173f8	testing.elf
 Finished building: testing.elf.size
  
+
+15:13:17 Build Finished (took 213ms)
+
