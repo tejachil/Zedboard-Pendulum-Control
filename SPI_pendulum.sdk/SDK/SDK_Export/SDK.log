@@ -1486,3 +1486,54 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 13:17:15.326 INFO  - PS Initialization is complete. 
 13:20:59.204 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 13:21:05.270 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:43:11.782 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:43:16.732 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:44:43.974 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:44:48.666 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:45:46.719 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:45:49.700 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:48:24.693 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:48:27.480 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:48:42.336 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+13:49:08.393 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+13:49:18.425 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:49:18.428 INFO  - PS initialization will be done as it is not done before. 
+13:49:18.428 INFO  - Running PS initialization.... 
+13:49:18.646 INFO  - ps7_init is completed. 
+13:49:18.649 INFO  - PS Initialization is complete. 
+14:06:15.165 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+14:06:22.276 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:06:22.376 INFO  - PS initialization will be done as it is not done before. 
+14:06:22.376 INFO  - Running PS initialization.... 
+14:06:22.591 INFO  - ps7_init is completed. 
+14:06:22.691 INFO  - PS Initialization is complete. 
+14:16:16.230 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:16:21.903 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:17:50.645 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:17:53.693 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:21:16.259 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:21:19.221 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:23:28.054 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:23:30.024 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:27:07.319 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:27:09.709 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:28:27.811 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:28:30.425 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:31:59.010 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:32:01.790 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:33:10.364 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+14:33:17.282 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:33:17.382 INFO  - PS initialization will be done as it is not done before. 
+14:33:17.382 INFO  - Running PS initialization.... 
+14:33:17.583 INFO  - ps7_init is completed. 
+14:33:17.683 INFO  - PS Initialization is complete. 
+14:34:14.274 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:34:16.688 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:34:27.178 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:34:29.240 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:36:34.028 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:36:39.853 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:36:48.454 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:36:50.164 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:42:48.847 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+14:43:54.221 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

@@ -35,13 +35,18 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_app_pendulum/src/main.c" title="main.c" tooltip="freertos_app_pendulum/src/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freertos_app_pendulum/src/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3517" selectionTopPixel="1745"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="390" selectionTopPixel="9"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SPI.c" partName="SPI.c" path="/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_app_pendulum/src/SPI.c" title="SPI.c" tooltip="freertos_app_pendulum/src/SPI.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freertos_app_pendulum/src/SPI.c"/>
+<editorState selectionHorizontalPixel="25" selectionLength="149" selectionOffset="1113" selectionTopPixel="2200"/>
 </editor>
 </editors>
 <views>
@@ -311,10 +316,6 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_zynq_bsp_0/ps7_cortexa9_0/libsrc/freertos_zynq_v1_01_a/src/port.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/freertos_zynq_bsp_0/system.mss"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.lscript.editor" path="/freertos_app_helloworld/src/lscript.ld"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_app_helloworld/src/platform_config.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_app_helloworld/src/main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/test2_bsp/system.mss"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_app_pendulum/src/main.c"/>
@@ -329,132 +330,149 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_app_pendulum/src/freertos_blink_led_semaphore.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/freertos_zynq_bsp_0/system.mss"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_app_pendulum/src/SPI.c"/>
 </editors>
-<item historyLabel="port.c" index="0">
-<position/>
-</item>
 <item historyLabel="system.mss" index="1"/>
-<item historyLabel="lscript.ld" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="lscript.ld" index="2"/>
-<item historyLabel="platform_config.h" index="3">
-<position info="not_deleted" x="118" y="0"/>
-</item>
-<item historyLabel="port.c" index="0">
-<position info="not_deleted" x="6849" y="25"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="2" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="6201" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="6198" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="6200" y="1"/>
-</item>
-<item historyLabel="main.c" index="4">
+<item historyLabel="main.c" index="0">
 <position info="not_deleted" x="1546" y="0"/>
 </item>
-<item historyLabel="system.mss" index="5"/>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="1546" y="0"/>
-</item>
-<item historyLabel="main.c" index="6">
+<item historyLabel="main.c" index="2">
 <position/>
 </item>
-<item historyLabel="main.c" index="6">
+<item historyLabel="main.c" index="2">
 <position/>
 </item>
-<item historyLabel="freertos_blink_led_semaphore.c" index="7">
+<item historyLabel="freertos_blink_led_semaphore.c" index="3">
 <position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="main.c" index="6">
+<item historyLabel="main.c" index="2">
 <position/>
 </item>
-<item historyLabel="freertos_blink_led_semaphore.c" index="7">
+<item historyLabel="freertos_blink_led_semaphore.c" index="3">
 <position info="not_deleted" x="8745" y="15"/>
 </item>
-<item historyLabel="main.c" index="6">
+<item historyLabel="main.c" index="2">
 <position/>
 </item>
-<item historyLabel="freertos_blink_led_semaphore.c" index="7">
+<item historyLabel="freertos_blink_led_semaphore.c" index="3">
 <position info="not_deleted" x="8745" y="15"/>
 </item>
-<item historyLabel="main.c" index="6">
+<item historyLabel="main.c" index="2">
 <position info="not_deleted" x="6202" y="0"/>
 </item>
-<item historyLabel="platform_config.h" index="8">
+<item historyLabel="platform_config.h" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="main.c" index="6">
+<item historyLabel="main.c" index="2">
 <position info="not_deleted" x="6202" y="0"/>
 </item>
-<item historyLabel="lscript.ld" index="9"/>
-<item historyLabel="main.c" index="6">
+<item historyLabel="lscript.ld" index="5"/>
+<item historyLabel="main.c" index="2">
 <position info="not_deleted" x="5617" y="0"/>
 </item>
-<item historyLabel="lscript.ld" index="10">
+<item historyLabel="lscript.ld" index="6">
 <position info="not_deleted" x="2953" y="0"/>
 </item>
-<item historyLabel="main.c" index="6">
+<item historyLabel="main.c" index="2">
 <position info="not_deleted" x="1836" y="0"/>
 </item>
-<item historyLabel="freertos_blink_led_semaphore.c" index="7">
+<item historyLabel="freertos_blink_led_semaphore.c" index="3">
 <position info="not_deleted" x="8745" y="15"/>
 </item>
-<item historyLabel="main.c" index="6">
+<item historyLabel="main.c" index="2">
 <position info="not_deleted" x="1836" y="0"/>
 </item>
-<item historyLabel="xparameters.h" index="11">
+<item historyLabel="xparameters.h" index="7">
 <position info="not_deleted" x="11290" y="41"/>
 </item>
-<item historyLabel="freertos_blink_led_mutex.c" index="12">
+<item historyLabel="freertos_blink_led_mutex.c" index="8">
 <position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="port.c" index="13">
+<item historyLabel="port.c" index="9">
 <position/>
 </item>
-<item historyLabel="freertos_blink_led_mutex.c" index="12">
+<item historyLabel="freertos_blink_led_mutex.c" index="8">
 <position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="main.c" index="6">
+<item historyLabel="main.c" index="2">
 <position info="not_deleted" x="1836" y="0"/>
 </item>
-<item historyLabel="system.mss" index="14"/>
-<item historyLabel="freertos_blink_led_semaphore.c" index="15">
+<item historyLabel="system.mss" index="10"/>
+<item historyLabel="freertos_blink_led_semaphore.c" index="11">
 <position info="not_deleted" x="6871" y="0"/>
 </item>
-<item historyLabel="main.c" index="6">
+<item historyLabel="main.c" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="main.c" index="6">
+<item historyLabel="main.c" index="2">
 <position info="not_deleted" x="4637" y="0"/>
 </item>
-<item historyLabel="port.c" index="13">
+<item historyLabel="port.c" index="9">
 <position info="not_deleted" x="6851" y="0"/>
 </item>
-<item historyLabel="main.c" index="6">
+<item historyLabel="main.c" index="2">
 <position info="not_deleted" x="4637" y="0"/>
 </item>
-<item historyLabel="main.c" index="6">
+<item historyLabel="main.c" index="2">
 <position info="not_deleted" x="2418" y="0"/>
 </item>
-<item historyLabel="system.mss" index="14">
+<item historyLabel="system.mss" index="10">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="xparameters.h" index="16">
+<item historyLabel="xparameters.h" index="12">
 <position info="not_deleted" x="11290" y="41"/>
 </item>
-<item historyLabel="main.c" index="6">
+<item historyLabel="main.c" index="2">
 <position info="not_deleted" x="2418" y="0"/>
 </item>
-<item historyLabel="system.mss" index="17"/>
-<item active="true" historyLabel="main.c" index="6">
+<item historyLabel="system.mss" index="13"/>
+<item historyLabel="main.c" index="2">
 <position info="not_deleted" x="1461" y="0"/>
+</item>
+<item historyLabel="SPI.c" index="14">
+<position info="not_deleted" x="535" y="87"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="826" y="0"/>
+</item>
+<item historyLabel="SPI.c" index="14">
+<position info="not_deleted" x="4493" y="42"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="826" y="0"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="4626" y="0"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="4626" y="0"/>
+</item>
+<item historyLabel="SPI.c" index="14">
+<position info="not_deleted" x="4493" y="42"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="4623" y="0"/>
+</item>
+<item historyLabel="SPI.c" index="14">
+<position info="not_deleted" x="5203" y="5"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="4623" y="0"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="4623" y="0"/>
+</item>
+<item historyLabel="SPI.c" index="14">
+<position info="not_deleted" x="1113" y="149"/>
+</item>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="375" y="10"/>
+</item>
+<item historyLabel="SPI.c" index="14">
+<position info="not_deleted" x="1113" y="149"/>
+</item>
+<item active="true" historyLabel="main.c" index="2">
+<position info="not_deleted" x="375" y="10"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -473,6 +491,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SPI.c" tooltip="freertos_app_pendulum/src/SPI.c">
+<persistable path="/freertos_app_pendulum/src/SPI.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" tooltip="freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h">
 <persistable path="/freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h"/>
 </file>
@@ -505,9 +526,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SPI.h" tooltip="freertos_app_pendulum/src/SPI.h">
 <persistable path="/freertos_app_pendulum/src/SPI.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SPI.c" tooltip="freertos_app_pendulum/src/SPI.c">
-<persistable path="/freertos_app_pendulum/src/SPI.c"/>
 </file>
 </mruList>
 </workbench>

@@ -29,7 +29,15 @@
 	#define LD4		 	57
 	static XGpioPs mio_emio_pmod2;
 	void prvSetLEDHardware( void );
+
+	// Function prototype for the printing task
+	static void printingTask(void *param);
 #endif
+
+// moved globally from update_value so I can print
+int temp;
+float u;
+static int printed; // variable to keep track of printing
 
 
 /********************** Global variables for controller **********************/
@@ -59,6 +67,8 @@ int main(void)
 	#if LED_DEBUG == 1
 	prvSetLEDHardware();
 	setupDebugLatancyLED(&mio_emio_pmod2, LD6);
+	printed = 0;
+	xTaskCreate(printingTask, (signed char*) "Printing Task", configMINIMAL_STACK_SIZE,(void *) NULL, (tskIDLE_PRIORITY + 1), ( xTaskHandle * ) NULL );
 	#endif
 
 	// Start the SPI monitor task
@@ -94,8 +104,6 @@ void update_value(xTimerHandle pxTimer)
 	XGpioPs_WritePin(&mio_emio_pmod2, LD7, 0x01);
 	#endif
 
-	int temp;
-	float u;
 	static float thetaOld=0.,alphaOld=0.;
 	sec1000++;            // Update global variable
 
@@ -111,6 +119,9 @@ void update_value(xTimerHandle pxTimer)
 	alphaDot=0.9391*alphaDot+60.92*(alpha_R-alphaOld);
 	//need to negate u, so just use positive feedback, u=K*x
 	u=-5.28*(theta_R-theta_des)+30.14*alpha_R-2.65*thetaDot+3.55*alphaDot;
+
+	printed = 1; // allow to print
+
 	if ((alpha_R>=0?alpha_R:-alpha_R)>(10.*pi/180)) u=0;
 	if (u>5.) u=5.;
 	else if (u<-5.) u=-5.;
@@ -134,6 +145,20 @@ void update_value(xTimerHandle pxTimer)
 
 
 #if LED_DEBUG == 1
+
+static void printingTask( void *param ){
+	for(;;){
+		if(printed){
+			XGpioPs_WritePin(&mio_emio_pmod2, LD5, 0x01);
+			//xil_printf("\n%d: %d, %d", (int)xTaskGetTickCount(), temp, ((int)u)*1000); // print time: encoder value, control input
+			xil_printf("\n%d, %d", temp, ((int)u)*1000); // print time: encoder value, control input
+		}
+		XGpioPs_WritePin(&mio_emio_pmod2, LD5, 0x00);
+		taskYIELD();
+	}
+
+}
+
 void prvSetLEDHardware( void )
 {
 
