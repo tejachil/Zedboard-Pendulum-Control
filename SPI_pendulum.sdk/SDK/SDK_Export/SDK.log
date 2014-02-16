@@ -1477,3 +1477,12 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 12:45:43.427 INFO  - Restoring local repository preferences: 
 		 /home/xps/Documents/Zedboard-Pendulum-Control/repo 
 12:45:43.639 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+13:16:08.997 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+13:16:53.619 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+13:17:14.920 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:17:15.020 INFO  - PS initialization will be done as it is not done before. 
+13:17:15.020 INFO  - Running PS initialization.... 
+13:17:15.226 INFO  - ps7_init is completed. 
+13:17:15.326 INFO  - PS Initialization is complete. 
+13:20:59.204 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:21:05.270 INFO  - Processor reset is completed for ps7_cortexa9_0 

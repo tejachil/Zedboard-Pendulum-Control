@@ -1,39 +1,6 @@
-15:13:17 **** Build of configuration Debug for project testing ****
+13:20:58 **** Incremental Build of configuration Debug for project testing ****
 make all 
-Building file: ../src/freertos_hello_world.c
-Invoking: ARM gcc compiler
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.d" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
-In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
-Finished building: ../src/freertos_hello_world.c
-                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
- 
-                 from ../src/freertos_hello_world.c:63:
-Building target: testing.elf
-Invoking: ARM gcc linker
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "testing.elf"  ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
-../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
-In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
-                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
-                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
-                 from ../src/freertos_hello_world.c:63:
-../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
-In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
-                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
-                 from ../src/freertos_hello_world.c:63:
-../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
-In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
-                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
-                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
-Finished building target: testing.elf
-                 from ../src/freertos_hello_world.c:63:
- 
-../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
-Invoking: ARM Print Size
-arm-xilinx-eabi-size testing.elf  |tee "testing.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  69064	   3060	  23100	  95224	  173f8	testing.elf
-Finished building: testing.elf.size
- 
+make: Nothing to be done for `all'.
 
-15:13:17 Build Finished (took 213ms)
+13:20:58 Build Finished (took 60ms)
 
