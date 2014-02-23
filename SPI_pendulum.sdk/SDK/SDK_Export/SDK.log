@@ -1537,3 +1537,25 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 14:36:50.164 INFO  - Processor reset is completed for ps7_cortexa9_0 
 14:42:48.847 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
 14:43:54.221 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:16:45.958 INFO  - Restoring local repository preferences: 
+		 /home/xps/Documents/Zedboard-Pendulum-Control/repo 
+16:22:49.500 INFO  - Restoring local repository preferences: 
+		 /home/xps/Documents/Zedboard-Pendulum-Control/repo 
+14:40:41.137 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+14:40:54.067 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:40:54.071 INFO  - PS initialization will be done as it is not done before. 
+14:40:54.071 INFO  - Running PS initialization.... 
+14:40:54.262 INFO  - ps7_init is completed. 
+14:40:54.362 INFO  - PS Initialization is complete. 
+14:49:18.972 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:49:45.575 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:50:49.436 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:50:51.442 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:54:38.389 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:54:40.952 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:59:54.291 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:59:57.148 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:01:47.008 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:01:49.157 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:13:34.577 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+15:13:34.579 WARN  - Terminating existing sessions on processor ps7_cortexa9_0 
