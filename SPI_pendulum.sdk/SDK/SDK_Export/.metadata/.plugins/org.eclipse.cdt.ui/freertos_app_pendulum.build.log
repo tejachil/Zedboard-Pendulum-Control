@@ -1,6 +1,6 @@
-16:29:19 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+16:39:25 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
 make all 
 make: Nothing to be done for `all'.
 
-16:29:19 Build Finished (took 60ms)
+16:39:25 Build Finished (took 60ms)
 

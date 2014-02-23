@@ -1,6 +1,640 @@
-14:40:51 **** Build of project freertos_zynq_bsp_0 ****
+16:39:09 **** Build of project freertos_zynq_bsp_0 ****
 make -k all 
+libgen -hw ../hw_platform_0/system.xml\
+	       -lp /home/xps/Documents/Zedboard-Pendulum-Control/repo\
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.4 Build EDK_2013.4.20131205
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../hw_platform_0/system.xml -lp
+/home/xps/Documents/Zedboard-Pendulum-Control/repo -pe ps7_cortexa9_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'gmake -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'gmake -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+Compiling standalone
+In file included from read.c:46:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from read.c:46:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from read.c:46:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from read.c:46:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from sleep.c:66:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from sleep.c:66:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from sleep.c:66:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from sleep.c:66:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from smc.h:67:0,
+                 from smc.c:64:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from smc.h:67,
+                 from smc.c:64:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from smc.h:67:0,
+                 from smc.c:64:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from smc.h:67,
+                 from smc.c:64:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from uart.c:2:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from uart.c:2:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from uart.c:2:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from uart.c:2:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from usleep.c:64:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from usleep.c:64:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from usleep.c:64:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from usleep.c:64:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from write.c:46:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from write.c:46:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from write.c:46:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from write.c:46:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xil_cache.c:75:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xil_cache.c:75:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xil_cache.c:75:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xil_cache.c:75:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from boot.S:66:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from boot.S:66:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from boot.S:66:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from boot.S:66:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+Compiling FreeRTOS
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from croutine.c:54:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from croutine.c:54:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from croutine.c:54:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from croutine.c:54:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from heap_3.c:73:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from heap_3.c:73:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from heap_3.c:73:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from heap_3.c:73:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from inbyte.c:1:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from inbyte.c:1:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from inbyte.c:1:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from inbyte.c:1:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from list.c:56:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from list.c:56:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from list.c:56:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from list.c:56:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from outbyte.c:1:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from outbyte.c:1:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from outbyte.c:1:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from outbyte.c:1:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from port.c:63:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from port.c:63:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from port.c:63:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from port.c:63:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from portISR.c:63:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from portISR.c:63:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from portISR.c:63:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from portISR.c:63:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from queue.c:62:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from queue.c:62:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from queue.c:62:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from queue.c:62:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from tasks.c:64:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from tasks.c:64:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from tasks.c:64:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from tasks.c:64:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from timers.c:59:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from timers.c:59:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from FreeRTOSConfig.h:19:0,
+                 from FreeRTOS.h:67,
+                 from timers.c:59:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from FreeRTOSConfig.h:19,
+                 from FreeRTOS.h:67,
+                 from timers.c:59:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+arm-xilinx-eabi-ar: creating ../../../lib/libfreertos.a
+Compiling devcfg
+In file included from xdevcfg_g.c:15:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xdevcfg_g.c:15:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xdevcfg_g.c:15:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xdevcfg_g.c:15:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xdevcfg_sinit.c:62:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xdevcfg_sinit.c:62:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xdevcfg_sinit.c:62:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xdevcfg_sinit.c:62:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Compiling dmaps
+In file included from xdmaps.h:95:0,
+                 from xdmaps.c:85:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xdmaps.h:95,
+                 from xdmaps.c:85:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xdmaps.h:95:0,
+                 from xdmaps.c:85:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xdmaps.h:95,
+                 from xdmaps.c:85:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xdmaps_g.c:15:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xdmaps_g.c:15:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xdmaps_g.c:15:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xdmaps_g.c:15:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xdmaps.h:95:0,
+                 from xdmaps_selftest.c:61:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xdmaps.h:95,
+                 from xdmaps_selftest.c:61:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xdmaps.h:95:0,
+                 from xdmaps_selftest.c:61:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xdmaps.h:95,
+                 from xdmaps_selftest.c:61:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xdmaps_sinit.c:62:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xdmaps_sinit.c:62:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xdmaps_sinit.c:62:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xdmaps_sinit.c:62:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Compiling gpiops
+In file included from xgpiops_g.c:15:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xgpiops_g.c:15:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xgpiops_g.c:15:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xgpiops_g.c:15:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xgpiops_sinit.c:64:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xgpiops_sinit.c:64:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xgpiops_sinit.c:64:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xgpiops_sinit.c:64:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Compiling qspips
+In file included from xqspips_hw.h:83:0,
+                 from xqspips.h:289,
+                 from xqspips.c:112:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xqspips_hw.h:83,
+                 from xqspips.h:289,
+                 from xqspips.c:112:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xqspips_hw.h:83:0,
+                 from xqspips.h:289,
+                 from xqspips.c:112:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xqspips_hw.h:83,
+                 from xqspips.h:289,
+                 from xqspips.c:112:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xqspips_g.c:15:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xqspips_g.c:15:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xqspips_g.c:15:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xqspips_g.c:15:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xqspips_hw.h:83:0,
+                 from xqspips_hw.c:61:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xqspips_hw.h:83,
+                 from xqspips_hw.c:61:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xqspips_hw.h:83:0,
+                 from xqspips_hw.c:61:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xqspips_hw.h:83,
+                 from xqspips_hw.c:61:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xqspips_hw.h:83:0,
+                 from xqspips.h:289,
+                 from xqspips_options.c:74:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xqspips_hw.h:83,
+                 from xqspips.h:289,
+                 from xqspips_options.c:74:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xqspips_hw.h:83:0,
+                 from xqspips.h:289,
+                 from xqspips_options.c:74:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xqspips_hw.h:83,
+                 from xqspips.h:289,
+                 from xqspips_options.c:74:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xqspips_hw.h:83:0,
+                 from xqspips.h:289,
+                 from xqspips_selftest.c:63:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xqspips_hw.h:83,
+                 from xqspips.h:289,
+                 from xqspips_selftest.c:63:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xqspips_hw.h:83:0,
+                 from xqspips.h:289,
+                 from xqspips_selftest.c:63:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xqspips_hw.h:83,
+                 from xqspips.h:289,
+                 from xqspips_selftest.c:63:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xqspips_hw.h:83:0,
+                 from xqspips.h:289,
+                 from xqspips_sinit.c:62:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xqspips_hw.h:83,
+                 from xqspips.h:289,
+                 from xqspips_sinit.c:62:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xqspips_hw.h:83:0,
+                 from xqspips.h:289,
+                 from xqspips_sinit.c:62:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xqspips_hw.h:83,
+                 from xqspips.h:289,
+                 from xqspips_sinit.c:62:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Compiling scugic
+In file included from xscugic.c:87:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscugic.c:87:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xscugic.c:87:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscugic.c:87:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xscugic_g.c:15:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscugic_g.c:15:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xscugic_g.c:15:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscugic_g.c:15:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xscugic_hw.c:79:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscugic_hw.c:79:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xscugic_hw.c:79:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscugic_hw.c:79:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xscugic_sinit.c:64:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscugic_sinit.c:64:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xscugic_sinit.c:64:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscugic_sinit.c:64:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Compiling scutimer
+In file included from xscutimer_g.c:15:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscutimer_g.c:15:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xscutimer_g.c:15:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscutimer_g.c:15:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xscutimer_sinit.c:62:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscutimer_sinit.c:62:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xscutimer_sinit.c:62:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscutimer_sinit.c:62:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Compiling scuwdt
+In file included from xscuwdt_g.c:15:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscuwdt_g.c:15:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xscuwdt_g.c:15:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscuwdt_g.c:15:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xscuwdt_sinit.c:62:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscuwdt_sinit.c:62:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xscuwdt_sinit.c:62:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xscuwdt_sinit.c:62:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Compiling spips
+In file included from xspips_g.c:15:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xspips_g.c:15:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xspips_g.c:15:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xspips_g.c:15:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xspips_sinit.c:63:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xspips_sinit.c:63:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xspips_sinit.c:63:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xspips_sinit.c:63:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Compiling ttcps
+In file included from xttcps_g.c:15:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xttcps_g.c:15:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xttcps_g.c:15:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xttcps_g.c:15:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xttcps_sinit.c:61:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xttcps_sinit.c:61:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xttcps_sinit.c:61:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xttcps_sinit.c:61:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Compiling uartps
+In file included from xuartps_g.c:15:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xuartps_g.c:15:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xuartps_g.c:15:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xuartps_g.c:15:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xuartps_sinit.c:62:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xuartps_sinit.c:62:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xuartps_sinit.c:62:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xuartps_sinit.c:62:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Compiling xadcps
+In file included from xadcps_g.c:15:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xadcps_g.c:15:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xadcps_g.c:15:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xadcps_g.c:15:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from xadcps_sinit.c:65:0:
+../../../include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xadcps_sinit.c:65:
+../../../include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from xadcps_sinit.c:65:0:
+../../../include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../../include/xparameters.h:15:0,
+                 from xadcps_sinit.c:65:
+../../../include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Compiling cpu_cortexa9
+Running execs_generate.
 Finished building libraries
 
-14:40:51 Build Finished (took 148ms)
+16:39:20 Build Finished (took 11s.794ms)
 
