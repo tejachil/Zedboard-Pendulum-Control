@@ -1569,3 +1569,53 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 15:47:00.736 INFO  - Processor reset is completed for ps7_cortexa9_0 
 15:47:11.033 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 15:47:12.773 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:59:06.920 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:59:10.177 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:03:21.838 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:03:52.365 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:03:58.999 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:03:59.100 INFO  - PS initialization will be done as it is not done before. 
+16:03:59.100 INFO  - Running PS initialization.... 
+16:03:59.302 INFO  - ps7_init is completed. 
+16:03:59.402 INFO  - PS Initialization is complete. 
+16:08:37.438 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: 
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+16:08:49.418 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:08:55.750 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:08:55.850 INFO  - PS initialization will be done as it is not done before. 
+16:08:55.850 INFO  - Running PS initialization.... 
+16:08:56.056 INFO  - ps7_init is completed. 
+16:08:56.156 INFO  - PS Initialization is complete. 
+16:10:54.078 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:10:56.190 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:11:41.760 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:11:45.314 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:14:56.063 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:15:03.785 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:15:03.885 INFO  - PS initialization will be done as it is not done before. 
+16:15:03.885 INFO  - Running PS initialization.... 
+16:15:04.093 INFO  - ps7_init is completed. 
+16:15:04.194 INFO  - PS Initialization is complete. 
+16:19:02.027 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:19:04.183 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:26:48.346 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:26:54.969 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:26:54.973 INFO  - PS initialization will be done as it is not done before. 
+16:26:54.973 INFO  - Running PS initialization.... 
+16:26:55.173 INFO  - ps7_init is completed. 
+16:26:55.274 INFO  - PS Initialization is complete. 
+16:27:09.981 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:27:12.102 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:28:02.043 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:28:06.496 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:28:06.596 INFO  - PS initialization will be done as it is not done before. 
+16:28:06.596 INFO  - Running PS initialization.... 
+16:28:06.796 INFO  - ps7_init is completed. 
+16:28:06.896 INFO  - PS Initialization is complete. 
+16:29:20.129 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:29:25.566 INFO  - Processor reset is completed for ps7_cortexa9_0 
