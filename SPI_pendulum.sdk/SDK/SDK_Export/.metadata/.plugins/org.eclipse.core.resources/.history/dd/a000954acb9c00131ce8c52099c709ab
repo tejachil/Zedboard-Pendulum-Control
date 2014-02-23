@@ -23,7 +23,7 @@ int encoderRead(target_t enc){
 	// read SPI, note this is a 32 bit mode and READ_CNTR need to be sent first
     // that is why it is shifted by 24 bits. Thus, the following two bytes will
     // contain the 2-bytes counter
-    int value =  readSPI(SPI_MODE_ENCODER_32, (READ_CNTR << 24), enc);
+    int value =  readSPI(SPI_MODE_ENCODER_32, (READ_CNTR << 24), ENC_SS);
     // get the 2-bytes counter
     value &= ~(0xFF0000FF);
     value = (value >> 8);

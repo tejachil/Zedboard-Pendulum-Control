@@ -910,3 +910,182 @@ make: Nothing to be done for `all'.
 15:01:46 **** Incremental Build of configuration Debug for project testing ****
 make all 
 make: Nothing to be done for `all'.
+15:45:07 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/encoder.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/encoder.d" -MT"src/encoder.d" -o "src/encoder.o" "../src/encoder.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/encoder.h:7,
+                 from ../src/encoder.c:1:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+Finished building: ../src/encoder.c
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+ 
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+Building file: ../src/main.c
+                 from ../src/SPI.h:11,
+                 from ../src/encoder.h:7,
+Invoking: ARM gcc compiler
+                 from ../src/encoder.c:1:
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/encoder.h:7,
+                 from ../src/encoder.c:1:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/encoder.h:7,
+                 from ../src/encoder.c:1:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/encoder.h:7:0,
+                 from ../src/encoder.c:1:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:113:2: error: too few arguments to function 'encoderRead'
+In file included from ../src/main.c:15:0:
+../src/encoder.h:87:5: note: declared here
+make: *** [src/main.o] Error 1
+15:45:08 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:45:23 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+Finished building: ../src/main.c
+                 from ../src/SPI.h:11,
+ 
+                 from ../src/main.c:13:
+Building target: freertos_app_pendulum.elf
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Invoking: ARM gcc linker
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+Finished building target: freertos_app_pendulum.elf
+ 
+                 from ../src/SPI.h:11,
+Invoking: ARM Print Size
+                 from ../src/main.c:13:
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+   text	   data	    bss	    dec	    hex	filename
+In file included from ../src/main.c:13:0:
+  84312	   3096	  23180	 110588	  1affc	freertos_app_pendulum.elf
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+Finished building: freertos_app_pendulum.elf.size
+ 
+15:45:24 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:46:01 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+15:46:02 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:46:49 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+Finished building: ../src/main.c
+                 from ../src/SPI.h:11,
+ 
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Building target: freertos_app_pendulum.elf
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+Invoking: ARM gcc linker
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84312	   3096	  23180	 110588	  1affc	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+15:46:50 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:46:56 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+15:46:57 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:47:10 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+15:47:10 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.

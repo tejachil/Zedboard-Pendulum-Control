@@ -78,7 +78,7 @@ int main(void)
 	// Write 0 to the motors and initialize the encoder
 	writeDAC(0);
     theta_des=0.;
-    initEncoder(ENCODER_P);
+    initEncoder(ENCODER_S);
 
     // Start a timer with a period of 1ms
 	xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,update_value);
@@ -110,7 +110,7 @@ void update_value(xTimerHandle pxTimer)
 	//  code for simple inverted pendulum control -- follows Quanser, no Kalman Filter
 	//read positions and compute velocities by filtering
 	theta_R=readADC()*Kpot;
-	temp=encoderRead(ENCODER_P)%4096;  //force encoder reading to be between 0 and 4096(2pi)
+	temp=encoderRead(ENCODER_S)%4096;  //force encoder reading to be between 0 and 4096(2pi)
 	//xil_printf("\nEncoder Value = %d", temp);
 	if (temp<0) temp+=4096;
 	alpha_R=(temp)*Kenc-pi;  //convert to up => alpha=0

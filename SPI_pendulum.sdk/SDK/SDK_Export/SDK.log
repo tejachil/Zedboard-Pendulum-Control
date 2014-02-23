@@ -1559,3 +1559,13 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 15:01:49.157 INFO  - Processor reset is completed for ps7_cortexa9_0 
 15:13:34.577 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
 15:13:34.579 WARN  - Terminating existing sessions on processor ps7_cortexa9_0 
+15:45:49.792 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+15:46:03.375 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:46:03.475 INFO  - PS initialization will be done as it is not done before. 
+15:46:03.476 INFO  - Running PS initialization.... 
+15:46:03.677 INFO  - ps7_init is completed. 
+15:46:03.777 INFO  - PS Initialization is complete. 
+15:46:57.504 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:47:00.736 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:47:11.033 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:47:12.773 INFO  - Processor reset is completed for ps7_cortexa9_0 

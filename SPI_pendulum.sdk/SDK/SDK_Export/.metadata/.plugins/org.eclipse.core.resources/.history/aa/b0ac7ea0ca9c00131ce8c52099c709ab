@@ -79,12 +79,12 @@
 #define LOAD_OTR        0xE4
 
 // Initilize registers of encoder
-void initEncoder(target_t enc);
+void initEncoder();
 
 // Read a value from encoder
 // Return:
 //      the counter value, its maximum size is based on the configuration of initEncoder()
-int encoderRead(target_t enc);
+int encoderRead();
 
 
 #endif	/* ENCODER_H */
