@@ -202,7 +202,7 @@ static void printingTask( void *param ){
 		if(printed){
 			XGpioPs_WritePin(&mio_emio_pmod2, LD5, 0x01);
 			//xil_printf("\n%d: %d, %d", (int)xTaskGetTickCount(), temp, ((int)u)*1000); // print time: encoder value, control input
-			xil_printf("\n%d %d", (int)(1000*theta_R), enc2); // print time: encoder value, control input
+			xil_printf("\n%d %d", theta_R, enc2); // print time: encoder value, control input
 			printed = 0;
 		}
 		XGpioPs_WritePin(&mio_emio_pmod2, LD5, 0x00);

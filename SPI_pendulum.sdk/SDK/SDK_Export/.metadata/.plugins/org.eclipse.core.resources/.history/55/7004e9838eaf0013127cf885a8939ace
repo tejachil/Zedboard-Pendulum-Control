@@ -30,7 +30,7 @@ int writeDAC(float voltage){
     //-------------------------------------------------
 
     //xil_printf("\nDAC Value = %x", hex);
-    writeSPI(SPI_MODE_DAC_16, hex, DAC); // write to DAC and change DAC chip select
+    writeSPI(SPI_MODE_DAC_16, hex, DAC_SS); // write to DAC and change DAC chip select
     return (hex & (~0xF000));
 }
 
@@ -39,7 +39,7 @@ float readADC(){
     float voltage;
     unsigned int hex;
     // read the ADC
-    hex = readSPI(SPI_MODE_ADC_32, ADC_CONFIG_BITS, ADC); // read the ADC and change ADC chip select
+    hex = readSPI(SPI_MODE_ADC_32, ADC_CONFIG_BITS, ADC_SS); // read the ADC and change ADC chip select
     //-------------------------------------------------
     //xil_printf("\n\nADC Value = %x", hex);
     // convert hex to voltage

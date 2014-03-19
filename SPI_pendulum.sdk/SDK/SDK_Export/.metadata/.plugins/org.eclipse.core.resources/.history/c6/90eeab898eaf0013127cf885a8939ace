@@ -30,7 +30,7 @@ int writeDAC(float voltage){
     //-------------------------------------------------
 
     //xil_printf("\nDAC Value = %x", hex);
-    writeSPI(SPI_MODE_DAC_16, hex, DAC); // write to DAC and change DAC chip select
+    writeSPI(SPI_MODE_DAC_16, hex, DAC_SS); // write to DAC and change DAC chip select
     return (hex & (~0xF000));
 }
 

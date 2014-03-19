@@ -1,4 +1,4 @@
-16:39:09 **** Build of project freertos_zynq_bsp_0 ****
+13:46:18 **** Build of project freertos_zynq_bsp_0 ****
 make -k all 
 libgen -hw ../hw_platform_0/system.xml\
 	       -lp /home/xps/Documents/Zedboard-Pendulum-Control/repo\
@@ -636,5 +636,5 @@ Compiling cpu_cortexa9
 Running execs_generate.
 Finished building libraries
 
-16:39:20 Build Finished (took 11s.794ms)
+13:46:31 Build Finished (took 13s.248ms)
 
