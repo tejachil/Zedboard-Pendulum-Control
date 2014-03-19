@@ -3800,3 +3800,2186 @@ make: Nothing to be done for `all'.
 13:59:44 **** Incremental Build of configuration Debug for project testing ****
 make all 
 make: Nothing to be done for `all'.
+14:04:43 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Finished building: ../src/main.c
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:124:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+ 
+Building target: freertos_app_pendulum.elf
+../src/main.c:124:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84832	   3096	  23212	 111140	  1b224	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:04:43 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:05:03 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:05:04 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:05:39 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:05:40 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:07:27 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Finished building: ../src/main.c
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:124:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:124:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+ 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84856	   3096	  23212	 111164	  1b23c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:07:28 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:07:38 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:07:39 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:08:38 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:08:39 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:08:55 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:08:56 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:09:00 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+Finished building: ../src/main.c
+                 from ../src/main.c:13:
+ 
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84856	   3096	  23212	 111164	  1b23c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:124:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:124:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+14:09:00 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:10:48 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+Finished building: ../src/main.c
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:124:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:124:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+ 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84848	   3096	  23212	 111156	  1b234	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:10:48 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:12:53 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+ 
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84872	   3096	  23212	 111180	  1b24c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:12:54 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:12:57 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:12:58 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:13:44 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:13:45 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:14:01 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:14:02 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:14:40 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+ 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84792	   3096	  23212	 111100	  1b1fc	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:14:41 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:15:20 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+ 
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../src/SPI.h:11,
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+                 from ../src/main.c:13:
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84840	   3096	  23212	 111148	  1b22c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+14:15:20 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:15:23 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:15:24 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:16:47 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+Finished building: ../src/main.c
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+ 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84872	   3096	  23212	 111180	  1b24c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:16:47 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:16:51 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:16:51 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:17:37 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:17:38 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:21:18 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:209:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:209:4: warning: incompatible implicit declaration of built-in function 'sprintf' [enabled by default]
+../src/main.c:209:12: error: 'stringBuffer' undeclared (first use in this function)
+../src/main.c:209:12: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:204:14: warning: unused variable 'printBuffer' [-Wunused-variable]
+make: *** [src/main.o] Error 1
+14:21:19 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:21:32 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+ 
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Building target: freertos_app_pendulum.elf
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+Invoking: ARM gcc linker
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:209:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:209:4: warning: incompatible implicit declaration of built-in function 'sprintf' [enabled by default]
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84944	   3096	  23308	 111348	  1b2f4	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:21:32 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:21:40 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+Finished building: ../src/main.c
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+ 
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:209:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+Building target: freertos_app_pendulum.elf
+../src/main.c:209:4: warning: incompatible implicit declaration of built-in function 'sprintf' [enabled by default]
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84856	   3096	  23308	 111260	  1b29c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:21:41 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:21:43 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:21:44 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:22:06 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:22:07 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:22:18 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+Finished building: ../src/main.c
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+ 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../src/main.c:13:0:
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84904	   3096	  23308	 111308	  1b2cc	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:209:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:209:4: warning: incompatible implicit declaration of built-in function 'sprintf' [enabled by default]
+14:22:19 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:22:23 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:22:23 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:24:23 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+Finished building: ../src/main.c
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+ 
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:205:14: warning: variable 'encodedVals' set but not used [-Wunused-but-set-variable]
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84840	   3096	  23212	 111148	  1b22c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:24:23 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:24:26 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:24:26 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:26:28 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+Finished building: ../src/main.c
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+ 
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84904	   3096	  23212	 111212	  1b26c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:211:4: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+../src/main.c:211:4: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+14:26:28 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:26:32 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:26:32 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:28:01 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+ 
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+  84888	   3096	  23212	 111196	  1b25c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:211:4: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+../src/main.c:211:4: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+../src/main.c:205:14: warning: variable 'encodedVals' set but not used [-Wunused-but-set-variable]
+14:28:01 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:28:07 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:28:08 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:28:47 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+Finished building: ../src/main.c
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+ 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../src/main.c:13:0:
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84888	   3096	  23212	 111196	  1b25c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:211:4: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+../src/main.c:211:4: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+../src/main.c:205:14: warning: variable 'encodedVals' set but not used [-Wunused-but-set-variable]
+14:28:48 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:29:11 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+ 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:211:4: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+../src/main.c:211:4: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+../src/main.c:205:14: warning: variable 'encodedVals' set but not used [-Wunused-but-set-variable]
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84888	   3096	  23212	 111196	  1b25c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:29:12 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:30:08 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+ 
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Finished building target: freertos_app_pendulum.elf
+In file included from ../src/main.c:13:0:
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84864	   3096	  23212	 111172	  1b244	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:211:4: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+../src/main.c:205:14: warning: variable 'encodedVals' set but not used [-Wunused-but-set-variable]
+14:30:09 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:30:20 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+Finished building: ../src/main.c
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+ 
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+Finished building target: freertos_app_pendulum.elf
+ 
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84872	   3096	  23212	 111180	  1b24c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:211:4: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+14:30:20 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:30:23 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:30:23 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:31:08 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:211:4: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+Finished building: ../src/main.c
+ 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84856	   3096	  23212	 111164	  1b23c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:31:08 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:31:12 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:31:12 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:34:49 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+ 
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../src/main.c:13:0:
+Finished building target: freertos_app_pendulum.elf
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84848	   3096	  23212	 111156	  1b234	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:211:4: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+../src/main.c:205:14: warning: variable 'encodedVals' set but not used [-Wunused-but-set-variable]
+14:34:50 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:36:29 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+Finished building: ../src/main.c
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+ 
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84904	   3096	  23212	 111212	  1b26c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:36:29 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:36:33 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:36:33 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:36:52 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:36:52 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:37:10 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+Finished building: ../src/main.c
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+ 
+                 from ../src/main.c:13:
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84864	   3096	  23212	 111172	  1b244	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:37:11 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:43:16 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+Finished building: ../src/main.c
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+ 
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85104	   3096	  23228	 111428	  1b344	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+14:43:17 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:43:20 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:43:20 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:45:13 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+ 
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85112	   3096	  23228	 111436	  1b34c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+../src/main.c: In function 'printingTask':
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+14:45:13 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:45:16 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:45:16 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:47:01 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+ 
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Finished building target: freertos_app_pendulum.elf
+In file included from ../src/main.c:13:0:
+ 
+Invoking: ARM Print Size
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85120	   3096	  23228	 111444	  1b354	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+14:47:01 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:47:04 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:47:05 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:47:31 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+Finished building: ../src/main.c
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+ 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85112	   3096	  23228	 111436	  1b34c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:206:15: warning: unused variable 'pointBuff' [-Wunused-variable]
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+14:47:31 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:47:38 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Finished building: ../src/main.c
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+ 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85112	   3096	  23228	 111436	  1b34c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:47:39 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:47:41 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:47:42 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:48:00 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+Finished building: ../src/main.c
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+ 
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85112	   3096	  23228	 111436	  1b34c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:48:00 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:48:03 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:48:03 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:50:10 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+ 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+Finished building target: freertos_app_pendulum.elf
+../src/main.c: In function 'update_value':
+ 
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85144	   3096	  23228	 111468	  1b36c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+../src/main.c:204:14: warning: variable 'printBuffer' set but not used [-Wunused-but-set-variable]
+14:50:11 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:50:16 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:50:16 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:50:48 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+ 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../src/main.c:13:0:
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85144	   3096	  23228	 111468	  1b36c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+14:50:48 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:50:51 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:50:52 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:54:09 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+Finished building: ../src/main.c
+                 from ../src/main.c:13:
+ 
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:219:4: warning: statement with no effect [-Wunused-value]
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85232	   3096	  23228	 111556	  1b3c4	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+14:54:10 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+14:54:14 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+14:54:14 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:03:09 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+ 
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:183:7: warning: implicit declaration of function 'sin' [-Wimplicit-function-declaration]
+../src/main.c:183:28: warning: incompatible implicit declaration of built-in function 'sin' [enabled by default]
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:218:4: warning: statement with no effect [-Wunused-value]
+../src/main.c:204:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+./src/main.o: In function `update_value':
+/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_app_pendulum/Debug/../src/main.c:183: undefined reference to `sin'
+collect2: error: ld returned 1 exit status
+make: *** [freertos_app_pendulum.elf] Error 1
+15:03:10 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:03:26 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+./src/main.o: In function `update_value':
+/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_app_pendulum/Debug/../src/main.c:183: undefined reference to `sin'
+collect2: error: ld returned 1 exit status
+make: *** [freertos_app_pendulum.elf] Error 1
+15:03:27 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:04:27 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+Finished building: ../src/main.c
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+ 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+../src/main.c: In function 'update_value':
+../src/main.c:126:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../src/main.c:126:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:219:4: warning: statement with no effect [-Wunused-value]
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+./src/main.o: In function `update_value':
+/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_app_pendulum/Debug/../src/main.c:184: undefined reference to `sin'
+collect2: error: ld returned 1 exit status
+make: *** [freertos_app_pendulum.elf] Error 1
+15:04:27 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:04:32 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c:18:19: fatal error: cmath.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+15:04:32 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:04:42 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+ 
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+Building target: freertos_app_pendulum.elf
+../src/main.c:126:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:126:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+Invoking: ARM gcc linker
+../src/main.c:219:4: warning: statement with no effect [-Wunused-value]
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+./src/main.o: In function `update_value':
+/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_app_pendulum/Debug/../src/main.c:184: undefined reference to `sin'
+collect2: error: ld returned 1 exit status
+make: *** [freertos_app_pendulum.elf] Error 1
+15:04:42 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:05:34 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Finished building: ../src/main.c
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:126:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:126:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:219:4: warning: statement with no effect [-Wunused-value]
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+ 
+./src/main.o: In function `update_value':
+/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_app_pendulum/Debug/../src/main.c:184: undefined reference to `sin'
+collect2: error: ld returned 1 exit status
+make: *** [freertos_app_pendulum.elf] Error 1
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+15:05:35 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:05:56 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Finished building: ../src/main.c
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+ 
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../src/main.c: In function 'printingTask':
+../src/main.c:218:4: warning: statement with no effect [-Wunused-value]
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85160	   3096	  23228	 111484	  1b37c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+../src/main.c:204:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+15:05:57 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:06:12 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+ 
+In file included from ../src/main.c:13:0:
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../src/main.c: In function 'update_value':
+../src/main.c:183:7: warning: implicit declaration of function 'sin' [-Wimplicit-function-declaration]
+../src/main.c:183:29: warning: incompatible implicit declaration of built-in function 'sin' [enabled by default]
+../src/main.c:125:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:125:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:218:4: warning: statement with no effect [-Wunused-value]
+../src/main.c:204:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+./src/main.o: In function `update_value':
+/home/xps/Documents/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_app_pendulum/Debug/../src/main.c:183: undefined reference to `sin'
+collect2: error: ld returned 1 exit status
+make: *** [freertos_app_pendulum.elf] Error 1
+15:06:12 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:06:28 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_zynq_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:357:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:358:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters.h:15:0,
+ 
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/main.c:13:
+../../freertos_zynq_bsp_0/ps7_cortexa9_0/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Building target: freertos_app_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_zynq_bsp_0/ps7_cortexa9_0/lib -o "freertos_app_pendulum.elf"  ./src/SPI.o ./src/adc_dac.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../src/main.c:13:0:
+Finished building target: freertos_app_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_app_pendulum.elf  |tee "freertos_app_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85160	   3096	  23228	 111484	  1b37c	freertos_app_pendulum.elf
+Finished building: freertos_app_pendulum.elf.size
+ 
+../src/SPI.h:17:21: warning: extra tokens at end of #include directive [enabled by default]
+../src/main.c: In function 'update_value':
+../src/main.c:126:29: warning: unused variable 'alphaOld' [-Wunused-variable]
+../src/main.c:126:17: warning: unused variable 'thetaOld' [-Wunused-variable]
+../src/main.c: In function 'printingTask':
+../src/main.c:219:4: warning: statement with no effect [-Wunused-value]
+../src/main.c:205:14: warning: unused variable 'encodedVals' [-Wunused-variable]
+15:06:28 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:06:32 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+15:06:32 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:06:56 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+15:06:57 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:07:02 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+15:07:03 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:07:35 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+15:07:35 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.
+15:09:32 **** Incremental Build of configuration Debug for project freertos_app_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+15:09:33 **** Incremental Build of configuration Debug for project testing ****
+make all 
+make: Nothing to be done for `all'.

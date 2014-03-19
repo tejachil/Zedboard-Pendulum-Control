@@ -17,6 +17,7 @@
 #include "xil_printf.h"
 
 
+
 #define mainLED_TASK_PRIORITY		( tskIDLE_PRIORITY + 1 )
 
 // Used to toggle the LEDs on ZedBoard to measure timer period and SPI send latency
@@ -36,6 +37,7 @@
 
 static int printed; // variable to keep track of printing
 static int enc1, enc2;
+static float pot1;
 
 
 /********************** Global variables for controller **********************/
@@ -129,14 +131,16 @@ void update_value(xTimerHandle pxTimer)
 
 	//  code for Kalman Filter based controller
 	//read inputs and convert to radians
-	theta_R=readADC()*Kpot;
+	pot1 = readADC();
+	theta_R=pot1*Kpot;
+	//theta_R=readADC()*Kpot;
 	enc1 = encoderRead(ENCODER_S);
 	//temp=-encoderRead(ENCODER_S) % 4096; //get servo reading. - for CCW +ve convention
 	temp = -enc1 % 4096;
 	//theta_R=temp*Kenc;
 	temp=encoderRead(ENCODER_P)%4096;  //force encoder reading to be between 0 and 4096(2pi)
 	enc2 = temp;
-	printed = 1;
+
 	if (temp<0) temp+=4096;
 	alpha_R=(temp)*Kenc-pi;  //convert to up => alpha=0
 
@@ -175,13 +179,12 @@ void update_value(xTimerHandle pxTimer)
 		  }
 		  xpre[ind]+=Bup[ind]*u;
 	  }
-
-      if((sec1000%20000)<10000) theta_des=20*pi/180;
-      else theta_des=-20*pi/180;
-      //theta_des=20*pi/180.*sin(2*pi*.0001*sec1000);
+	  //if((sec1000%20000)<10000) theta_des=20*pi/180;
+      //else theta_des=-20*pi/180;
+      theta_des=20*pi/180;//.*sin(2*pi*.0001*sec1000);
 	}
 
-
+	printed = 1;
 
 /*	#if LED_DEBUG == 1
 	XGpioPs_WritePin(&mio_emio_pmod2, LD6, 0x01);
@@ -198,11 +201,29 @@ void update_value(xTimerHandle pxTimer)
 #if LED_DEBUG == 1
 
 static void printingTask( void *param ){
+	static char printBuffer[7];
+	static long encodedVals;
 	for(;;){
 		if(printed){
 			XGpioPs_WritePin(&mio_emio_pmod2, LD5, 0x01);
 			//xil_printf("\n%d: %d, %d", (int)xTaskGetTickCount(), temp, ((int)u)*1000); // print time: encoder value, control input
-			xil_printf("\n%d", (int)(theta_R*1000)); // print time: encoder value, control input
+			//sprintf(printBuffer, "%d %d %d", (int)(output_V*1000), (int)(pot1*1000), enc2);
+			//encodedVals = ((short)(enc2))<<8 + ((short)(pot1*1000));
+			printBuffer[0] = (char)(((short)(pot1*1000))&0x0F);
+			printBuffer[1] = (char)(((short)(pot1*1000))>>8);
+			printBuffer[2] = (char)(((short)(enc2))&0x0F);
+			printBuffer[3] = (char)(((short)(enc2))>>8);
+			printBuffer[4] = (char)(((short)(output_V*1000))&0x0F);
+			printBuffer[5] = (char)(((short)(output_V*1000))>>8);
+			int i = 0;
+			for(i; i < 6; ++i)
+				if(printBuffer[i] == 0)	printBuffer[i] = 1;
+			printBuffer[6] = 0;
+			print(printBuffer);//, printBuffer);
+			print("\n");
+			//xil_printf("\n%d", 	(short)(output_V*1000)); // print time: encoder value, control input
+			//xil_printf(" %d",	(short)(pot1*1000));
+			//xil_printf(" %d",	(short)(enc2));
 			//  (int)(alpha_R), (int)(u*1000), (int)(xhat[0]*1000), (int)(xhat[1]*1000), (int)(xhat[2]*1000), (int)(xhat[3]*1000)
 			printed = 0;
 		}

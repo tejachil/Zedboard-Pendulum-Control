@@ -3,18 +3,19 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="312" key="DIALOG_WIDTH"/>
 		<item value="140" key="DIALOG_Y_ORIGIN"/>
-		<item value="437" key="DIALOG_HEIGHT"/>
 		<item value="492" key="DIALOG_X_ORIGIN"/>
+		<item value="437" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="xil_printf" key="selection"/>
+		<item value="alpha_R" key="selection"/>
 		<list key="findhistory">
+			<item value="alpha_R"/>
 			<item value="xil_printf"/>
 			<item value="setupDebugLatancyLED"/>
 			<item value="yield"/>
@@ -22,7 +23,6 @@
 			<item value="vApplicationSet"/>
 			<item value="vApplication"/>
 			<item value="axi_pmod1"/>
-			<item value="BANK2"/>
 		</list>
 		<list key="replacehistory">
 		</list>
