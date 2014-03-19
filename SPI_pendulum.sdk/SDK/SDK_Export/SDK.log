@@ -1664,3 +1664,9 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 13:45:08.928 INFO  - Processor reset is completed for ps7_cortexa9_0 
 13:47:49.608 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 13:47:51.956 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:53:40.060 INFO  - FPGA configured successfully with bitstream "/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+13:53:47.401 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:55:32.184 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:55:38.096 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:59:45.249 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:59:47.602 INFO  - Processor reset is completed for ps7_cortexa9_0 

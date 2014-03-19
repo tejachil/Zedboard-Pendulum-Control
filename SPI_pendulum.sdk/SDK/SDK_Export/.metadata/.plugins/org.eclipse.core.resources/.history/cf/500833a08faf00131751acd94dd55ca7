@@ -106,17 +106,17 @@ void update_value(xTimerHandle pxTimer)
 
 
     static const float Kf[4][2]={
-    {0.5475,0},
+    {0.9775,0},
     {0,0.9775},
-    {0.0059,-0.0256},
-    {-0.0158,0.9422}
+    {0.0109,-0.0256},
+    {-.0279,0.9422}
     };
     static const float Kc[4]={-5.1871,27.8442,-2.7295,3.1867};
     static const float Aup[4][4]={
-        {0.4525,0.0000,0.0004,0},
-        {0,0.0225,0,0.000},
-        {-0.0059,0.1051, 0.9552, -0.0008},
-        {0.0158, -0.8221, -0.0431, 0.9977}
+        {0.0225,0.0000,0.0000,0.0000},
+        {0.0000,0.0225,0.0000,0.0000},
+        {-0.0109,0.1051,0.9552,-0.0008},
+        {0.0279,-0.8221,-0.0431,0.9977}
     };
     static const float Bup[4]={0,0,0.0815,0.0784};
    int temp,ind,col;
@@ -141,7 +141,7 @@ void update_value(xTimerHandle pxTimer)
 	alpha_R=(temp)*Kenc-pi;  //convert to up => alpha=0
 
 	//check to see if we should be controlling.  If not, output 0
-	if ((alpha_R>=0?alpha_R:-alpha_R)>(30.*pi/180)) {
+	if ((alpha_R>=0?alpha_R:-alpha_R)>(20.*pi/180)) {
 		u=0.;  //if we are not in range do nothing
 		writeDAC(u);
 		output_V=u;
@@ -155,14 +155,14 @@ void update_value(xTimerHandle pxTimer)
 	  //compute control
 	  u=0.;
 	  for(ind=0;ind<4;ind++) {
-		  u+= -Kc[ind]*xhat[ind];
+		  u += -Kc[ind]*xhat[ind];
 	  }
 	  u+= Kc[0]*theta_des;
 	  output_V=u;
 
 	  //saturate
-	  if (u>5) u=5;
-	  else if (u<-5) u=-5;
+	  if (u>5.) u=5.;
+	  else if (u<-5.) u=-5.;
 
 
 	  writeDAC(-u);  //invert due to sign conventions
@@ -202,8 +202,7 @@ static void printingTask( void *param ){
 		if(printed){
 			XGpioPs_WritePin(&mio_emio_pmod2, LD5, 0x01);
 			//xil_printf("\n%d: %d, %d", (int)xTaskGetTickCount(), temp, ((int)u)*1000); // print time: encoder value, control input
-			xil_printf("\n%d", (int)(theta_R*1000)); // print time: encoder value, control input
-			//  (int)(alpha_R), (int)(u*1000), (int)(xhat[0]*1000), (int)(xhat[1]*1000), (int)(xhat[2]*1000), (int)(xhat[3]*1000)
+			xil_printf("\n%d %d", (int)(1000*theta_R), enc2); // print time: encoder value, control input
 			printed = 0;
 		}
 		XGpioPs_WritePin(&mio_emio_pmod2, LD5, 0x00);

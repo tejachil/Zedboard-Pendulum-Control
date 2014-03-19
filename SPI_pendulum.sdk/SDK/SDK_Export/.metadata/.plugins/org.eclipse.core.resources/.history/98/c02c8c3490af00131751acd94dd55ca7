@@ -106,10 +106,10 @@ void update_value(xTimerHandle pxTimer)
 
 
     static const float Kf[4][2]={
-    {0.5475,0},
-    {0,0.9775},
-    {0.0059,-0.0256},
-    {-0.0158,0.9422}
+    {0.0629,0},
+    {0,1},
+    {2.0392,0.0002},
+    {2.2630l,-0.0229}
     };
     static const float Kc[4]={-5.1871,27.8442,-2.7295,3.1867};
     static const float Aup[4][4]={

@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
-  84792	   3096	  23212	 111100	  1b1fc	freertos_app_pendulum.elf
+  84768	   3096	  23212	 111076	  1b1e4	freertos_app_pendulum.elf
