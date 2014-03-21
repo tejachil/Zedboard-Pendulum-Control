@@ -120,7 +120,7 @@ void update_value(xTimerHandle pxTimer)
         {-2.1157,0.0793, 0.9531, 0.0009},
         {-4.2222, -0.1268, -0.0390, 0.9986}
     };
-    static const float Bup[4]={0,0,0.0815,0.0784};
+    static const float Bup[4]={0,0,0.0815,-0.0784};
    int temp,ind,col;
    float u;
    static float thetaOld=0.,alphaOld=0.;

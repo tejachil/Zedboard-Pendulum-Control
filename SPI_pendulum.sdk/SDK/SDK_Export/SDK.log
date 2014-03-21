@@ -1760,3 +1760,119 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 15:07:36.728 INFO  - Running PS initialization.... 
 15:07:36.936 INFO  - ps7_init is completed. 
 15:07:37.036 INFO  - PS Initialization is complete. 
+15:13:54.891 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+15:14:11.888 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+15:14:11.988 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:15:25.776 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+15:15:25.779 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:20:37.880 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+15:20:44.079 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+15:20:44.179 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:01:38.393 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:01:42.270 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+16:01:42.370 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:03:54.472 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:03:56.363 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+16:03:56.463 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:04:34.212 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:04:43.005 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+16:04:43.105 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:05:09.235 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:07:21.541 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: 
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+16:07:35.660 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+16:07:35.760 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:07:35.860 INFO  - PS initialization will be done as it is not done before. 
+16:07:35.860 INFO  - Running PS initialization.... 
+16:07:35.960 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+invalid command name "ps7_init"
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
+
+16:07:48.467 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:07:58.467 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:08:04.006 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:09:21.522 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:09:30.076 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+16:09:30.098 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:09:30.198 INFO  - PS initialization will be done as it is not done before. 
+16:09:30.199 INFO  - Running PS initialization.... 
+16:09:30.301 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+invalid command name "ps7_init"
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
+
+16:10:16.231 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:10:56.260 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+16:11:08.130 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+16:11:08.231 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:11:08.331 INFO  - PS initialization will be done as it is not done before. 
+16:11:08.331 INFO  - Running PS initialization.... 
+16:11:08.431 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+invalid command name "ps7_init"
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
+
+16:11:29.984 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:34:32.200 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+17:35:03.677 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+17:35:03.777 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:35:03.877 INFO  - PS initialization will be done as it is not done before. 
+17:35:03.877 INFO  - Running PS initialization.... 
+17:35:03.979 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+invalid command name "ps7_init"
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
+
+17:36:21.486 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+17:36:28.763 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+17:36:28.863 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:36:28.963 INFO  - PS initialization will be done as it is not done before. 
+17:36:28.963 INFO  - Running PS initialization.... 
+17:36:29.063 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+invalid command name "ps7_init"
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
+
+17:40:52.025 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+17:40:57.058 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:41:23.914 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+17:41:24.014 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:41:24.114 INFO  - PS initialization will be done as it is not done before. 
+17:41:24.115 INFO  - Running PS initialization.... 
+17:41:24.217 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+invalid command name "ps7_init"
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
+
+17:41:58.070 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:42:23.676 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+17:42:32.615 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+17:42:32.715 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:42:32.815 INFO  - PS initialization will be done as it is not done before. 
+17:42:32.815 INFO  - Running PS initialization.... 
+17:42:32.917 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+invalid command name "ps7_init"
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
+
+18:01:31.589 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+18:05:48.869 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+18:06:17.730 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+18:06:17.830 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:06:17.930 INFO  - PS initialization will be done as it is not done before. 
+18:06:17.930 INFO  - Running PS initialization.... 
+18:06:18.032 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+invalid command name "ps7_init"
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
+
+18:07:36.431 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
