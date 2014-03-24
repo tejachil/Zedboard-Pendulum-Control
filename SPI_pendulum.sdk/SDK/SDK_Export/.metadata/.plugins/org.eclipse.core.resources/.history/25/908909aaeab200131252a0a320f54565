@@ -1,4 +1,4 @@
-// SWING UP
+
 
 /*
  * File:   		main.c
@@ -15,9 +15,7 @@
 #include "encoder.h"
 #include "sleep.h"
 #include "xil_printf.h"
-#include <stdio.h>
-#include <math.h>
-#include <stdlib.h>
+
 
 #define mainLED_TASK_PRIORITY		( tskIDLE_PRIORITY + 1 )
 
@@ -38,7 +36,7 @@
 
 // moved globally from update_value so I can print
 int temp;
-float u,u1,u2;
+float u;
 static int printed; // variable to keep track of printing
 
 
@@ -47,7 +45,7 @@ static int printed; // variable to keep track of printing
 volatile unsigned sec1000; // This is updated 1000 times per second by interrupt handler
 volatile float output_V,theta_R,alpha_R,theta_des;
 volatile float thetaDot=0.,alphaDot=0.;
-volatile float E; // Energy of the pendulum E = (1/2)Jp*alphadort^2 + (1-cos(alpha))*)1/2*mp*Lp*g)
+
 #define pi ((float)3.14125926535)
 const float Kr2d=180./pi;        //radians to degrees
 const float Kpot=-352.*pi/180/10;    //radians/V for pot
@@ -106,7 +104,6 @@ void update_value(xTimerHandle pxTimer)
 	XGpioPs_WritePin(&mio_emio_pmod2, LD7, 0x01);
 	#endif
 
-	static int k=1; // added for sign of alphadot*cos(alpha) for swing up control
 	static float thetaOld=0.,alphaOld=0.;
 	sec1000++;            // Update global variable
 
@@ -121,21 +118,14 @@ void update_value(xTimerHandle pxTimer)
 	thetaDot=0.9391*thetaDot+60.92*(theta_R-thetaOld);
 	alphaDot=0.9391*alphaDot+60.92*(alpha_R-alphaOld);
 	//need to negate u, so just use positive feedback, u=K*x
-	//u=-5.28*(theta_R-theta_des)+30.14*alpha_R-2.65*thetaDot+3.55*alphaDot;
+	u=-5.28*(theta_R-theta_des)+30.14*alpha_R-2.65*thetaDot+3.55*alphaDot;
 
-	// self erect control law
-	u1=-5.28*(theta_R-theta_des)+30.14*alpha_R-2.65*thetaDot+3.55*alphaDot;
-	E = ((1/2)*(.0012)*(alphaDot)*(alphaDot)) + (1/2)*(0.1270)*(0.3365)*(9.81)*(1-cos(alpha_R)); // calculation of enenrgy of pendulum
-	if((cos(alpha_R)*alphaDot)>=0) k = 1;
-	else k = -1;
-	u2= 10*(E- 0.42)*k;
 	printed = 1; // allow to print
 
-	if ((alpha_R>=0?alpha_R:-alpha_R)>(15.*pi/180)) u=u2;
-	else u = u1;
-/*	if (u>10.) u=10.;
-	else if (u<-10.) u=-10.;
-//*/
+	if ((alpha_R>=0?alpha_R:-alpha_R)>(10.*pi/180)) u=0;
+	if (u>5.) u=5.;
+	else if (u<-5.) u=-5.;
+
 	#if LED_DEBUG == 1
 	XGpioPs_WritePin(&mio_emio_pmod2, LD6, 0x01);
 	#endif
@@ -144,10 +134,9 @@ void update_value(xTimerHandle pxTimer)
 	output_V=u;
 	alphaOld=alpha_R;
 	thetaOld=theta_R;
-	theta_des=20*pi/180;
-	/*if((sec1000%10000)<5000) theta_des=20*pi/180;
+	if((sec1000%10000)<5000) theta_des=20*pi/180;
 	else theta_des=-20*pi/180;
-//*/
+
 	#if LED_DEBUG == 1
 	XGpioPs_WritePin(&mio_emio_pmod2, LD7, 0x00);
 	#endif
@@ -162,7 +151,8 @@ static void printingTask( void *param ){
 		if(printed){
 			XGpioPs_WritePin(&mio_emio_pmod2, LD5, 0x01);
 			//xil_printf("\n%d: %d, %d", (int)xTaskGetTickCount(), temp, ((int)u)*1000); // print time: encoder value, control input
-			//xil_printf("\n%d", temp); // print time: encoder value, control input
+			xil_printf("\n%d", temp); // print time: encoder value, control input
+			printed = 0;
 		}
 		XGpioPs_WritePin(&mio_emio_pmod2, LD5, 0x00);
 		taskYIELD();

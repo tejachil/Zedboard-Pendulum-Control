@@ -1559,3 +1559,71 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 15:01:49.157 INFO  - Processor reset is completed for ps7_cortexa9_0 
 15:13:34.577 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
 15:13:34.579 WARN  - Terminating existing sessions on processor ps7_cortexa9_0 
+20:16:26.618 INFO  - Restoring local repository preferences: 
+		 /home/xps/Documents/Zedboard-Pendulum-Control/repo 
+20:17:44.328 INFO  - Saving repository preferences. 
+20:17:44.329 INFO  - Reading in cores from local repositories: 
+		 /home/xps/Documents/State-Feedback-Branch/Swing-Up/Zedboard-Pendulum-Control/repo 
+20:17:44.330 INFO  - Updating libgen.options on all BSP projects. 
+20:17:44.764 INFO  - Cleaning BSP projects in the workspace. 
+20:17:48.379 INFO  - Saving repository preferences. 
+20:18:37.658 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/State-Feedback-Branch/Swing-Up/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+20:19:25.718 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+20:19:25.818 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:21:36.490 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+20:22:24.311 INFO  - Refreshed build settings on project freertos_app_pendulum 
+20:22:24.338 INFO  - Refreshed build settings on project testing 
+20:23:11.342 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+20:23:25.059 INFO  - Refreshed build settings on project freertos_app_pendulum 
+20:23:25.071 INFO  - Refreshed build settings on project testing 
+20:24:11.570 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:24:14.519 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+20:24:14.619 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:24:34.786 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:24:36.642 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+20:24:36.743 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:24:55.627 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+20:25:11.063 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+20:25:11.068 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:30:36.491 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+20:30:36.591 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:30:57.204 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:30:59.944 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+20:30:59.964 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:31:43.590 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/State-Feedback-Branch/Swing-Up/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+20:32:36.783 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:32:36.883 INFO  - PS initialization will be done as it is not done before. 
+20:32:36.884 INFO  - Running PS initialization.... 
+20:32:37.093 INFO  - ps7_init is completed. 
+20:32:37.193 INFO  - PS Initialization is complete. 
+20:32:53.582 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/State-Feedback-Branch/Swing-Up/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+20:33:06.070 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:33:07.222 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+20:33:15.362 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:33:33.168 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/State-Feedback-Branch/Swing-Up/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+20:33:39.908 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:33:40.008 INFO  - PS initialization will be done as it is not done before. 
+20:33:40.009 INFO  - Running PS initialization.... 
+20:33:40.210 INFO  - ps7_init is completed. 
+20:33:40.310 INFO  - PS Initialization is complete. 
+20:36:12.095 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/State-Feedback-Branch/Swing-Up/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+20:36:20.556 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:36:21.931 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+20:36:27.013 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:36:44.108 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/State-Feedback-Branch/Swing-Up/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+20:36:49.467 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:36:49.567 INFO  - PS initialization will be done as it is not done before. 
+20:36:49.567 INFO  - Running PS initialization.... 
+20:36:49.785 INFO  - ps7_init is completed. 
+20:36:49.885 INFO  - PS Initialization is complete. 

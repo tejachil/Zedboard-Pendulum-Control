@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="" key="hw_platform_0-bmmFile"/>
-	<item value="/home/controls/Documents/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" key="hw_platform_0-bitFile"/>
+	<item value="/home/xps/Documents/State-Feedback-Branch/Swing-Up/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" key="hw_platform_0-bitFile"/>
 </section>
