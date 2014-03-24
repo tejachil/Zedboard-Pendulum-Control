@@ -128,10 +128,10 @@ void update_value(xTimerHandle pxTimer)
 	E = (0.00059937)*(alphaDot)*(alphaDot) + (0.2096)*(1-cos(alpha_R)); // calculation of enenrgy of pendulum
 	if((cos(alpha_R)*alphaDot)>=0) k = 1;
 	else k = -1;
-	u2= 4*(E- 0.42)*k;
+	u2= 10*(E- 0.42)*k;
 	printed = 1; // allow to print
 
-	if ((alpha_R>=0?alpha_R:-alpha_R)>(20.*pi/180)) u=u2;
+	if ((alpha_R>=0?alpha_R:-alpha_R)>(15.*pi/180)) u=u2;
 	else u = u1;
 /*	if (u>10.) u=10.;
 	else if (u<-10.) u=-10.;
@@ -144,7 +144,7 @@ void update_value(xTimerHandle pxTimer)
 	output_V=u;
 	alphaOld=alpha_R;
 	thetaOld=theta_R;
-	theta_des=-20*pi/180;
+	theta_des=20*pi/180;
 	/*if((sec1000%10000)<5000) theta_des=20*pi/180;
 	else theta_des=-20*pi/180;
 //*/
