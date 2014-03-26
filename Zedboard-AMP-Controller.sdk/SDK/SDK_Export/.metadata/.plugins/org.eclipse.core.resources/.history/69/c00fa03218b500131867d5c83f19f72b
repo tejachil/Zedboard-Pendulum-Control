@@ -19,11 +19,11 @@
 #include "xgpiops.h"
 
 // Chip Select Signals
-//#define ADC_SS      (0x01) 			// ADC chip select (RD1)		// previously 0x00
-//#define DAC_SS      (0x02) 			// DAC chip select (RD2)		// previously 0x01
-//#define ENC_SS      (0x04) 			// Encoder Chip select (RD9)	// previously 0x02
+#define ADC_SS      (0x01) 			// ADC chip select (RD1)		// previously 0x00
+#define DAC_SS      (0x02) 			// DAC chip select (RD2)		// previously 0x01
+#define ENC_SS      (0x04) 			// Encoder Chip select (RD9)	// previously 0x02
 
-typedef enum {ADC=0x01, DAC=0x02, ENCODER_P=0x04, ENCODER_S=0x08} target_t;
+typedef enum {ADC=0x01, DAC=0x02, ENCODER_P=0x04, ENCODER_S} target_t;
 
 // Different SPI Modes
 #define SPI_MODE_ENCODER_8   (0)

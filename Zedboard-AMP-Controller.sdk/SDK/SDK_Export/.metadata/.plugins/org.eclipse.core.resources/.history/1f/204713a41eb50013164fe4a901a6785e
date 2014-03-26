@@ -213,7 +213,7 @@ static void printingTask( void *param ){
 			#if LED_DEBUG == 1
 			setLEDs(&GPIOInstance_Ptr, LED_5, 1);
 			#endif
-			xil_printf("\n%d %d", enc1, enc2); // print time: encoder value, control input
+			xil_printf("\n%d", temp); // print time: encoder value, control input
 		}
 		#if LED_DEBUG == 1
 		setLEDs(&GPIOInstance_Ptr, LED_5, 0);

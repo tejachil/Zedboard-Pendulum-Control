@@ -1,16 +1,6 @@
-14:31:52 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+15:48:00 **** Incremental Build of configuration Debug for project freertos_amp_pendulum ****
 make all 
-Building target: freertos_amp_pendulum.elf
-Invoking: ARM gcc linker
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
-Finished building target: freertos_amp_pendulum.elf
- 
-Invoking: ARM Print Size
-arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  81920	   3120	  88812	 173852	  2a71c	freertos_amp_pendulum.elf
-Finished building: freertos_amp_pendulum.elf.size
- 
+make: Nothing to be done for `all'.
 
-14:31:52 Build Finished (took 60ms)
+15:48:00 Build Finished (took 60ms)
 

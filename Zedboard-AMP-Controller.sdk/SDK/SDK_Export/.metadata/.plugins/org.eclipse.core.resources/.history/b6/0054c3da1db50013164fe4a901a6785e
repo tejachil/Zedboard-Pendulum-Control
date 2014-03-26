@@ -8,7 +8,7 @@ void initEncoder(target_t enc){
    // QUADRX4: X4 quadrature mode (four counts per quadrature cycle)
    // FREE_RUN: run the counter without any limits
    // DISABLE_INDX: index_disabled
-   // FILTER_2: filter clock frequency division factor 2
+   // FILTER_2: filter clock frequncy division factor 2
    writeSPI(SPI_MODE_ENCODER_16, (WRITE_MDR0 << 8) | QUADRX4|FREE_RUN|DISABLE_INDX|FILTER_2, enc);
    // write to MDR1 register the following:
    // NO_FLAGS: turn off flags

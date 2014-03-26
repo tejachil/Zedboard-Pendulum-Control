@@ -322,3 +322,6 @@
 14:28:35.169 INFO  - PS Initialization is complete. 
 14:30:44.580 INFO  - ps7_cortexa9_1 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 14:30:46.492 INFO  - Processor reset is completed for ps7_cortexa9_1 
+14:56:39.851 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:36:33.487 INFO  - Restoring local repository preferences: 
+		 /home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/sdk_repo 

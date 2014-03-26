@@ -35,12 +35,14 @@
 	static void printingTask(void *param);
 #endif
 
+// moved globally from update_value so I can print
+int temp;
+float u;
+static int printed; // variable to keep track of printing
 SpiStruct mySpi;
 
+
 /********************** Global variables for controller **********************/
-static int printed; // variable to keep track of printing
-static int enc1, enc2;
-static float pot1;
 
 volatile unsigned sec1000; // This is updated 1000 times per second by interrupt handler
 volatile float output_V,theta_R,alpha_R,theta_des;
@@ -51,11 +53,8 @@ const float Kr2d=180./pi;        //radians to degrees
 const float Kpot=-352.*pi/180/10;    //radians/V for pot
 const float Kenc=pi/(2.*1024.);     //radians/count for encoder
 
-float xhat[4];
 
 /*************************** Function Prototypes ***************************/
-
-
 
 void update_value(xTimerHandle pxTimer);
 
@@ -87,9 +86,7 @@ int main(void)
 	// Write 0 to the motors and initialize the encoder
 	writeDAC(0);
     theta_des=0.;
-    initEncoder(ENCODER_P);
-    initEncoder(ENCODER_S);
-
+    initEncoder();
 
     // Start a timer with a period of 1ms
 	xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,update_value);
@@ -115,88 +112,38 @@ void update_value(xTimerHandle pxTimer)
 	setLEDs(&GPIOInstance_Ptr, LED_7, 1);
 	#endif
 
+	static float thetaOld=0.,alphaOld=0.;
+	sec1000++;            // Update global variable
 
-	   static const float Kf[4][2]={
-	    {0.5475,0.0},
-	    {0.0,0.9204},
-	    {0.0059,-0.0194},
-	    {-0.0158,0.8941}
-	    };
-	    static const float Kc[4]={-5.1871,27.8442,-2.7295,3.1867};
-	    static const float Aup[4][4]={
-	        {0.4525,0.0,0.0004,0},
-	        {0.00,0.0796,-0.0,0.0001},
-	        {-0.0059,0.099,0.9552,-0.0009},
-	        {0.0158,-0.7740,-0.0431,0.9978}
-	    };
-	    static const float Bup[4]={0,0,0.0815,0.0784};
-	   int temp,ind,col;
-	   float u;
-	   // static float thetaOld=0., alphaOld=0.;
+	//  code for simple inverted pendulum control -- follows Quanser, no Kalman Filter
+	//read positions and compute velocities by filtering
+	theta_R=readADC()*Kpot;
+	temp=encoderRead()%4096;  //force encoder reading to be between 0 and 4096(2pi)
+	//xil_printf("\nEncoder Value = %d", temp);
+	if (temp<0) temp+=4096;
+	alpha_R=(temp)*Kenc-pi;  //convert to up => alpha=0
+	//alpha_R=encoderRead();
+	thetaDot=0.9391*thetaDot+60.92*(theta_R-thetaOld);
+	alphaDot=0.9391*alphaDot+60.92*(alpha_R-alphaOld);
+	//need to negate u, so just use positive feedback, u=K*x
+	u=-5.28*(theta_R-theta_des)+30.14*alpha_R-2.65*thetaDot+3.55*alphaDot;
 
-	   static float xpre[4]={0.,0.,0.,0.};
+	printed = 1; // allow to print
 
-		sec1000++;            // Update global variable
+	if ((alpha_R>=0?alpha_R:-alpha_R)>(10.*pi/180)) u=0;
+	if (u>5.) u=5.;
+	else if (u<-5.) u=-5.;
 
-		//  code for Kalman Filter based controller
-		//read inputs and convert to radians
-		pot1 = readADC();
-		theta_R=pot1*Kpot;
-		//theta_R=readADC()*Kpot;
-		enc1 = encoderRead(ENCODER_S);
-		//temp=-encoderRead(ENCODER_S) % 4096; //get servo reading. - for CCW +ve convention
-		temp = -enc1 % 4096;
-		//theta_R=temp*Kenc;
-		temp=encoderRead(ENCODER_P)%4096;  //force encoder reading to be between 0 and 4096(2pi)
-		enc2 = temp;
+	#if LED_DEBUG == 1
+	setLEDs(&GPIOInstance_Ptr, LED_6, 1);
+	#endif
 
-		if (temp<0) temp+=4096;
-		alpha_R=(temp)*Kenc-pi;  //convert to up => alpha=0
-
-		//check to see if we should be controlling.  If not, output 0
-		if ((alpha_R>=0?alpha_R:-alpha_R)>(30.*pi/180)) {
-			u=0.;  //if we are not in range do nothing
-			writeDAC(u);
-			output_V=u;
-			for(ind=0;ind<4;ind++) xpre[ind]=0.; //reset estimator
-		}
-		else {
-		  //update state estimate based on new input
-		  for(ind=0;ind<4;ind++) {
-			  xhat[ind]=xpre[ind]+Kf[ind][0]*theta_R+Kf[ind][1]*alpha_R;
-		  }
-		  //compute control
-		  u=0.;
-		  for(ind=0;ind<4;ind++) {
-			  u+= Kc[ind]*xhat[ind]; // changed the sign for kc to positive
-		  }
-		  u+= -Kc[0]*theta_des; // changed the sign of kc to negative
-		  output_V=u;
-
-		  //saturate
-		  if (u>5) u=5;
-		  else if (u<-5) u=-5;
-
-
-		#if LED_DEBUG == 1
-		setLEDs(&GPIOInstance_Ptr, LED_6, 1);
-		#endif
-		  writeDAC(-u);  //invert due to sign conventions
-
-		  //precompute the part of xhat we can
-		  for(ind=0;ind<4;ind++) {
-			  xpre[ind]=0.;
-			  for(col=0;col<4;col++) {
-				  xpre[ind]+=Aup[ind][col]*xhat[col];
-			  }
-			  xpre[ind]+=Bup[ind]*u;
-		  }
-		  if((sec1000%20000)<10000) theta_des=20*pi/180;
-	      else theta_des=-20*pi/180;
-	     // theta_des=20*pi/180;//.*sin(2*pi*.0001*sec1000);
-		}
-
-		printed = 1;
+	writeDAC(u);
+	output_V=u;
+	alphaOld=alpha_R;
+	thetaOld=theta_R;
+	if((sec1000%10000)<5000) theta_des=20*pi/180;
+	else theta_des=-20*pi/180;
 
 	#if LED_DEBUG == 1
 	setLEDs(&GPIOInstance_Ptr, LED_7, 0);
@@ -213,7 +160,7 @@ static void printingTask( void *param ){
 			#if LED_DEBUG == 1
 			setLEDs(&GPIOInstance_Ptr, LED_5, 1);
 			#endif
-			xil_printf("\n%d %d", enc1, enc2); // print time: encoder value, control input
+			xil_printf("\n%d", temp); // print time: encoder value, control input
 		}
 		#if LED_DEBUG == 1
 		setLEDs(&GPIOInstance_Ptr, LED_5, 0);
