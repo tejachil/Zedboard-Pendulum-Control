@@ -1,0 +1,222 @@
+/*
+ * File:   		main.c
+ * Author: 		Chris McCarty
+ * Description: Source code for a test platform involving FreeRTOS running on core 1 of an AMP system on the Zedboard.
+ * Date:		March 25, 2014
+*/
+
+
+/*--------------------------------------------------------------*/
+/*-------------------------- Includes --------------------------*/
+// Kernel includes
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+#include "timers.h"
+#include "xil_printf.h"
+
+// AMP includes
+#include "amp.h"
+#include "gpio.h"
+#include "AXI_SPI.h"
+
+
+/*-------------------------------------------------------------*/
+/*-------------------------- Defines --------------------------*/
+// FreeRTOS LED task information
+#define mainLED_TASK_PRIORITY		( tskIDLE_PRIORITY + 1 )
+
+// FreeRTOS timer information
+#define TIMER_PERIOD				100 	// No of ticks before timer expires
+#define TIMER_ID					123 	// Timer ID
+
+
+/*-------------------------------------------------------------*/
+/*---------------- Declarations and Prototypes ----------------*/
+// GPIO device (AXI GPIO)
+XGpio GPIOInstance_Ptr;
+
+// FreeRTOS handles
+xTimerHandle xTimer;
+xTaskHandle xTask;
+xSemaphoreHandle xSemaphore_led = NULL;
+
+// SPI device (AXI Quad SPI)
+SpiStruct SPIDevice;
+
+// Prototype LED task function
+static void prvLEDTask(void *param);
+
+// Prototype AXI GPIO init function
+void prvSetGpioHardware(void);
+
+// Prototype shutdown function
+void prvShutdown(void);
+
+// Prototype timer callback function
+void vTimerCallback(xTimerHandle pxTimer);
+
+
+
+
+/*--------------------------------------------------------------*/
+/*---------------------------- Main ----------------------------*/
+int main(void)
+{
+	prvInitializeExceptions();
+
+	// Disable L1 cache for OCM (BARE METAL)
+	MyXil_SetTlbAttributes(0xFFFF0000,0x04de2);           // S=b0 TEX=b100 AP=b11, Domain=b1111, C=b0, B=b0
+	xil_printf("Starting FreeRTOS on CPU1...\n");
+
+	// Create Binary Semaphore
+	xil_printf("     Creating Binary Semaphore...");
+	vSemaphoreCreateBinary(xSemaphore_led);
+	configASSERT(xSemaphore_led);
+	xil_printf("DONE\n");
+
+
+	// Setup the GPIO Hardware.
+	xil_printf("     Setting up the GPIO Hardware...");
+	prvSetGpioHardware();
+	xil_printf("DONE\n");
+
+
+	// Create the task
+	xil_printf("     Creating the LED Task...");
+	xTaskCreate(	prvLEDTask,
+	   				(signed char *)"LED_TASK",
+	   				configMINIMAL_STACK_SIZE,
+	   				NULL,
+	   				mainLED_TASK_PRIORITY,
+	   				&xTask
+	  		   );
+	xil_printf("DONE\n");
+
+
+	// Create the timer
+	xil_printf("     Creating the LED Timer...");
+	xTimer = xTimerCreate(	(const signed char *)"LedTimer",
+	   		 	 	 	  	TIMER_PERIOD,
+	   		 	 	 	  	pdTRUE, 			// auto-reload when expires
+	   		 	 	 	  	(void *)TIMER_ID, 	// unique id
+	   		 	 	 	  	vTimerCallback		// Callback
+	                     );
+	xil_printf("DONE\n");
+
+
+	if(xTimer == NULL){
+	 	// The timer was not created.
+	   	xil_printf("\nFailed to create timer\n");
+	   	prvShutdown();
+		return 0;
+	}else{
+		// Start the timer
+		xil_printf("     Starting the LED Timer...");
+		xTimerStart(xTimer, 0);
+		xil_printf("DONE\n");
+	}
+
+	// Start the scheduler
+	xil_printf("All Tasks Complete.\n     Starting the Scheduler\n");
+	vTaskStartScheduler();
+
+	// Should never reach here.
+	for(;;);
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------*/
+/*---------------------- Implementations ----------------------*/
+
+
+void vTimerCallback(xTimerHandle pxTimer){
+	if(xSemaphoreGive(xSemaphore_led) != pdTRUE){
+		xil_printf("xSemaphore_led give fail\n");
+		prvShutdown();
+	}
+}
+
+
+static void prvLEDTask(void *param){
+	xil_printf("     LED Task Started Successfully\n");
+	unsigned int uiLedFlag = 0;
+
+	for(;;){
+		if(xSemaphoreTake(xSemaphore_led,(portTickType)portMAX_DELAY) == pdTRUE){
+			uiLedFlag ^= 1;
+			if(uiLedFlag){
+				// Set the GPIO Output to High
+				setLEDs(&GPIOInstance_Ptr, LED_4 | LED_3, 1);
+				xil_printf("Set GPIO Output to High\n");
+			}else{
+				// Set the GPIO Output to Low
+				setLEDs(&GPIOInstance_Ptr, LED_4 | LED_3, 0);
+				xil_printf("Set GPIO Output to Low\n");
+			}
+		}else{
+			xil_printf("xSemaphore_led take fail\n");
+			// Call shutdown
+			prvShutdown();
+		}
+	}
+}
+
+
+void prvSetGpioHardware(void){
+	if(initLEDs(&GPIOInstance_Ptr) != XST_SUCCESS){
+		xil_printf("Failed to initialize AXI GPIO\n");
+	}
+}
+
+
+void prvShutdown(void){
+	 // Check if the timer is created
+	 if(xTimer){
+		 xTimerDelete(xTimer, 0);
+	 }
+	 vSemaphoreDelete(xSemaphore_led);
+	 vTaskDelete(xTask);
+}
+
+
+void vApplicationMallocFailedHook( void ){
+	/* vApplicationMallocFailedHook() will only be called if
+	configUSE_MALLOC_FAILED_HOOK is set to 1 in FreeRTOSConfig.h.  It is a hook
+	function that will get called if a call to pvPortMalloc() fails.
+	pvPortMalloc() is called internally by the kernel whenever a task, queue or
+	semaphore is created.  It is also called by various parts of the demo
+	application.  If heap_1.c or heap_2.c are used, then the size of the heap
+	available to pvPortMalloc() is defined by configTOTAL_HEAP_SIZE in
+	FreeRTOSConfig.h, and the xPortGetFreeHeapSize() API function can be used
+	to query the size of free heap space that remains (although it does not
+	provide information on how the remaining heap might be fragmented). */
+	taskDISABLE_INTERRUPTS();
+	for( ;; );
+}
+
+
+void vApplicationStackOverflowHook( xTaskHandle *pxTask, signed char *pcTaskName ){
+	( void ) pcTaskName;
+	( void ) pxTask;
+
+	/* vApplicationStackOverflowHook() will only be called if
+	configCHECK_FOR_STACK_OVERFLOW is set to either 1 or 2.  The handle and name
+	of the offending task will be passed into the hook function via its
+	parameters.  However, when a stack has overflowed, it is possible that the
+	parameters will have been corrupted, in which case the pxCurrentTCB variable
+	can be inspected directly. */
+	taskDISABLE_INTERRUPTS();
+	for( ;; );
+}
+
+
+void vApplicationSetupHardware( void ){
+	// Do nothing
+}
+

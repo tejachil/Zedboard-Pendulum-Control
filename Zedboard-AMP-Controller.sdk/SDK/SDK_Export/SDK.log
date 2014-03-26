@@ -1,0 +1,302 @@
+15:25:20.652 INFO  - Processing command line option -hwspec /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml. 
+15:26:59.701 INFO  - Saving repository preferences. 
+15:26:59.702 INFO  - Reading in cores from local repositories: 
+		 /home/chris/sdk_repo 
+15:26:59.704 INFO  - Updating libgen.options on all BSP projects. 
+15:26:59.705 INFO  - Cleaning BSP projects in the workspace. 
+15:27:00.840 INFO  - Saving repository preferences. 
+15:27:22.580 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+15:38:06.413 INFO  - Invoking Bootgen:  
+15:38:06.928 INFO  - Bootgen command execution is done. 
+15:49:27.427 INFO  - Invoking Bootgen:  
+15:49:27.936 INFO  - Bootgen command execution is done. 
+15:52:09.402 INFO  - Specified output file already exists 
+15:52:10.426 INFO  - Invoking Bootgen:  
+15:52:10.936 INFO  - Bootgen command execution is done. 
+15:54:10.747 INFO  - Invoking Bootgen:  
+15:54:11.255 INFO  - Bootgen command execution is done. 
+16:10:53.036 INFO  - Invoking Bootgen:  
+16:10:53.547 INFO  - Bootgen command execution is done. 
+16:17:28.159 INFO  - Specified output file already exists 
+16:17:30.516 INFO  - Invoking Bootgen:  
+16:17:31.029 INFO  - Bootgen command execution is done. 
+16:20:40.915 INFO  - Invoking Bootgen:  
+16:20:41.423 INFO  - Bootgen command execution is done. 
+16:25:29.931 INFO  - Specified output file already exists 
+16:25:31.421 INFO  - Invoking Bootgen:  
+16:25:31.931 INFO  - Bootgen command execution is done. 
+16:30:04.951 INFO  - Specified output file already exists 
+16:30:06.365 INFO  - Invoking Bootgen:  
+16:30:06.876 INFO  - Bootgen command execution is done. 
+16:31:16.683 INFO  - Specified output file already exists 
+16:31:17.797 INFO  - Invoking Bootgen:  
+16:31:18.311 INFO  - Bootgen command execution is done. 
+16:33:04.528 INFO  - Invoking Bootgen:  
+16:33:05.036 INFO  - Bootgen command execution is done. 
+16:35:03.739 INFO  - Settings changed on project freertos_bsp. Triggering a rebuild... 
+16:35:18.929 INFO  - Refreshed build settings on project freertos_app_pendulum 
+16:35:18.948 INFO  - Refreshed build settings on project freertos_cpu1 
+16:35:18.967 INFO  - Refreshed build settings on project freertos_led 
+16:35:18.985 INFO  - Refreshed build settings on project freertos_test_controller 
+16:35:35.900 INFO  - Specified output file already exists 
+16:35:36.916 INFO  - Invoking Bootgen:  
+16:35:37.425 INFO  - Bootgen command execution is done. 
+16:39:38.033 INFO  - Specified output file already exists 
+16:39:39.268 INFO  - Invoking Bootgen:  
+16:39:39.777 INFO  - Bootgen command execution is done. 
+16:45:17.901 INFO  - Invoking Bootgen:  
+16:45:18.411 INFO  - Bootgen command execution is done. 
+16:53:19.351 INFO  - Invoking Bootgen:  
+16:53:19.861 INFO  - Bootgen command execution is done. 
+16:56:16.674 INFO  - Specified output file already exists 
+16:56:17.663 INFO  - Invoking Bootgen:  
+16:56:18.174 INFO  - Bootgen command execution is done. 
+16:58:30.401 INFO  - Specified output file already exists 
+16:58:33.207 INFO  - Invoking Bootgen:  
+16:58:33.719 INFO  - Bootgen command execution is done. 
+17:02:47.322 INFO  - Specified output file already exists 
+17:02:48.343 INFO  - Invoking Bootgen:  
+17:02:48.857 INFO  - Bootgen command execution is done. 
+17:10:27.453 INFO  - Invoking Bootgen:  
+17:10:27.965 INFO  - Bootgen command execution is done. 
+17:13:16.195 INFO  - Specified output file already exists 
+17:13:17.295 INFO  - Invoking Bootgen:  
+17:13:17.806 INFO  - Bootgen command execution is done. 
+09:09:38.587 INFO  - Invoking Bootgen:  
+09:09:39.106 INFO  - Bootgen command execution is done. 
+09:28:19.760 INFO  - Project hw_platform_0's source hardware specification located at /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+09:28:28.015 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml into /hw_platform_0/system.xml. 
+09:28:28.091 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system_wrapper.bit into /hw_platform_0/system_wrapper.bit. 
+09:28:28.185 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.c into /hw_platform_0/ps7_init.c. 
+09:28:28.185 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.h into /hw_platform_0/ps7_init.h. 
+09:28:28.189 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.html into /hw_platform_0/ps7_init.html. 
+09:28:28.190 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_summary.html into /hw_platform_0/ps7_summary.html. 
+09:28:28.190 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.tcl into /hw_platform_0/ps7_init.tcl. 
+09:28:28.430 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+09:28:29.263 INFO  - Restoring local repository preferences: 
+		 /home/chris/sdk_repo 
+09:28:29.541 INFO  - Updating MSS for Board Support Package Project: freertos_bsp.
+		 The following driver assignments were removed:
+			Peripheral Instance: ps7_spi_1, driver: spips_v1_06_a.
+		 The following new driver assignments were made:
+			Peripheral Instance: axi_quad_spi_0, driver: spi_v3_07_a.
+ 
+09:28:30.329 INFO  - Updating hardware inferred compiler options for freertos_app_pendulum. 
+09:28:31.080 INFO  - Updating hardware inferred compiler options for freertos_cpu1. 
+09:28:31.831 INFO  - Updating hardware inferred compiler options for freertos_cpu1_platform. 
+09:28:32.582 INFO  - Updating hardware inferred compiler options for freertos_test_controller. 
+09:28:32.602 INFO  - Clearing existing target manager status. 
+09:45:08.981 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+11:49:12.591 INFO  - Project hw_platform_0's source hardware specification located at /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+11:49:15.721 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml into /hw_platform_0/system.xml. 
+11:49:15.727 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system_wrapper.bit into /hw_platform_0/system_wrapper.bit. 
+11:49:15.841 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.c into /hw_platform_0/ps7_init.c. 
+11:49:15.842 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.h into /hw_platform_0/ps7_init.h. 
+11:49:15.846 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.html into /hw_platform_0/ps7_init.html. 
+11:49:15.846 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_summary.html into /hw_platform_0/ps7_summary.html. 
+11:49:15.847 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.tcl into /hw_platform_0/ps7_init.tcl. 
+11:49:16.426 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+11:49:18.028 INFO  - Updating hardware inferred compiler options for freertos_amp_pendulum. 
+11:49:18.779 INFO  - Updating hardware inferred compiler options for freertos_app_pendulum. 
+11:49:19.530 INFO  - Updating hardware inferred compiler options for freertos_cpu1_platform. 
+11:49:19.548 INFO  - Clearing existing target manager status. 
+11:49:19.549 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_cpu1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+11:49:19.550 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_test_controller' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+11:49:19.550 INFO  - Closing and re-opening the MSS file of ther project freertos_bsp 
+11:49:19.692 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+11:49:21.062 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+12:14:14.424 INFO  - Project hw_platform_0's source hardware specification located at /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+12:14:21.433 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml into /hw_platform_0/system.xml. 
+12:14:21.444 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system_wrapper.bit into /hw_platform_0/system_wrapper.bit. 
+12:14:21.528 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.c into /hw_platform_0/ps7_init.c. 
+12:14:21.529 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.h into /hw_platform_0/ps7_init.h. 
+12:14:21.533 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.html into /hw_platform_0/ps7_init.html. 
+12:14:21.533 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_summary.html into /hw_platform_0/ps7_summary.html. 
+12:14:21.534 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.tcl into /hw_platform_0/ps7_init.tcl. 
+12:14:21.749 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+12:14:23.338 INFO  - Updating hardware inferred compiler options for freertos_amp_pendulum. 
+12:14:24.089 INFO  - Updating hardware inferred compiler options for freertos_app_pendulum. 
+12:14:24.841 INFO  - Updating hardware inferred compiler options for freertos_cpu1_platform. 
+12:14:24.861 INFO  - Clearing existing target manager status. 
+12:14:24.862 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_cpu1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+12:14:24.862 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_test_controller' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+12:14:24.862 INFO  - Closing and re-opening the MSS file of ther project freertos_bsp 
+12:14:24.982 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+12:14:25.337 INFO  - Closing and re-opening the MSS file of ther project freertos_bsp 
+12:14:25.429 INFO  - Closing and re-opening the MSS file of ther project freertos_bsp 
+12:14:26.508 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+12:29:19.685 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:02:14.212 INFO  - Processing command line option -hwspec /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml. 
+17:02:14.430 INFO  - The hardware specification for project 'hw_platform_0' is different from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml. 
+17:02:14.445 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml into /hw_platform_0/system.xml. 
+17:02:14.452 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system_wrapper.bit into /hw_platform_0/system_wrapper.bit. 
+17:02:14.617 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.c into /hw_platform_0/ps7_init.c. 
+17:02:14.617 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.h into /hw_platform_0/ps7_init.h. 
+17:02:14.622 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.html into /hw_platform_0/ps7_init.html. 
+17:02:14.623 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_summary.html into /hw_platform_0/ps7_summary.html. 
+17:02:14.623 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.tcl into /hw_platform_0/ps7_init.tcl. 
+17:02:14.896 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+17:02:31.972 INFO  - Updating hardware inferred compiler options for freertos_amp_pendulum. 
+17:02:32.724 INFO  - Updating hardware inferred compiler options for freertos_app_pendulum. 
+17:02:33.475 INFO  - Updating hardware inferred compiler options for freertos_cpu1_platform. 
+17:02:33.507 INFO  - Clearing existing target manager status. 
+17:02:34.679 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_cpu1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+17:02:34.680 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_test_controller' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+17:02:34.683 INFO  - Closing and re-opening the MSS file of ther project freertos_bsp 
+17:02:35.330 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+17:02:36.713 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+17:42:39.203 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+08:56:36.763 INFO  - Processing command line option -hwspec /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml. 
+08:56:38.332 INFO  - The hardware specification for project 'hw_platform_0' is different from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml. 
+08:56:38.339 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml into /hw_platform_0/system.xml. 
+08:56:38.346 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system_wrapper.bit into /hw_platform_0/system_wrapper.bit. 
+08:56:38.461 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.c into /hw_platform_0/ps7_init.c. 
+08:56:38.462 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.h into /hw_platform_0/ps7_init.h. 
+08:56:38.466 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.html into /hw_platform_0/ps7_init.html. 
+08:56:38.467 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_summary.html into /hw_platform_0/ps7_summary.html. 
+08:56:38.468 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.tcl into /hw_platform_0/ps7_init.tcl. 
+08:56:38.743 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+08:56:39.673 INFO  - Restoring local repository preferences: 
+		 /home/chris/sdk_repo 
+08:56:40.493 INFO  - Updating hardware inferred compiler options for freertos_amp_pendulum. 
+08:56:41.244 INFO  - Updating hardware inferred compiler options for freertos_app_pendulum. 
+08:56:41.995 INFO  - Updating hardware inferred compiler options for freertos_cpu1_platform. 
+08:56:42.023 INFO  - Clearing existing target manager status. 
+08:56:43.186 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_cpu1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+08:56:43.186 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_test_controller' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+12:54:01.472 INFO  - Project hw_platform_0's source hardware specification located at /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+12:54:03.270 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml into /hw_platform_0/system.xml. 
+12:54:03.279 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system_wrapper.bit into /hw_platform_0/system_wrapper.bit. 
+12:54:03.368 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.c into /hw_platform_0/ps7_init.c. 
+12:54:03.368 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.h into /hw_platform_0/ps7_init.h. 
+12:54:03.373 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.html into /hw_platform_0/ps7_init.html. 
+12:54:03.373 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_summary.html into /hw_platform_0/ps7_summary.html. 
+12:54:03.374 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.tcl into /hw_platform_0/ps7_init.tcl. 
+12:54:03.680 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+12:54:05.270 INFO  - Updating hardware inferred compiler options for freertos_amp_pendulum. 
+12:54:06.021 INFO  - Updating hardware inferred compiler options for freertos_cpu1_platform. 
+12:54:06.025 INFO  - Clearing existing target manager status. 
+12:54:06.026 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_app_pendulum' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+12:54:06.026 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_cpu1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+12:54:06.027 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_test_controller' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+13:02:55.932 INFO  - Project hw_platform_0's source hardware specification located at /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+13:02:59.242 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml into /hw_platform_0/system.xml. 
+13:02:59.250 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system_wrapper.bit into /hw_platform_0/system_wrapper.bit. 
+13:02:59.340 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.c into /hw_platform_0/ps7_init.c. 
+13:02:59.340 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.h into /hw_platform_0/ps7_init.h. 
+13:02:59.345 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.html into /hw_platform_0/ps7_init.html. 
+13:02:59.345 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_summary.html into /hw_platform_0/ps7_summary.html. 
+13:02:59.346 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.tcl into /hw_platform_0/ps7_init.tcl. 
+13:02:59.637 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+13:03:01.219 INFO  - Updating hardware inferred compiler options for freertos_amp_pendulum. 
+13:03:01.222 INFO  - Clearing existing target manager status. 
+13:03:01.223 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_app_pendulum' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+13:03:01.223 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_cpu1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+13:03:01.224 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_cpu1_platform' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+13:03:01.224 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_test_controller' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+13:18:39.238 INFO  - Project hw_platform_0's source hardware specification located at /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+13:18:44.777 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml into /hw_platform_0/system.xml. 
+13:18:44.785 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system_wrapper.bit into /hw_platform_0/system_wrapper.bit. 
+13:18:44.875 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.c into /hw_platform_0/ps7_init.c. 
+13:18:44.876 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.h into /hw_platform_0/ps7_init.h. 
+13:18:44.880 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.html into /hw_platform_0/ps7_init.html. 
+13:18:44.881 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_summary.html into /hw_platform_0/ps7_summary.html. 
+13:18:44.881 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.tcl into /hw_platform_0/ps7_init.tcl. 
+13:18:45.166 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+13:18:46.756 INFO  - Updating hardware inferred compiler options for freertos_amp_pendulum. 
+13:18:46.759 INFO  - Clearing existing target manager status. 
+13:18:46.760 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_app_pendulum' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+13:18:46.760 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_cpu1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+13:18:46.761 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_cpu1_platform' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+13:18:46.761 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_test_controller' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+13:48:24.396 INFO  - Project hw_platform_0's source hardware specification located at /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+13:48:26.231 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system.xml into /hw_platform_0/system.xml. 
+13:48:26.238 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/system_wrapper.bit into /hw_platform_0/system_wrapper.bit. 
+13:48:26.324 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.c into /hw_platform_0/ps7_init.c. 
+13:48:26.325 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.h into /hw_platform_0/ps7_init.h. 
+13:48:26.329 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.html into /hw_platform_0/ps7_init.html. 
+13:48:26.330 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_summary.html into /hw_platform_0/ps7_summary.html. 
+13:48:26.330 INFO  - Copied contents of /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/hw/ps7_init.tcl into /hw_platform_0/ps7_init.tcl. 
+13:48:26.644 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+13:48:28.230 INFO  - Updating hardware inferred compiler options for freertos_amp_pendulum. 
+13:48:28.233 INFO  - Clearing existing target manager status. 
+13:48:28.234 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_app_pendulum' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+13:48:28.235 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_cpu1' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+13:48:28.235 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_cpu1_platform' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+13:48:28.235 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/freertos_test_controller' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+

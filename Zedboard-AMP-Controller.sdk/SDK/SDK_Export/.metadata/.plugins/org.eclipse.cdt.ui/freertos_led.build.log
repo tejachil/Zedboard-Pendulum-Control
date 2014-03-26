@@ -1,0 +1,39 @@
+09:21:12 **** Auto Build of configuration Debug for project freertos_led ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I/home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:12:
+/home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/xparameters.h:466:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:12:
+/home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Finished building: ../src/main.c
+                 from ../src/main.c:12:
+ 
+/home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/xparameters.h:467:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Building target: freertos_led.elf
+Invoking: ARM gcc linker
+In file included from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/lib -o "freertos_led.elf"  ./src/amp.o ./src/gpio.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_led.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_led.elf  |tee "freertos_led.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72912	   3088	  88652	 164652	  2832c	freertos_led.elf
+Finished building: freertos_led.elf.size
+ 
+                 from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:12:
+/home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+
+09:21:12 Build Finished (took 209ms)
+

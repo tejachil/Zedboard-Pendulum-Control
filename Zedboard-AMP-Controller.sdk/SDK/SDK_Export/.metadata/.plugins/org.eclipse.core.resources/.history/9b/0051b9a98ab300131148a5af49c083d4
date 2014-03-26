@@ -1,0 +1,40 @@
+/*
+ * amp.h
+ *
+ *  Created on: Mar 24, 2014
+ *      Author: chris
+ */
+
+#ifndef AMP_H_
+#define AMP_H_
+
+
+#include "xparameters.h"
+#include <stdio.h>
+#include "xil_io.h"
+#include "xil_mmu.h"
+
+
+#define COMM_VAL        (*(volatile unsigned long *)(0xFFFF8000))
+#define COMM_TX_FLAG    (*(volatile unsigned long *)(0xFFFF9000))
+#define COMM_TX_DATA    (*(volatile unsigned long *)(0xFFFF9004))
+#define COMM_RX_FLAG    (*(volatile unsigned long *)(0xFFFF9008))
+#define COMM_RX_DATA    (*(volatile unsigned long *)(0xFFFF900C))
+
+
+extern u32 MMUTable;
+
+void MyXil_DCacheFlush(void);
+
+
+
+
+/**
+ * Modified SetTlbAttributes to call MyXil_DCacheFlush in order
+ * to prevelt L2 Cache controller accesses
+ */
+void MyXil_SetTlbAttributes(u32 addr, u32 attrib);
+
+
+
+#endif /* AMP_H_ */

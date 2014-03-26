@@ -1,0 +1,150 @@
+13:58:04 **** Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/AXI_GPIO.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/AXI_GPIO.d" -MT"src/AXI_GPIO.d" -o "src/AXI_GPIO.o" "../src/AXI_GPIO.c"
+In file included from ../src/AXI_GPIO.c:10:0:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+Finished building: ../src/AXI_GPIO.c
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+ 
+                 from ../src/AXI_GPIO.c:10:
+Building file: ../src/AXI_SPI.c
+Invoking: ARM gcc compiler
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/AXI_SPI.d" -MT"src/AXI_SPI.d" -o "src/AXI_SPI.o" "../src/AXI_SPI.c"
+In file included from ../src/AXI_GPIO.c:10:0:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Finished building: ../src/AXI_SPI.c
+                 from ../src/AXI_GPIO.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+ 
+Building file: ../src/adc_dac.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/adc_dac.d" -MT"src/adc_dac.d" -o "src/adc_dac.o" "../src/adc_dac.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/AXI_SPI.c:9:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+Finished building: ../src/adc_dac.c
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+ 
+Building file: ../src/amp.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/amp.d" -MT"src/amp.d" -o "src/amp.o" "../src/amp.c"
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Finished building: ../src/amp.c
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/AXI_SPI.c:9:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+ 
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+Building file: ../src/encoder.c
+Invoking: ARM gcc compiler
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/encoder.d" -MT"src/encoder.d" -o "src/encoder.o" "../src/encoder.c"
+                 from ../src/AXI_SPI.c:9:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+Finished building: ../src/encoder.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/AXI_SPI.c:9:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+ 
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/adc_dac.h:10,
+                 from ../src/adc_dac.c:1:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+Finished building: ../src/main.c
+ 
+Building target: freertos_amp_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/adc_dac.h:10,
+Finished building target: freertos_amp_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81920	   3120	  88812	 173852	  2a71c	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+                 from ../src/adc_dac.c:1:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/adc_dac.h:10,
+                 from ../src/adc_dac.c:1:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/adc_dac.h:10,
+                 from ../src/adc_dac.c:1:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/amp.c: In function 'MyXil_DCacheFlush':
+../src/amp.c:21:2: warning: implicit declaration of function 'Xil_L1DCacheFlush' [-Wimplicit-function-declaration]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/encoder.h:7,
+                 from ../src/encoder.c:1:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/encoder.h:7,
+                 from ../src/encoder.c:1:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/encoder.h:7,
+                 from ../src/encoder.c:1:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/encoder.h:7,
+                 from ../src/encoder.c:1:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:12:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:12:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:12:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:12:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+
+13:58:05 Build Finished (took 561ms)
+

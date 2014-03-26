@@ -1,0 +1,52 @@
+{
+   guistr: "# # String gsaved with Nlview version 6.3.3  2013-08-16 bk=1.2871 VDI=33 GEI=35
+#  -string -flagsOSRD
+preplace port AXI_SPI0_SCLK_T -pg 1 -y 450 -defaultsOSRD
+preplace port DDR -pg 1 -y 60 -defaultsOSRD
+preplace port AXI_SPI0_SCLK_I -pg 1 -y 570 -defaultsOSRD
+preplace port AXI_SPI0_MOSI_T -pg 1 -y 490 -defaultsOSRD
+preplace port sws_8bits -pg 1 -y 260 -defaultsOSRD
+preplace port leds_8bits -pg 1 -y 20 -defaultsOSRD
+preplace port AXI_SPI0_MISO_O -pg 1 -y 510 -defaultsOSRD
+preplace port AXI_SPI0_MOSI_I -pg 1 -y 590 -defaultsOSRD
+preplace port AXI_SPI0_SS_T -pg 1 -y 570 -defaultsOSRD
+preplace port AXI_SPI0_SCLK_O -pg 1 -y 430 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 100 -defaultsOSRD
+preplace port AXI_SPI0_MISO_T -pg 1 -y 530 -defaultsOSRD
+preplace port AXI_SPI0_MOSI_O -pg 1 -y 470 -defaultsOSRD
+preplace port AXI_SPI0_MISO_I -pg 1 -y 610 -defaultsOSRD
+preplace portBus AXI_SPI0_SS_O -pg 1 -y 550 -defaultsOSRD
+preplace portBus AXI_SPI0_SS_I -pg 1 -y 630 -defaultsOSRD
+preplace inst axi_gpio_switches -pg 1 -lvl 3 -y 260 -defaultsOSRD
+preplace inst axi_gpio_leds -pg 1 -lvl 3 -y 110 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 2 -y 300 -defaultsOSRD
+preplace inst axi_quad_spi_0 -pg 1 -lvl 3 -y 500 -defaultsOSRD -resize 220 196
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 310 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 1 3 600 470 NJ 340 NJ
+preplace netloc axi_quad_spi_0_io1_t 1 3 1 N
+preplace netloc axi_quad_spi_0_ss_o 1 3 1 1380
+preplace netloc AXI_SPI0_SCLK_I_1 1 0 4 NJ 570 NJ 570 NJ 370 1360
+preplace netloc axi_gpio_switches_GPIO 1 3 1 N
+preplace netloc axi_interconnect_0_M02_AXI 1 2 1 1010
+preplace netloc AXI_SPI0_SS_I_1 1 0 4 NJ 630 NJ 630 NJ 630 1350
+preplace netloc AXI_SPI0_MISO_I_1 1 0 4 NJ 610 NJ 610 NJ 620 1360
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 630 460 1040
+preplace netloc AXI_SPI0_MOSI_I_1 1 0 4 NJ 590 NJ 590 NJ 380 1350
+preplace netloc axi_quad_spi_0_io0_o 1 3 1 1370
+preplace netloc axi_gpio_leds_GPIO 1 3 1 1350
+preplace netloc axi_quad_spi_0_ss_t 1 3 1 1370
+preplace netloc axi_quad_spi_0_sck_o 1 3 1 1370
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 590 480 NJ 350 NJ
+preplace netloc S00_AXI_1 1 1 1 610
+preplace netloc axi_quad_spi_0_io1_o 1 3 1 1380
+preplace netloc axi_interconnect_0_M00_AXI 1 2 1 1000
+preplace netloc axi_interconnect_0_M01_AXI 1 2 1 1010
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 190 180 620 140 1030
+preplace netloc axi_quad_spi_0_io0_t 1 3 1 1380
+preplace netloc axi_quad_spi_0_sck_t 1 3 1 1380
+levelinfo -pg 1 170 390 880 1220 1400
+",
+}
+{
+   da_board_cnt: "3",
+}

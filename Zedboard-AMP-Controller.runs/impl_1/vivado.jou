@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:26:26 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Wed Mar 26 13:46:32 2014
+# Process ID: 29766
+# Log file: /home/chris/Gen-3/Gen-3.runs/impl_1/system_wrapper.rdi
+# Journal file: /home/chris/Gen-3/Gen-3.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source system_wrapper.tcl -notrace

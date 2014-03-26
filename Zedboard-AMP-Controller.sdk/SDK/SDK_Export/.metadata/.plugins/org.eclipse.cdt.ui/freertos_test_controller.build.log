@@ -1,0 +1,7 @@
+10:07:32 **** Clean-only build of configuration Debug for project freertos_test_controller ****
+make clean 
+rm -rf  ./src/SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/freertos_blink_led_semaphore.o ./src/gpio.o  ./src/SPI.d ./src/adc_dac.d ./src/amp.d ./src/encoder.d ./src/freertos_blink_led_semaphore.d ./src/gpio.d  freertos_test_controller.elf.size  freertos_test_controller.elf
+ 
+
+10:07:32 Build Finished (took 112ms)
+

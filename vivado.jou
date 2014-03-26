@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:26:26 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Wed Mar 26 11:51:11 2014
+# Process ID: 16511
+# Log file: /home/chris/vivado.log
+# Journal file: /home/chris/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/chris/vanilla-pendulum-project/Zedboard-Pendulum-Control/SPI_pendulum.xpr
+open_bd_design {/home/chris/vanilla-pendulum-project/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/system.bd}
+open_bd_design {/home/chris/vanilla-pendulum-project/Zedboard-Pendulum-Control/SPI_pendulum.srcs/sources_1/bd/system/system.bd}

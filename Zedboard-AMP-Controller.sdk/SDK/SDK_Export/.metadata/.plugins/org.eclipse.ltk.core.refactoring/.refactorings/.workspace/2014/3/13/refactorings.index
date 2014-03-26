@@ -1,0 +1,6 @@
+1395753704037	Rename resource 'freertos_led'
+1395760099676	Delete 6 resources
+1395838625297	Delete resource 'freertos_cpu1_platform'
+1395843218844	Delete resource 'freertos_amp_pendulum/src/SPI.c'
+1395843221637	Delete resource 'freertos_amp_pendulum/src/SPI.h'
+1395843637389	Delete resource 'freertos_amp_pendulum/Debug/freertos_app_pendulum.elf'

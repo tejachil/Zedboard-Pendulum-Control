@@ -1,0 +1,92 @@
+13:58:03 **** Build of configuration Debug for project freertos_cpu1_platform ****
+make all 
+Building file: ../src/AXI_SPI.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/AXI_SPI.d" -MT"src/AXI_SPI.d" -o "src/AXI_SPI.o" "../src/AXI_SPI.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/AXI_SPI.c:9:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/AXI_SPI.c:9:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+Finished building: ../src/AXI_SPI.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/AXI_SPI.c:9:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+ 
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+Building file: ../src/amp.c
+Invoking: ARM gcc compiler
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/AXI_SPI.h:13,
+                 from ../src/AXI_SPI.c:9:
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/amp.d" -MT"src/amp.d" -o "src/amp.o" "../src/amp.c"
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Finished building: ../src/amp.c
+ 
+Building file: ../src/gpio.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/gpio.d" -MT"src/gpio.d" -o "src/gpio.o" "../src/gpio.c"
+../src/amp.c: In function 'MyXil_DCacheFlush':
+Finished building: ../src/gpio.c
+ 
+Building file: ../src/main.c
+../src/amp.c:15:2: warning: implicit declaration of function 'Xil_L1DCacheFlush' [-Wimplicit-function-declaration]
+In file included from ../src/gpio.h:12:0,
+                 from ../src/gpio.c:9:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../src/gpio.h:12,
+                 from ../src/gpio.c:9:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+Finished building: ../src/main.c
+ 
+In file included from ../src/gpio.h:12:0,
+                 from ../src/gpio.c:9:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Building target: freertos_cpu1_platform.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_cpu1_platform.elf"  ./src/AXI_SPI.o ./src/amp.o ./src/gpio.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../src/gpio.h:12,
+                 from ../src/gpio.c:9:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Finished building target: freertos_cpu1_platform.elf
+ 
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:12:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_cpu1_platform.elf  |tee "freertos_cpu1_platform.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:12:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:12:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:12:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+  80288	   3120	  88764	 172172	  2a08c	freertos_cpu1_platform.elf
+Finished building: freertos_cpu1_platform.elf.size
+ 
+
+13:58:04 Build Finished (took 410ms)
+

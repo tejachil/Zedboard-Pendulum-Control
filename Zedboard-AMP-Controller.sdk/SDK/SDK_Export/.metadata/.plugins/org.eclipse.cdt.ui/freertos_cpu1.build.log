@@ -1,0 +1,33 @@
+11:14:23 **** Build of configuration Debug for project freertos_cpu1 ****
+make all 
+Building file: ../src/SPI.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../freertos_zynq_bsp_1/ps7_cortexa9_1/include -c -fmessage-length=0 -I/home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/SPI.d" -MT"src/SPI.d" -o "src/SPI.o" "../src/SPI.c"
+In file included from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/SPI.c:9:
+/home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/SPI.c:9:
+/home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/SPI.c:9:
+/home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from /home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/SPI.h:11,
+                 from ../src/SPI.c:9:
+/home/chris/Gen-3/Gen-3.sdk/SDK/SDK_Export/freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/SPI.c:11:20: fatal error: xspips.h: No such file or directory
+compilation terminated.
+make: *** [src/SPI.o] Error 1
+
+11:14:23 Build Finished (took 210ms)
+

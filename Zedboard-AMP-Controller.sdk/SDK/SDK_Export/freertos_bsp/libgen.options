@@ -1,0 +1,3 @@
+PROCESSOR=ps7_cortexa9_1
+REPOSITORIES=-lp /home/chris/sdk_repo
+HWSPEC=../hw_platform_0/system.xml
