@@ -300,3 +300,25 @@
 	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
 	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
 
+14:22:32.904 INFO  - Restoring local repository preferences: 
+		 /home/chris/sdk_repo 
+14:22:33.458 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+14:22:33.496 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+14:22:33.533 WARN  - Unable to determine location of documentation for OS . 
+14:22:33.555 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+14:22:33.785 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+14:23:59.281 INFO  - Saving repository preferences. 
+14:23:59.283 INFO  - Reading in cores from local repositories: 
+		 /home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/sdk_repo 
+14:23:59.284 INFO  - Updating libgen.options on all BSP projects. 
+14:23:59.288 INFO  - Cleaning BSP projects in the workspace. 
+14:24:00.923 INFO  - Saving repository preferences. 
+14:28:22.493 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.runs/impl_1/system_wrapper.bit" 
+14:28:34.600 INFO  - Processor reset is completed for ps7_cortexa9_1 
+14:28:34.700 INFO  - PS initialization will be done as it is not done before. 
+14:28:34.700 INFO  - Running PS initialization.... 
+14:28:34.968 INFO  - ps7_init is completed. 
+14:28:35.068 INFO  - ps7_post_config is completed. 
+14:28:35.169 INFO  - PS Initialization is complete. 
+14:30:44.580 INFO  - ps7_cortexa9_1 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:30:46.492 INFO  - Processor reset is completed for ps7_cortexa9_1 

@@ -1,0 +1,8 @@
+the_ROM_image:
+{
+	[bootloader]/home/controls/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/Bootables/amp_fsbl.elf
+	/home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/hw_platform_0/system_wrapper.bit
+	/home/controls/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/Bootables/u-boot.elf
+	/home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_amp_pendulum/Debug/freertos_amp_pendulum.elf
+	[load = 0xFFFFFFF0]/home/controls/Documents/AMP-Controller/Zedboard-Pendulum-Control/Bootables/cpu1_bootvec.bin
+}

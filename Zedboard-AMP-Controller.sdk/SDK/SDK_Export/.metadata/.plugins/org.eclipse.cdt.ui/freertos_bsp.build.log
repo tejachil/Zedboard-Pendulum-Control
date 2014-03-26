@@ -1,7 +1,7 @@
-13:57:49 **** Build of project freertos_bsp ****
+14:23:59 **** Build of project freertos_bsp ****
 make -k all 
 libgen -hw ../hw_platform_0/system.xml\
-	       -lp /home/chris/sdk_repo\
+	       -lp /home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/sdk_repo\
 	       -pe ps7_cortexa9_1 \
 	       -log libgen.log \
 	       system.mss
@@ -9,8 +9,9 @@ libgen
 Xilinx EDK 2013.4 Build EDK_2013.4.20131205
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Command Line: libgen -hw ../hw_platform_0/system.xml -lp /home/chris/sdk_repo
--pe ps7_cortexa9_1 -log libgen.log system.mss 
+Command Line: libgen -hw ../hw_platform_0/system.xml -lp
+/home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/sdk_repo -pe
+ps7_cortexa9_1 -log libgen.log system.mss 
 
 
 Staging source files.
@@ -768,5 +769,5 @@ Compiling cpu_cortexa9
 Running execs_generate.
 Finished building libraries
 
-13:58:03 Build Finished (took 14s.398ms)
+14:24:15 Build Finished (took 15s.849ms)
 
