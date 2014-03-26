@@ -1876,3 +1876,140 @@ invalid command name "ps7_init"
 	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
 
 18:07:36.431 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:25:37.798 INFO  - Restoring local repository preferences: 
+		 /home/xps/Documents/Zedboard-Pendulum-Control/repo 
+20:25:37.838 ERROR - Unable to read in MSS file /home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_zynq_bsp_0/system.mss. 
+20:25:39.387 ERROR - Unable to read in MSS file /home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_zynq_bsp_0/system.mss. 
+20:25:39.427 ERROR - Unable to read in MSS file /home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_zynq_bsp_0/system.mss. 
+20:25:39.464 WARN  - Unable to determine location of documentation for OS . 
+20:25:39.483 ERROR - Unable to read in MSS file /home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_zynq_bsp_0/system.mss. 
+20:25:39.682 ERROR - Unable to read in MSS file /home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_zynq_bsp_0/system.mss. 
+20:25:40.874 ERROR - Unable to read in MSS file /home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.sdk/SDK/SDK_Export/freertos_zynq_bsp_0/system.mss. 
+20:26:14.988 INFO  - Saving repository preferences. 
+20:26:14.989 INFO  - Reading in cores from local repositories: 
+		 /home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/repo 
+20:26:14.990 INFO  - Updating libgen.options on all BSP projects. 
+20:26:14.992 INFO  - Cleaning BSP projects in the workspace. 
+20:26:56.161 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+20:26:56.261 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:27:51.270 INFO  - ps7_init.tcl file does not exists in HwPlatform 
+20:27:51.370 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:27:51.471 INFO  - PS initialization will be done as it is not done before. 
+20:27:51.471 INFO  - Running PS initialization.... 
+20:27:51.573 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error while running ps7_init method.
+invalid command name "ps7_init"
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.runPs7Init(Unknown Source)
+
+20:28:04.056 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+20:28:51.354 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+20:29:00.040 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:29:20.626 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+20:29:27.778 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:29:27.879 INFO  - PS initialization will be done as it is not done before. 
+20:29:27.879 INFO  - Running PS initialization.... 
+20:29:28.138 INFO  - ps7_init is completed. 
+20:29:28.238 INFO  - PS Initialization is complete. 
+20:30:18.865 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+20:30:18.870 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+21:10:22.263 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+21:10:44.584 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:11:18.102 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:11:29.094 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:11:31.364 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:11:33.726 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:13:20.284 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:13:22.597 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:17:30.661 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:17:32.903 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:22:40.078 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:22:42.737 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:22:57.179 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:22:59.028 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:56:45.530 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:56:47.555 INFO  - Processor reset is completed for ps7_cortexa9_0 
+22:02:42.168 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+22:03:46.730 INFO  - Processor reset is completed for ps7_cortexa9_0 
+22:03:46.830 INFO  - PS initialization will be done as it is not done before. 
+22:03:46.831 INFO  - Running PS initialization.... 
+22:03:47.031 INFO  - ps7_init is completed. 
+22:03:47.132 INFO  - PS Initialization is complete. 
+22:29:35.736 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:23:08.404 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:14:23.515 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:14:25.684 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:14:39.502 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:14:41.383 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:17:29.371 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+17:17:29.377 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:35:02.028 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/State-Feedback-Branch/Balanced-master/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+11:36:21.385 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:36:21.485 INFO  - PS initialization will be done as it is not done before. 
+11:36:21.485 INFO  - Running PS initialization.... 
+11:36:21.686 INFO  - ps7_init is completed. 
+11:36:21.786 INFO  - PS Initialization is complete. 
+11:54:48.652 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:55:41.736 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/State-Feedback-Branch/Swing-Up/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+11:56:30.540 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:56:30.640 INFO  - PS initialization will be done as it is not done before. 
+11:56:30.640 INFO  - Running PS initialization.... 
+11:56:30.870 INFO  - ps7_init is completed. 
+11:56:30.970 INFO  - PS Initialization is complete. 
+09:48:15.956 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/State-Feedback-Branch/Swing-Up/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+09:48:36.736 INFO  - Processor reset is completed for ps7_cortexa9_0 
+09:48:36.836 INFO  - PS initialization will be done as it is not done before. 
+09:48:36.836 INFO  - Running PS initialization.... 
+09:48:37.050 INFO  - ps7_init is completed. 
+09:48:37.150 INFO  - PS Initialization is complete. 
+10:08:03.464 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:08:05.900 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:13:49.650 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:13:52.040 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:25:26.422 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:25:32.738 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:26:22.837 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:26:25.107 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:27:10.489 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:27:12.711 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:34:38.955 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:34:56.888 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:34:59.172 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:36:28.488 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:36:30.392 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:37:35.202 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+10:37:35.206 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:43:17.228 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+10:43:52.302 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:43:55.052 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+10:43:55.055 WARN  - Terminating existing sessions on processor ps7_cortexa9_0 
+10:44:47.495 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:45:13.727 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+10:45:29.343 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:45:29.443 INFO  - PS initialization will be done as it is not done before. 
+10:45:29.444 INFO  - Running PS initialization.... 
+10:45:29.676 INFO  - ps7_init is completed. 
+10:45:29.776 INFO  - PS Initialization is complete. 
+10:46:58.451 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+10:47:06.314 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:47:07.985 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+10:47:15.367 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:48:04.038 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/Kalman-Filter-Branch/Zedboard-Pendulum-Control/SPI_pendulum.runs/impl_1/system_wrapper.bit" 
+10:48:09.815 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:49:51.637 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+10:49:51.641 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

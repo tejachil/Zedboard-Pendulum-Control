@@ -1,6 +1,6 @@
-15:14:09 **** Build of project freertos_zynq_bsp_0 ****
+15:22:58 **** Build of project freertos_zynq_bsp_0 ****
 make -k all 
 Finished building libraries
 
-15:14:10 Build Finished (took 67ms)
+15:22:58 Build Finished (took 75ms)
 

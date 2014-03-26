@@ -108,22 +108,22 @@ void update_value(xTimerHandle pxTimer)
 
 
     static const float Kf[4][2]={
-    {0.0640,0},
-    {0,1},
-    {2.1157,0.0001},
-    {4.2222,0.0064}
+    {0.5475,0.0},
+    {0.0,0.9204},
+    {0.0059,-0.0194},
+    {-0.0158,0.8941}
     };
     static const float Kc[4]={-5.1871,27.8442,-2.7295,3.1867};
     static const float Aup[4][4]={
-        {0.9360,0.0000,0.0009,0},
-        {0,0.0,0,0.000},
-        {-2.1157,0.0793, 0.9531, 0.0009},
-        {-4.2222, -0.1268, -0.0390, 0.9986}
+        {0.4525,0.0,0.0004,0},
+        {0.00,0.0796,-0.0,0.0001},
+        {-0.0059,0.099,0.9552,-0.0009},
+        {0.0158,-0.7740,-0.0431,0.9978}
     };
     static const float Bup[4]={0,0,0.0815,0.0784};
    int temp,ind,col;
    float u;
-   static float thetaOld=0.,alphaOld=0.;
+   // static float thetaOld=0., alphaOld=0.;
 
    static float xpre[4]={0.,0.,0.,0.};
 
@@ -159,9 +159,9 @@ void update_value(xTimerHandle pxTimer)
 	  //compute control
 	  u=0.;
 	  for(ind=0;ind<4;ind++) {
-		  u+= -Kc[ind]*xhat[ind];
+		  u+= Kc[ind]*xhat[ind]; // changed the sign for kc to positive
 	  }
-	  u+= Kc[0]*theta_des;
+	  u+= -Kc[0]*theta_des; // changed the sign of kc to negative
 	  output_V=u;
 
 	  //saturate
@@ -179,9 +179,9 @@ void update_value(xTimerHandle pxTimer)
 		  }
 		  xpre[ind]+=Bup[ind]*u;
 	  }
-	  //if((sec1000%20000)<10000) theta_des=20*pi/180;
-      //else theta_des=-20*pi/180;
-      theta_des=20*pi/180;//.*sin(2*pi*.0001*sec1000);
+	  if((sec1000%20000)<10000) theta_des=20*pi/180;
+      else theta_des=-20*pi/180;
+     // theta_des=20*pi/180;//.*sin(2*pi*.0001*sec1000);
 	}
 
 	printed = 1;
@@ -215,12 +215,14 @@ static void printingTask( void *param ){
 			printBuffer[3] = (char)(((short)(enc2))>>8);
 			printBuffer[4] = (char)(((short)(output_V*1000))&0x0F);
 			printBuffer[5] = (char)(((short)(output_V*1000))>>8);
+
 			int i = 0;
 			for(i; i < 6; ++i)
 				if(printBuffer[i] == 0)	printBuffer[i] = 1;
 			printBuffer[6] = 0;
-			print(printBuffer);//, printBuffer);
-			print("\n");
+			//xil_printf("\n%s", printBuffer);
+			//print(printBuffer);//, printBuffer);
+			//print("\n");
 			//xil_printf("\n%d", 	(short)(output_V*1000)); // print time: encoder value, control input
 			//xil_printf(" %d",	(short)(pot1*1000));
 			//xil_printf(" %d",	(short)(enc2));
