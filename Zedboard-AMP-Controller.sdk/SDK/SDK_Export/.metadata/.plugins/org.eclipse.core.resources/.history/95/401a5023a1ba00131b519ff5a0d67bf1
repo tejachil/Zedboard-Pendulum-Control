@@ -23,9 +23,9 @@
 #include "amp.h"
 
 // MODE Defines for the precompiler options
+#define LED_DEBUG 			1	// Used to three LEDs to debug
 #define CONTROLLER_MODE		KALMAN_FILTER
 #define PRINT_FREQ			5	// print every x value
-#define LED_DEBUG 			1	// Used to three LEDs to debug
 
 #define mainLED_TASK_PRIORITY		( tskIDLE_PRIORITY + 1 )
 #define configTIMER_TASK_PRIORITY   ( configMAX_PRIORITIES - 1 )

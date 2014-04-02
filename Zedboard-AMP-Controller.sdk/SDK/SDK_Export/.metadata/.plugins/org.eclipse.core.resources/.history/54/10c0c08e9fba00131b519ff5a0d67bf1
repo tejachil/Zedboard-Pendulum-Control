@@ -11,6 +11,8 @@
 #include "xscugic.h"
 #include "sleep.h"
 #include "xpseudo_asm.h"
+#include "FreeRTOS.h"
+
 
 /**
  * Modified DCacheFlush to prevent L2 Cache controller access
@@ -50,7 +52,9 @@ void MyXil_SetTlbAttributes(u32 addr, u32 attrib)
  */
 void myPutchar(char c){
 	//wait for cpu0 to consume previous value
-	while(COMM_TX_FLAG);
+	while(COMM_TX_FLAG){
+		taskYIELD();
+	}
 	COMM_TX_DATA = (volatile unsigned long)c;
 	dmb();
 	COMM_TX_FLAG = 1;

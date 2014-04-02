@@ -23,9 +23,9 @@
 #include "amp.h"
 
 // MODE Defines for the precompiler options
-#define CONTROLLER_MODE		KALMAN_FILTER
-#define PRINT_FREQ			5	// print every x value
 #define LED_DEBUG 			1	// Used to three LEDs to debug
+#define CONTROLLER_MODE		KALMAN_FILTER
+
 
 #define mainLED_TASK_PRIORITY		( tskIDLE_PRIORITY + 1 )
 #define configTIMER_TASK_PRIORITY   ( configMAX_PRIORITIES - 1 )
@@ -91,7 +91,7 @@ void state_feedback(xTimerHandle pxTimer){
 	//need to negate u, so just use positive feedback, u=K*x
 	u=-5.28*(theta_R-theta_des)+30.14*alpha_R-2.65*thetaDot+3.55*alphaDot;
 
-	++printed; // allow to print
+	printed = 1; // allow to print
 
 	if ((alpha_R>=0?alpha_R:-alpha_R)>(10.*pi/180)) u=0;
 	if (u>5.) u=5.;
@@ -213,7 +213,7 @@ void kalman_filter(xTimerHandle pxTimer){
 	 // theta_des=20*pi/180;//.*sin(2*pi*.0001*sec1000);
 	}
 
-	++printed;
+	printed = 1;
 
 	// Timer LED
 	#if LED_DEBUG == 1
@@ -262,7 +262,7 @@ void swing_up(xTimerHandle pxTimer){
 	if((cos(alpha_R)*alphaDot)>=0) k = 1;
 	else k = -1;
 	u2= 4*(E- 0.42)*k;
-	++printed; // allow to print
+	printed = 1; // allow to print
 
 	if ((alpha_R>=0?alpha_R:-alpha_R)>(20.*pi/180)) u=u2;
 	else u = u1;

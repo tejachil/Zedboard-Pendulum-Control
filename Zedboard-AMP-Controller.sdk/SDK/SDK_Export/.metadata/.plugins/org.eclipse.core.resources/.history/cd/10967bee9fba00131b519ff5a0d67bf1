@@ -11,6 +11,8 @@
 #include "xscugic.h"
 #include "sleep.h"
 #include "xpseudo_asm.h"
+#include "FreeRTOS.h"
+#include "task.h"
 
 /**
  * Modified DCacheFlush to prevent L2 Cache controller access

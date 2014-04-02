@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
-  87056	   3120	  88812	 178988	  2bb2c	freertos_amp_pendulum.elf
+  83072	   3120	  88860	 175052	  2abcc	freertos_amp_pendulum.elf
