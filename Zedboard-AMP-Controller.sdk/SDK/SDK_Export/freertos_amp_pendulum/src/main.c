@@ -22,47 +22,277 @@
 #include "AXI_GPIO.h"
 #include "amp.h"
 
+// MODE Defines for the precompiler options
+#define LED_DEBUG 			1	// Used to three LEDs to debug
+#define CONTROLLER_MODE		SWING_UP
+
 
 #define mainLED_TASK_PRIORITY		( tskIDLE_PRIORITY + 1 )
 
-// Used to toggle the LEDs on ZedBoard to measure timer period and SPI send latency
-#define LED_DEBUG 1
 #if LED_DEBUG == 1
 	XGpio GPIOInstance_Ptr;
 	void prvSetLEDHardware( void );
-
 	// Function prototype for the printing task
 	static void printingTask(void *param);
 #endif
 
 SpiStruct mySpi;
 
-/********************** Global variables for controller **********************/
-static int printed; // variable to keep track of printing
-static int enc1, enc2;
-static float pot1;
+#define STATE_FEEDBACK		0
+#define KALMAN_FILTER		1
+#define SWING_UP			2
 
+
+static int printed; // variable to keep track of printing
+
+
+/*********************************************************************/
+/*********************** CONTROLLER FUNCTIONS ************************/
+/*********************************************************************/
+
+/****************** Common Global variables for all ******************/
 volatile unsigned sec1000; // This is updated 1000 times per second by interrupt handler
 volatile float output_V,theta_R,alpha_R,theta_des;
 volatile float thetaDot=0.,alphaDot=0.;
-
 #define pi ((float)3.14125926535)
 const float Kr2d=180./pi;        //radians to degrees
 const float Kpot=-352.*pi/180/10;    //radians/V for pot
 const float Kenc=pi/(2.*1024.);     //radians/count for encoder
 
+/************************* state_feedback() **************************/
+#if CONTROLLER_MODE == STATE_FEEDBACK
+/****************** Global variables for Controller ******************/
+void state_feedback(xTimerHandle pxTimer);
+
+int temp;
+float u;
+static float thetaOld=0.,alphaOld=0.;
+
+/****************** Control algorithm for Controller ******************/
+void state_feedback(xTimerHandle pxTimer){
+	// Timer LED
+	#if LED_DEBUG == 1
+	setLEDs(&GPIOInstance_Ptr, LED_7, 1);
+	#endif
+
+
+	sec1000++;            // Update global variable
+	//  code for simple inverted pendulum control -- follows Quanser, no Kalman Filter
+	//read positions and compute velocities by filtering
+	theta_R=readADC()*Kpot;
+	temp=encoderRead(ENCODER_P)%4096;  //force encoder reading to be between 0 and 4096(2pi)
+	//xil_printf("\nEncoder Value = %d", temp);
+	if (temp<0) temp+=4096;
+	alpha_R=(temp)*Kenc-pi;  //convert to up => alpha=0
+	//alpha_R=encoderRead();
+	thetaDot=0.9391*thetaDot+60.92*(theta_R-thetaOld);
+	alphaDot=0.9391*alphaDot+60.92*(alpha_R-alphaOld);
+	//need to negate u, so just use positive feedback, u=K*x
+	u=-5.28*(theta_R-theta_des)+30.14*alpha_R-2.65*thetaDot+3.55*alphaDot;
+
+	printed = 1; // allow to print
+
+	if ((alpha_R>=0?alpha_R:-alpha_R)>(10.*pi/180)) u=0;
+	if (u>5.) u=5.;
+	else if (u<-5.) u=-5.;
+
+	// Latancy measuring LED
+	#if LED_DEBUG == 1
+	setLEDs(&GPIOInstance_Ptr, LED_6, 1);
+	#endif
+
+	writeDAC(u);
+	output_V=u;
+	alphaOld=alpha_R;
+	thetaOld=theta_R;
+	if((sec1000%10000)<5000) theta_des=20*pi/180;
+	else theta_des=-20*pi/180;
+
+	// Timer LED
+	#if LED_DEBUG == 1
+	setLEDs(&GPIOInstance_Ptr, LED_7, 0);
+	#endif
+}
+
+
+/************************** kalman_filter() **************************/
+#elif CONTROLLER_MODE == KALMAN_FILTER
+/****************** Global variables for Controller ******************/
+void kalman_filter(xTimerHandle pxTimer);
+
+int temp,ind,col;
+float u;
+static int enc1, enc2;
+static float pot1;
+
 float xhat[4];
+static const float Kf[4][2]={
+	{0.9775,0},
+	{0,0.9775},
+	{0.0109,-0.0256},
+	{-.0279,0.9422}
+};
+static const float Kc[4]={-5.1871,27.8442,-2.7295,3.1867};
+static const float Aup[4][4]={
+    {0.0225,0.0000,0.0000,0.0000},
+    {0.0000,0.0225,0.0000,0.0000},
+    {-0.0109,0.1051,0.9552,-0.0008},
+    {0.0279,-0.8221,-0.0431,0.9977}
+};
+static const float Bup[4]={0,0,0.0815,0.0784};
+static float thetaOld=0.,alphaOld=0.;
+static float xpre[4]={0.,0.,0.,0.};
 
-/*************************** Function Prototypes ***************************/
+/****************** Control algorithm for Controller ******************/
+void kalman_filter(xTimerHandle pxTimer){
+	// Timer LED
+	#if LED_DEBUG == 1
+	setLEDs(&GPIOInstance_Ptr, LED_7, 1);
+	#endif
+
+	sec1000++;            // Update global variable
+
+	//  code for Kalman Filter based controller
+	//read inputs and convert to radians
+
+	// ADC Read
+		//pot1 = readADC();
+		//theta_R=pot1*Kpot;
+		//theta_R=readADC()*Kpot;
+	enc1 = encoderRead(ENCODER_S);
+	temp = -enc1 % 4096;
+	theta_R=temp*Kenc;
+	temp=encoderRead(ENCODER_P)%4096;  //force encoder reading to be between 0 and 4096(2pi)
+	enc2 = temp;
+
+	if (temp<0) temp+=4096;
+	alpha_R=(temp)*Kenc-pi;  //convert to up => alpha=0
+
+	//check to see if we should be controlling.  If not, output 0
+	if ((alpha_R>=0?alpha_R:-alpha_R)>(20.*pi/180)) {
+		u=0.;  //if we are not in range do nothing
+		writeDAC(u);
+		output_V=u;
+		for(ind=0;ind<4;ind++) xpre[ind]=0.; //reset estimator
+	}
+	else {
+	  //update state estimate based on new input
+	  for(ind=0;ind<4;ind++) {
+		  xhat[ind]=xpre[ind]+Kf[ind][0]*theta_R+Kf[ind][1]*alpha_R;
+	  }
+	  //compute control
+	  u=0.;
+	  for(ind=0;ind<4;ind++) {
+		  u+= Kc[ind]*xhat[ind]; // changed the sign for kc to positive
+	  }
+	  u+= -Kc[0]*theta_des; // changed the sign of kc to negative
+	  output_V=u;
+
+	  //saturate
+	  if (u>5) u=5;
+	  else if (u<-5) u=-5;
+
+	// Latancy measuring LED
+	#if LED_DEBUG == 1
+	setLEDs(&GPIOInstance_Ptr, LED_6, 1);
+	#endif
+
+	  writeDAC(-u);  //invert due to sign conventions
+
+	  //precompute the part of xhat we can
+	  for(ind=0;ind<4;ind++) {
+		  xpre[ind]=0.;
+		  for(col=0;col<4;col++) {
+			  xpre[ind]+=Aup[ind][col]*xhat[col];
+		  }
+		  xpre[ind]+=Bup[ind]*u;
+	  }
+	  if((sec1000%20000)<10000) theta_des=20*pi/180;
+	  else theta_des=-20*pi/180;
+	 // theta_des=20*pi/180;//.*sin(2*pi*.0001*sec1000);
+	}
+
+	printed = 1;
+
+	// Timer LED
+	#if LED_DEBUG == 1
+	setLEDs(&GPIOInstance_Ptr, LED_7, 0);
+	#endif
+}
 
 
+#elif CONTROLLER_MODE == SWING_UP
+/**************************** swing_up() *****************************/
+/****************** Global variables for Controller ******************/
+void swing_up(xTimerHandle pxTimer);
 
-void update_value(xTimerHandle pxTimer);
+int temp;
+float u,u1,u2;
+volatile float E; // Energy of the pendulum E = (1/2)Jp*alphadort^2 + (1-cos(alpha))*)1/2*mp*Lp*g)
 
-//INVERTED PENDULUM STABILIZATION
+static int k=1; // added for sign of alphadot*cos(alpha) for swing up control
+static float thetaOld=0.,alphaOld=0.;
 
-//*************************** main() ***************************
+/***************** Control algorithm for Controller ******************/
+void swing_up(xTimerHandle pxTimer){
+	// Timer LED
+	#if LED_DEBUG == 1
+	setLEDs(&GPIOInstance_Ptr, LED_7, 1);
+	#endif
 
+	sec1000++;            // Update global variable
+
+	//  code for simple inverted pendulum control -- follows Quanser, no Kalman Filter
+	//read positions and compute velocities by filtering
+	theta_R=readADC()*Kpot;
+	temp=encoderRead(ENCODER_P)%4096;  //force encoder reading to be between 0 and 4096(2pi)
+
+	if (temp<0) temp+=4096;
+	alpha_R=(temp)*Kenc-pi;  //convert to up => alpha=0
+
+	thetaDot=0.9391*thetaDot+60.92*(theta_R-thetaOld);
+	alphaDot=0.9391*alphaDot+60.92*(alpha_R-alphaOld);
+	//need to negate u, so just use positive feedback, u=K*x
+	//u=-5.28*(theta_R-theta_des)+30.14*alpha_R-2.65*thetaDot+3.55*alphaDot;
+
+	// self erect control law
+	u1=-5.28*(theta_R-theta_des)+30.14*alpha_R-2.65*thetaDot+3.55*alphaDot;
+	E = (0.00059937)*(alphaDot)*(alphaDot) + (0.2096)*(1-cos(alpha_R)); // calculation of enenrgy of pendulum
+	if((cos(alpha_R)*alphaDot)>=0) k = 1;
+	else k = -1;
+	u2= 4*(E- 0.42)*k;
+	printed = 1; // allow to print
+
+	if ((alpha_R>=0?alpha_R:-alpha_R)>(20.*pi/180)) u=u2;
+	else u = u1;
+
+	/*if (u>10.) u=10.;
+	else if (u<-10.) u=-10.;*/
+
+	// Latancy measuring LED
+	#if LED_DEBUG == 1
+	setLEDs(&GPIOInstance_Ptr, LED_6, 1);
+	#endif
+
+	writeDAC(u);
+	output_V=u;
+	alphaOld=alpha_R;
+	thetaOld=theta_R;
+	theta_des=-20*pi/180;
+	/*if((sec1000%10000)<5000) theta_des=20*pi/180;
+	else theta_des=-20*pi/180;*/
+
+	// Timer LED
+	#if LED_DEBUG == 1
+	setLEDs(&GPIOInstance_Ptr, LED_7, 0);
+	#endif
+}
+#endif // end controller mode case
+
+
+/*********************************************************************/
+/****************************** main() *******************************/
+/*********************************************************************/
 int main(void)
 {
 	prvInitializeExceptions();
@@ -92,7 +322,13 @@ int main(void)
 
 
     // Start a timer with a period of 1ms
-	xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,update_value);
+	#if CONTROLLER_MODE == STATE_FEEDBACK
+		xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,state_feedback);
+	#elif CONTROLLER_MODE == KALMAN_FILTER
+		xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,kalman_filter);
+	#elif CONTROLLER_MODE == SWING_UP
+		xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,swing_up);
+	#endif
 	xTimerStart(ControllerTimerHandle, 0);
 
 	/* Start the tasks and timer running. */
@@ -107,104 +343,6 @@ int main(void)
 }
 
 
-//************************** update_value() ***************************
-// Contains the control algorithm for maintaining stability of the pendulum
-void update_value(xTimerHandle pxTimer)
-{
-	#if LED_DEBUG == 1
-	setLEDs(&GPIOInstance_Ptr, LED_7, 1);
-	#endif
-
-
-	   static const float Kf[4][2]={
-	    {0.5475,0.0},
-	    {0.0,0.9204},
-	    {0.0059,-0.0194},
-	    {-0.0158,0.8941}
-	    };
-	    static const float Kc[4]={-5.1871,27.8442,-2.7295,3.1867};
-	    static const float Aup[4][4]={
-	        {0.4525,0.0,0.0004,0},
-	        {0.00,0.0796,-0.0,0.0001},
-	        {-0.0059,0.099,0.9552,-0.0009},
-	        {0.0158,-0.7740,-0.0431,0.9978}
-	    };
-	    static const float Bup[4]={0,0,0.0815,0.0784};
-	   int temp,ind,col;
-	   float u;
-	   // static float thetaOld=0., alphaOld=0.;
-
-	   static float xpre[4]={0.,0.,0.,0.};
-
-		sec1000++;            // Update global variable
-
-		//  code for Kalman Filter based controller
-		//read inputs and convert to radians
-		pot1 = readADC();
-		theta_R=pot1*Kpot;
-		//theta_R=readADC()*Kpot;
-		enc1 = encoderRead(ENCODER_S);
-		//temp=-encoderRead(ENCODER_S) % 4096; //get servo reading. - for CCW +ve convention
-		temp = -enc1 % 4096;
-		//theta_R=temp*Kenc;
-		temp=encoderRead(ENCODER_P)%4096;  //force encoder reading to be between 0 and 4096(2pi)
-		enc2 = temp;
-
-		if (temp<0) temp+=4096;
-		alpha_R=(temp)*Kenc-pi;  //convert to up => alpha=0
-
-		//check to see if we should be controlling.  If not, output 0
-		if ((alpha_R>=0?alpha_R:-alpha_R)>(30.*pi/180)) {
-			u=0.;  //if we are not in range do nothing
-			writeDAC(u);
-			output_V=u;
-			for(ind=0;ind<4;ind++) xpre[ind]=0.; //reset estimator
-		}
-		else {
-		  //update state estimate based on new input
-		  for(ind=0;ind<4;ind++) {
-			  xhat[ind]=xpre[ind]+Kf[ind][0]*theta_R+Kf[ind][1]*alpha_R;
-		  }
-		  //compute control
-		  u=0.;
-		  for(ind=0;ind<4;ind++) {
-			  u+= Kc[ind]*xhat[ind]; // changed the sign for kc to positive
-		  }
-		  u+= -Kc[0]*theta_des; // changed the sign of kc to negative
-		  output_V=u;
-
-		  //saturate
-		  if (u>5) u=5;
-		  else if (u<-5) u=-5;
-
-
-		#if LED_DEBUG == 1
-		setLEDs(&GPIOInstance_Ptr, LED_6, 1);
-		#endif
-		  writeDAC(-u);  //invert due to sign conventions
-
-		  //precompute the part of xhat we can
-		  for(ind=0;ind<4;ind++) {
-			  xpre[ind]=0.;
-			  for(col=0;col<4;col++) {
-				  xpre[ind]+=Aup[ind][col]*xhat[col];
-			  }
-			  xpre[ind]+=Bup[ind]*u;
-		  }
-		  if((sec1000%20000)<10000) theta_des=20*pi/180;
-	      else theta_des=-20*pi/180;
-	     // theta_des=20*pi/180;//.*sin(2*pi*.0001*sec1000);
-		}
-
-		printed = 1;
-
-	#if LED_DEBUG == 1
-	setLEDs(&GPIOInstance_Ptr, LED_7, 0);
-	#endif
-}
-
-
-
 #if LED_DEBUG == 1
 
 static void printingTask( void *param ){
@@ -213,7 +351,14 @@ static void printingTask( void *param ){
 			#if LED_DEBUG == 1
 			setLEDs(&GPIOInstance_Ptr, LED_5, 1);
 			#endif
-			xil_printf("\n%d %d", enc1, enc2); // print time: encoder value, control input
+			#if CONTROLLER_MODE == STATE_FEEDBACK
+				xil_printf("%d|%d|%d|%d|%d|%d|%d\n", (int)(output_V*100000.0), 0, 0, 0, 0, 0, 0);
+			#elif CONTROLLER_MODE == KALMAN_FILTER
+				xil_printf("%d|%d|%d|%d|%d|%d|%d\n", (int)(output_V*100000.0), enc1, enc2, xhat[0], xhat[1], xhat[2], xhat[3]);
+			#elif CONTROLLER_MODE == SWING_UP
+				xil_printf("%d|%d|%d|%d|%d|%d|%d\n", (int)(output_V*100000.0), 0, 0, 0, 0, 0, 0);
+			#endif
+			printed = 0;
 		}
 		#if LED_DEBUG == 1
 		setLEDs(&GPIOInstance_Ptr, LED_5, 0);

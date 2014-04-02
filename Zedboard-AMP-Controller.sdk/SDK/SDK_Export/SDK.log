@@ -325,3 +325,15 @@
 14:56:39.851 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
 15:36:33.487 INFO  - Restoring local repository preferences: 
 		 /home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/sdk_repo 
+11:58:50.380 INFO  - FPGA configured successfully with bitstream "/home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.runs/impl_1/system_wrapper.bit" 
+12:18:38.571 INFO  - Processor reset is completed for ps7_cortexa9_1 
+12:18:38.671 INFO  - PS initialization will be done as it is not done before. 
+12:18:38.671 INFO  - Running PS initialization.... 
+12:18:38.926 INFO  - ps7_init is completed. 
+12:18:39.026 INFO  - ps7_post_config is completed. 
+12:18:39.126 INFO  - PS Initialization is complete. 
+12:22:24.517 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+12:22:24.525 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
