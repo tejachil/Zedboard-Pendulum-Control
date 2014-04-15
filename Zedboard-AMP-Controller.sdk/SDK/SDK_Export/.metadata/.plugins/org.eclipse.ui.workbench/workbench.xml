@@ -41,17 +41,13 @@
 <part id="4"/>
 <part id="5"/>
 <part id="6"/>
-<part id="7"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="/home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_amp_pendulum/src/main.c" title="main.c" tooltip="freertos_amp_pendulum/src/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freertos_amp_pendulum/src/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="1" selectionOffset="938" selectionTopPixel="330"/>
-</editor>
-<editor id="com.xilinx.sdk.lscript.editor" name="lscript.ld" partName="lscript.ld" path="/home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_amp_pendulum/src/lscript.ld" title="lscript.ld" tooltip="freertos_amp_pendulum/src/lscript.ld" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freertos_amp_pendulum/src/lscript.ld"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="614" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="encoder.c" partName="encoder.c" path="/home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_amp_pendulum/src/encoder.c" title="encoder.c" tooltip="freertos_amp_pendulum/src/encoder.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freertos_amp_pendulum/src/encoder.c"/>
@@ -94,7 +90,6 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="886" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -193,7 +188,7 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.16160521" ratioLeft="298" ratioRight="1546" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.75" ratioLeft="498" ratioRight="166" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -228,8 +223,6 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_amp_pendulum/src/encoder.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_amp_pendulum/src/encoder.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_amp_pendulum/src/AXI_SPI.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_amp_pendulum/src/main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_amp_pendulum/src/AXI_SPI.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_amp_pendulum/src/adc_dac.c"/>
@@ -242,155 +235,155 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_bsp/ps7_cortexa9_1/libsrc/standalone_v3_06_a/src/xil_printf.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/freertos_bsp/ps7_cortexa9_1/include/task.h"/>
 </editors>
-<item historyLabel="encoder.h" index="1">
-<position info="not_deleted" x="150" y="0"/>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="2407" y="0"/>
 </item>
 <item historyLabel="AXI_SPI.h" index="2">
 <position info="not_deleted" x="668" y="0"/>
 </item>
-<item historyLabel="encoder.h" index="1">
-<position info="not_deleted" x="150" y="0"/>
-</item>
-<item historyLabel="encoder.c" index="0">
-<position info="not_deleted" x="75" y="0"/>
-</item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="2407" y="0"/>
-</item>
-<item historyLabel="AXI_SPI.h" index="4">
-<position info="not_deleted" x="668" y="0"/>
-</item>
-<item historyLabel="adc_dac.c" index="5">
+<item historyLabel="adc_dac.c" index="3">
 <position info="not_deleted" x="1013" y="0"/>
 </item>
-<item historyLabel="AXI_SPI.c" index="6">
+<item historyLabel="AXI_SPI.c" index="4">
 <position info="not_deleted" x="4" y="0"/>
 </item>
-<item historyLabel="AXI_SPI.h" index="4">
+<item historyLabel="AXI_SPI.h" index="2">
 <position info="not_deleted" x="668" y="0"/>
 </item>
-<item historyLabel="encoder.h" index="7">
+<item historyLabel="encoder.h" index="5">
 <position info="not_deleted" x="150" y="0"/>
 </item>
-<item historyLabel="adc_dac.c" index="5">
+<item historyLabel="adc_dac.c" index="3">
 <position info="not_deleted" x="1013" y="0"/>
 </item>
-<item historyLabel="AXI_SPI.c" index="6">
+<item historyLabel="AXI_SPI.c" index="4">
 <position info="not_deleted" x="4" y="0"/>
 </item>
 <item historyLabel="encoder.c" index="0">
 <position info="not_deleted" x="917" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="3919" y="0"/>
 </item>
-<item historyLabel="AXI_SPI.h" index="4">
+<item historyLabel="AXI_SPI.h" index="2">
 <position info="not_deleted" x="783" y="9"/>
 </item>
-<item historyLabel="encoder.h" index="7">
+<item historyLabel="encoder.h" index="5">
 <position info="not_deleted" x="150" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="3535" y="0"/>
 </item>
 <item historyLabel="encoder.c" index="0">
 <position info="not_deleted" x="917" y="0"/>
 </item>
-<item historyLabel="AXI_SPI.h" index="4">
+<item historyLabel="AXI_SPI.h" index="2">
 <position info="not_deleted" x="879" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="3535" y="0"/>
 </item>
-<item historyLabel="AXI_SPI.c" index="8">
+<item historyLabel="AXI_SPI.c" index="6">
 <position info="not_deleted" x="4" y="0"/>
 </item>
-<item historyLabel="AXI_SPI.h" index="9">
+<item historyLabel="AXI_SPI.h" index="7">
 <position info="not_deleted" x="879" y="0"/>
 </item>
-<item historyLabel="AXI_SPI.c" index="8">
+<item historyLabel="AXI_SPI.c" index="6">
 <position info="not_deleted" x="4" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="881" y="0"/>
 </item>
-<item historyLabel="AXI_SPI.h" index="9">
+<item historyLabel="AXI_SPI.h" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="adc_dac.c" index="10">
+<item historyLabel="adc_dac.c" index="8">
 <position info="not_deleted" x="1013" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="1096" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="4636" y="30"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="5652" y="8"/>
 </item>
-<item historyLabel="AXI_SPI.c" index="8">
+<item historyLabel="AXI_SPI.c" index="6">
 <position info="not_deleted" x="7426" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="5699" y="0"/>
 </item>
-<item historyLabel="amp.c" index="11">
+<item historyLabel="amp.c" index="9">
 <position info="not_deleted" x="1012" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="5699" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="10359" y="10"/>
 </item>
-<item historyLabel="xil_printf.c" index="12">
+<item historyLabel="xil_printf.c" index="10">
 <position info="not_deleted" x="7010" y="7"/>
 </item>
-<item historyLabel="amp.c" index="11">
+<item historyLabel="amp.c" index="9">
 <position info="not_deleted" x="1012" y="0"/>
 </item>
-<item historyLabel="amp.c" index="11">
+<item historyLabel="amp.c" index="9">
 <position/>
 </item>
-<item historyLabel="task.h" index="13">
+<item historyLabel="task.h" index="11">
 <position/>
 </item>
-<item historyLabel="amp.c" index="11">
+<item historyLabel="amp.c" index="9">
 <position/>
 </item>
-<item historyLabel="task.h" index="13">
+<item historyLabel="task.h" index="11">
 <position info="not_deleted" x="2969" y="77"/>
 </item>
-<item historyLabel="amp.c" index="11">
+<item historyLabel="amp.c" index="9">
 <position/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="284" y="39"/>
 </item>
-<item historyLabel="amp.c" index="11">
+<item historyLabel="amp.c" index="9">
 <position info="not_deleted" x="696" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="284" y="39"/>
 </item>
-<item historyLabel="amp.c" index="11">
+<item historyLabel="amp.c" index="9">
 <position info="not_deleted" x="222" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="529" y="0"/>
 </item>
-<item historyLabel="amp.c" index="11">
+<item historyLabel="amp.c" index="9">
 <position info="not_deleted" x="222" y="0"/>
 </item>
-<item active="true" historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="529" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="7665" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="3730" y="18"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="4143" y="37"/>
+</item>
+<item active="true" historyLabel="main.c" index="1">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

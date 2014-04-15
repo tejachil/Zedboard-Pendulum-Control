@@ -14813,3 +14813,1462 @@ make: Nothing to be done for `all'.
 16:05:08 **** Incremental Build of configuration Debug for project freertos_amp_pendulum ****
 make all 
 make: Nothing to be done for `all'.
+12:08:16 **** Build of project freertos_bsp ****
+make -k all 
+Finished building libraries
+12:08:17 **** Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Finished building: ../src/main.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+ 
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+Invoking: ARM gcc linker
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Finished building target: freertos_amp_pendulum.elf
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83072	   3120	  88860	 175052	  2abcc	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+16:57:33 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+ 
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+Building target: freertos_amp_pendulum.elf
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Invoking: ARM gcc linker
+                 from ../src/main.c:10:
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Finished building target: freertos_amp_pendulum.elf
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+ 
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+Invoking: ARM Print Size
+                 from ../src/main.c:10:
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+   text	   data	    bss	    dec	    hex	filename
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+  83072	   3120	  88860	 175052	  2abcc	freertos_amp_pendulum.elf
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+Finished building: freertos_amp_pendulum.elf.size
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+ 
+15:14:02 **** Build of project freertos_bsp ****
+make -k all 
+Finished building libraries
+15:14:02 **** Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Finished building: ../src/main.c
+                 from ../src/main.c:10:
+ 
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+Building target: freertos_amp_pendulum.elf
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+Invoking: ARM gcc linker
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building target: freertos_amp_pendulum.elf
+ 
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:14:32 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+ 
+Building target: freertos_amp_pendulum.elf
+Invoking: ARM gcc linker
+                 from ../src/main.c:10:
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+Finished building target: freertos_amp_pendulum.elf
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+ 
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:14:39 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+Finished building: ../src/main.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+ 
+                 from ../src/main.c:10:
+Building target: freertos_amp_pendulum.elf
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Invoking: ARM gcc linker
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+Finished building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+ 
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+Invoking: ARM Print Size
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+   text	   data	    bss	    dec	    hex	filename
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:14:58 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+Finished building: ../src/main.c
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+ 
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Building target: freertos_amp_pendulum.elf
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Finished building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+ 
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+Invoking: ARM Print Size
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:15:08 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Finished building: ../src/main.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+ 
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Building target: freertos_amp_pendulum.elf
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+Invoking: ARM gcc linker
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+Finished building target: freertos_amp_pendulum.elf
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+ 
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:15:15 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Finished building: ../src/main.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+ 
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+Invoking: ARM gcc linker
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+Finished building target: freertos_amp_pendulum.elf
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+ 
+                 from ../src/main.c:10:
+Invoking: ARM Print Size
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+   text	   data	    bss	    dec	    hex	filename
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:15:33 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Finished building: ../src/main.c
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+ 
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+Building target: freertos_amp_pendulum.elf
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+Invoking: ARM gcc linker
+                 from ../src/main.c:10:
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+Finished building target: freertos_amp_pendulum.elf
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+ 
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:15:43 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+ 
+                 from ../src/main.c:10:
+Building target: freertos_amp_pendulum.elf
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+Finished building target: freertos_amp_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:15:56 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Finished building: ../src/main.c
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+ 
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+Building target: freertos_amp_pendulum.elf
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Invoking: ARM gcc linker
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../src/main.c:10:
+Finished building target: freertos_amp_pendulum.elf
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+ 
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+Invoking: ARM Print Size
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+ 
+15:15:59 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+Finished building: ../src/main.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+ 
+                 from ../src/main.c:10:
+Building target: freertos_amp_pendulum.elf
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Invoking: ARM gcc linker
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+Finished building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+ 
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+Invoking: ARM Print Size
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:16:25 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+Finished building: ../src/main.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+ 
+                 from ../src/main.c:10:
+Building target: freertos_amp_pendulum.elf
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Invoking: ARM gcc linker
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+Finished building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+ 
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+Invoking: ARM Print Size
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+   text	   data	    bss	    dec	    hex	filename
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:17:48 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Finished building: ../src/main.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+ 
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+Invoking: ARM gcc linker
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+Finished building target: freertos_amp_pendulum.elf
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+ 
+                 from ../src/main.c:10:
+Invoking: ARM Print Size
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:18:09 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Finished building: ../src/main.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+ 
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+Invoking: ARM gcc linker
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+Finished building target: freertos_amp_pendulum.elf
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+ 
+                 from ../src/main.c:10:
+Invoking: ARM Print Size
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+   text	   data	    bss	    dec	    hex	filename
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:19:45 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+Finished building: ../src/main.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+ 
+                 from ../src/main.c:10:
+Building target: freertos_amp_pendulum.elf
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Invoking: ARM gcc linker
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+Finished building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+ 
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+Invoking: ARM Print Size
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+   text	   data	    bss	    dec	    hex	filename
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:20:12 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Finished building: ../src/main.c
+                 from ../src/main.c:10:
+ 
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Building target: freertos_amp_pendulum.elf
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Invoking: ARM gcc linker
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Finished building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+ 
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Invoking: ARM Print Size
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+   text	   data	    bss	    dec	    hex	filename
+                 from ../src/main.c:10:
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+Finished building: freertos_amp_pendulum.elf.size
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+ 
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+15:20:25 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Finished building: ../src/main.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+ 
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+Invoking: ARM gcc linker
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+Finished building target: freertos_amp_pendulum.elf
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+ 
+                 from ../src/main.c:10:
+Invoking: ARM Print Size
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+   text	   data	    bss	    dec	    hex	filename
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:20:48 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Finished building: ../src/main.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+ 
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+Invoking: ARM gcc linker
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+Finished building target: freertos_amp_pendulum.elf
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+ 
+                 from ../src/main.c:10:
+Invoking: ARM Print Size
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+   text	   data	    bss	    dec	    hex	filename
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:20:57 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Finished building: ../src/main.c
+                 from ../src/main.c:10:
+ 
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Building target: freertos_amp_pendulum.elf
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+Finished building target: freertos_amp_pendulum.elf
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+ 
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:21:02 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Finished building: ../src/main.c
+                 from ../src/main.c:10:
+ 
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+Building target: freertos_amp_pendulum.elf
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Invoking: ARM gcc linker
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Finished building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+ 
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Invoking: ARM Print Size
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+   text	   data	    bss	    dec	    hex	filename
+                 from ../src/main.c:10:
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+Finished building: freertos_amp_pendulum.elf.size
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+ 
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+15:21:10 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Finished building: ../src/main.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+ 
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Building target: freertos_amp_pendulum.elf
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_amp_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:21:46 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: freertos_amp_pendulum.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_amp_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:21:54 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+Finished building: ../src/main.c
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+ 
+                 from ../src/main.c:10:
+Building target: freertos_amp_pendulum.elf
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Invoking: ARM gcc linker
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+Finished building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+ 
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+Invoking: ARM Print Size
+../src/main.c:127:14: warning: 'pot1' defined but not used [-Wunused-variable]
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+../src/main.c:144:14: warning: 'thetaOld' defined but not used [-Wunused-variable]
+   text	   data	    bss	    dec	    hex	filename
+../src/main.c:144:26: warning: 'alphaOld' defined but not used [-Wunused-variable]
+  83080	   3120	  88860	 175060	  2abd4	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:21:54 **** Incremental Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+15:22:03 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c: In function 'swing_up_kalman':
+../src/main.c:329:20: error: 'mio_emio_pmod2' undeclared (first use in this function)
+../src/main.c:329:20: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:329:36: error: 'LD7' undeclared (first use in this function)
+../src/main.c:337:2: error: too few arguments to function 'encoderRead'
+In file included from ../src/main.c:18:0:
+../src/encoder.h:87:5: note: declared here
+../src/main.c:348:2: warning: implicit declaration of function 'cos' [-Wimplicit-function-declaration]
+../src/main.c:348:55: warning: incompatible implicit declaration of built-in function 'cos' [enabled by default]
+../src/main.c:384:36: error: 'LD6' undeclared (first use in this function)
+../src/main.c: At top level:
+../src/main.c:305:12: warning: 'enc1' defined but not used [-Wunused-variable]
+../src/main.c:305:18: warning: 'enc2' defined but not used [-Wunused-variable]
+../src/main.c:306:14: warning: 'pot1' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+15:22:04 **** Incremental Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c: In function 'swing_up_kalman':
+../src/main.c:329:20: error: 'mio_emio_pmod2' undeclared (first use in this function)
+../src/main.c:329:20: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:329:36: error: 'LD7' undeclared (first use in this function)
+../src/main.c:337:2: error: too few arguments to function 'encoderRead'
+In file included from ../src/main.c:18:0:
+../src/encoder.h:87:5: note: declared here
+../src/main.c:348:2: warning: implicit declaration of function 'cos' [-Wimplicit-function-declaration]
+../src/main.c:348:55: warning: incompatible implicit declaration of built-in function 'cos' [enabled by default]
+../src/main.c:384:36: error: 'LD6' undeclared (first use in this function)
+../src/main.c: At top level:
+../src/main.c:305:12: warning: 'enc1' defined but not used [-Wunused-variable]
+../src/main.c:305:18: warning: 'enc2' defined but not used [-Wunused-variable]
+../src/main.c:306:14: warning: 'pot1' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+15:22:30 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c: In function 'swing_up_kalman':
+../src/main.c:337:2: error: too few arguments to function 'encoderRead'
+In file included from ../src/main.c:18:0:
+../src/encoder.h:87:5: note: declared here
+../src/main.c:348:2: warning: implicit declaration of function 'cos' [-Wimplicit-function-declaration]
+../src/main.c:348:55: warning: incompatible implicit declaration of built-in function 'cos' [enabled by default]
+../src/main.c:384:20: error: 'mio_emio_pmod2' undeclared (first use in this function)
+../src/main.c:384:20: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:384:36: error: 'LD6' undeclared (first use in this function)
+../src/main.c:411:36: error: 'LD7' undeclared (first use in this function)
+../src/main.c: At top level:
+../src/main.c:305:12: warning: 'enc1' defined but not used [-Wunused-variable]
+../src/main.c:305:18: warning: 'enc2' defined but not used [-Wunused-variable]
+../src/main.c:306:14: warning: 'pot1' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+15:22:42 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c: In function 'swing_up_kalman':
+../src/main.c:337:2: error: too few arguments to function 'encoderRead'
+In file included from ../src/main.c:18:0:
+../src/encoder.h:87:5: note: declared here
+../src/main.c:348:2: warning: implicit declaration of function 'cos' [-Wimplicit-function-declaration]
+../src/main.c:348:55: warning: incompatible implicit declaration of built-in function 'cos' [enabled by default]
+../src/main.c:384:20: error: 'mio_emio_pmod2' undeclared (first use in this function)
+../src/main.c:384:20: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:384:36: error: 'LD6' undeclared (first use in this function)
+../src/main.c: At top level:
+../src/main.c:305:12: warning: 'enc1' defined but not used [-Wunused-variable]
+../src/main.c:305:18: warning: 'enc2' defined but not used [-Wunused-variable]
+../src/main.c:306:14: warning: 'pot1' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+15:22:54 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c: In function 'swing_up_kalman':
+../src/main.c:337:2: error: too few arguments to function 'encoderRead'
+In file included from ../src/main.c:18:0:
+../src/encoder.h:87:5: note: declared here
+../src/main.c:348:2: warning: implicit declaration of function 'cos' [-Wimplicit-function-declaration]
+../src/main.c:348:55: warning: incompatible implicit declaration of built-in function 'cos' [enabled by default]
+../src/main.c: At top level:
+../src/main.c:305:12: warning: 'enc1' defined but not used [-Wunused-variable]
+../src/main.c:305:18: warning: 'enc2' defined but not used [-Wunused-variable]
+../src/main.c:306:14: warning: 'pot1' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+15:23:02 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c: In function 'swing_up_kalman':
+../src/main.c:337:2: error: too few arguments to function 'encoderRead'
+In file included from ../src/main.c:18:0:
+../src/encoder.h:87:5: note: declared here
+../src/main.c:348:2: warning: implicit declaration of function 'cos' [-Wimplicit-function-declaration]
+../src/main.c:348:55: warning: incompatible implicit declaration of built-in function 'cos' [enabled by default]
+../src/main.c: At top level:
+../src/main.c:305:12: warning: 'enc1' defined but not used [-Wunused-variable]
+../src/main.c:305:18: warning: 'enc2' defined but not used [-Wunused-variable]
+../src/main.c:306:14: warning: 'pot1' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+15:23:05 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c: In function 'swing_up_kalman':
+../src/main.c:337:2: error: too few arguments to function 'encoderRead'
+In file included from ../src/main.c:18:0:
+../src/encoder.h:87:5: note: declared here
+../src/main.c:348:2: warning: implicit declaration of function 'cos' [-Wimplicit-function-declaration]
+../src/main.c:348:55: warning: incompatible implicit declaration of built-in function 'cos' [enabled by default]
+../src/main.c: At top level:
+../src/main.c:305:12: warning: 'enc1' defined but not used [-Wunused-variable]
+../src/main.c:305:18: warning: 'enc2' defined but not used [-Wunused-variable]
+../src/main.c:306:14: warning: 'pot1' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+15:23:19 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+../src/main.c: In function 'swing_up_kalman':
+../src/main.c:337:2: error: too few arguments to function 'encoderRead'
+In file included from ../src/main.c:18:0:
+../src/encoder.h:87:5: note: declared here
+../src/main.c:348:2: warning: implicit declaration of function 'cos' [-Wimplicit-function-declaration]
+../src/main.c:348:55: warning: incompatible implicit declaration of built-in function 'cos' [enabled by default]
+../src/main.c: At top level:
+../src/main.c:305:12: warning: 'enc1' defined but not used [-Wunused-variable]
+../src/main.c:305:18: warning: 'enc2' defined but not used [-Wunused-variable]
+../src/main.c:306:14: warning: 'pot1' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+15:24:37 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+Finished building: ../src/main.c
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+ 
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+Building target: freertos_amp_pendulum.elf
+../src/main.c: In function 'swing_up_kalman':
+Invoking: ARM gcc linker
+../src/main.c:348:2: warning: implicit declaration of function 'cos' [-Wimplicit-function-declaration]
+../src/main.c:348:55: warning: incompatible implicit declaration of built-in function 'cos' [enabled by default]
+../src/main.c: At top level:
+../src/main.c:305:12: warning: 'enc1' defined but not used [-Wunused-variable]
+../src/main.c:305:18: warning: 'enc2' defined but not used [-Wunused-variable]
+../src/main.c:306:14: warning: 'pot1' defined but not used [-Wunused-variable]
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: freertos_amp_pendulum.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  88176	   3120	  88876	 180172	  2bfcc	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:24:38 **** Incremental Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+15:24:45 **** Incremental Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+15:25:19 **** Incremental Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+make: Nothing to be done for `all'.
+15:25:43 **** Auto Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../freertos_bsp/ps7_cortexa9_1/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:483:0: warning: "XPAR_XADCPS_0_DEVICE_ID" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:304:0: note: this is the location of the previous definition
+Finished building: ../src/main.c
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19:0,
+ 
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+Building target: freertos_amp_pendulum.elf
+                 from ../src/main.c:10:
+Invoking: ARM gcc linker
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:484:0: warning: "XPAR_XADCPS_0_BASEADDR" redefined [enabled by default]
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos_bsp/ps7_cortexa9_1/lib -o "freertos_amp_pendulum.elf"  ./src/AXI_GPIO.o ./src/AXI_SPI.o ./src/adc_dac.o ./src/amp.o ./src/encoder.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:15:0,
+Finished building target: freertos_amp_pendulum.elf
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:19,
+                 from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67,
+                 from ../src/main.c:10:
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:305:0: note: this is the location of the previous definition
+../src/main.c:31:0: warning: "configTIMER_TASK_PRIORITY" redefined [enabled by default]
+In file included from ../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOS.h:67:0,
+                 from ../src/main.c:10:
+ 
+../../freertos_bsp/ps7_cortexa9_1/include/FreeRTOSConfig.h:59:0: note: this is the location of the previous definition
+Invoking: ARM Print Size
+arm-xilinx-eabi-size freertos_amp_pendulum.elf  |tee "freertos_amp_pendulum.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82080	   3120	  88812	 174012	  2a7bc	freertos_amp_pendulum.elf
+Finished building: freertos_amp_pendulum.elf.size
+ 
+15:25:44 **** Incremental Build of configuration Debug for project freertos_amp_pendulum ****
+make all 
+make: Nothing to be done for `all'.

@@ -23,7 +23,7 @@
 #include "amp.h"
 
 // MODE Defines for the precompiler options
-#define CONTROLLER_MODE		STATE_FEEDBACK
+#define CONTROLLER_MODE		SWING_UP_KALMAN
 #define PRINT_FREQ			5	// print every x value
 #define LED_DEBUG 			1	// Used to three LEDs to debug
 
@@ -334,7 +334,7 @@ void swing_up_kalman(xTimerHandle pxTimer){
 	//  code for simple inverted pendulum control -- follows Quanser, no Kalman Filter
 	//read positions and compute velocities by filtering
 	theta_R=readADC()*Kpot;
-	temp=encoderRead(ENCODER_P)%4096;  //force encoder reading to be between 0 and 4096(2pi)
+	temp=encoderRead()%4096;  //force encoder reading to be between 0 and 4096(2pi)
 
 	if (temp<0) temp+=4096;
 	alpha_R=(temp)*Kenc-pi;  //convert to up => alpha=0
@@ -375,15 +375,14 @@ void swing_up_kalman(xTimerHandle pxTimer){
 		  u1+= Kc[0]*theta_des; // changed the sign of kc to negative
 		  output_V=-u1;
 		  u = u1;
-
-		// Latancy measuring LED
-		#if LED_DEBUG == 1
-		setLEDs(&GPIOInstance_Ptr, LED_6, 1);
-		#endif
-
-		writeDAC(-u);
+		  writeDAC(-u);
 
 	++printed; // allow to print
+
+	// Latancy measuring LED
+	#if LED_DEBUG == 1
+	XGpioPs_WritePin(&mio_emio_pmod2, LD6, 0x01);
+	#endif
 
 
 	if (u>10.) u=10.;
@@ -409,7 +408,7 @@ void swing_up_kalman(xTimerHandle pxTimer){
 
 	// Timer LED
 	#if LED_DEBUG == 1
-		setLEDs(&GPIOInstance_Ptr, LED_7, 0);
+	XGpioPs_WritePin(&mio_emio_pmod2, LD7, 0x00);
 	#endif
 }
 

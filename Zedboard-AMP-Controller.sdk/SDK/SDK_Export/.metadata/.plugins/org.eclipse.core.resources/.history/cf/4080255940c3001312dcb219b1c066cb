@@ -23,7 +23,7 @@
 #include "amp.h"
 
 // MODE Defines for the precompiler options
-#define CONTROLLER_MODE		STATE_FEEDBACK
+#define CONTROLLER_MODE		KALMAN_FILTER
 #define PRINT_FREQ			5	// print every x value
 #define LED_DEBUG 			1	// Used to three LEDs to debug
 
@@ -222,9 +222,8 @@ void kalman_filter(xTimerHandle pxTimer){
 }
 
 
-
-/********************* swing_up_statefeedback() **********************/
 #elif CONTROLLER_MODE == SWING_UP_STATEFEEDBACK
+/********************* swing_up_statefeedback() **********************/
 /****************** Global variables for Controller ******************/
 void swing_up_statefeedback(xTimerHandle pxTimer);
 
@@ -290,10 +289,8 @@ void swing_up_statefeedback(xTimerHandle pxTimer){
 	#endif
 }
 
-/************************* swing_up_kalman() *************************/
-#elif CONTROLLER_MODE == SWING_UP_KALMAN
+/**************************** swing_up() *****************************/
 /****************** Global variables for Controller ******************/
-void swing_up_kalman(xTimerHandle pxTimer);
 
 float u,u1,u2;
 volatile float E; // Energy of the pendulum E = (1/2)Jp*alphadort^2 + (1-cos(alpha))*)1/2*mp*Lp*g)
@@ -321,12 +318,27 @@ static const float Aup[4][4]={
 };
 static const float Bup[4]={0,0,0.0815,0.0784};
 static float xpre[4]={0.,0.,0.,0.};
+static const float A[4][4] = {
+		{0,0,1,0},
+		{0,0,0,1},
+		{0,81.4033,-45.8259,-0.9319},
+		{0,122.0545,-44.0926,-1.3972}
+};
+static const float B[4] = {0,0,83.4659,80.3162};
+static const float C[2][4] =  {
+		{1,0,0,0},
+		{0,1,0,0}
+};
+
+static float xdot[4] = {0.,0.,0.,0.};
+static float del[4] = {0.,0.,0.,0.};
+static const eps[4] = {2,2,2,2};
 
 /***************** Control algorithm for Controller ******************/
-void swing_up_kalman(xTimerHandle pxTimer){
+void update_value(xTimerHandle pxTimer){
 	// Timer LED
 	#if LED_DEBUG == 1
-	setLEDs(&GPIOInstance_Ptr, LED_7, 1);
+	XGpioPs_WritePin(&mio_emio_pmod2, LD7, 0x01);
 	#endif
 
 	sec1000++;            // Update global variable
@@ -334,7 +346,7 @@ void swing_up_kalman(xTimerHandle pxTimer){
 	//  code for simple inverted pendulum control -- follows Quanser, no Kalman Filter
 	//read positions and compute velocities by filtering
 	theta_R=readADC()*Kpot;
-	temp=encoderRead(ENCODER_P)%4096;  //force encoder reading to be between 0 and 4096(2pi)
+	temp=encoderRead()%4096;  //force encoder reading to be between 0 and 4096(2pi)
 
 	if (temp<0) temp+=4096;
 	alpha_R=(temp)*Kenc-pi;  //convert to up => alpha=0
@@ -344,6 +356,19 @@ void swing_up_kalman(xTimerHandle pxTimer){
 	//need to negate u, so just use positive feedback, u=K*x
 	//u=-5.28*(theta_R-theta_des)+30.14*alpha_R-2.65*thetaDot+3.55*alphaDot;
 
+	// comparing plant output with the plant model
+	// Plant model and actual plant performance should be compared only for production controller, not for backup
+	if(u == u1)
+	{
+	for(i=0;i<4;i++)
+	{
+		del[i] = xhat[i] - xdot[i]; // Find the difference in the actual states and model states
+	}
+	if(del[0]> 10) // check the state of concern ( in this case theta) to ensure it is not more than allowable limit
+	{ u = 0;
+	writeDAC(u);
+	}
+	}
 	// self erect control law
 	E = (0.00059937)*(alphaDot)*(alphaDot) + (0.2096)*(1-cos(alpha_R)); // calculation of enenrgy of pendulum
 	if((cos(alpha_R)*alphaDot)>=0) k = 1;
@@ -375,15 +400,22 @@ void swing_up_kalman(xTimerHandle pxTimer){
 		  u1+= Kc[0]*theta_des; // changed the sign of kc to negative
 		  output_V=-u1;
 		  u = u1;
+		  writeDAC(-u);
 
-		// Latancy measuring LED
-		#if LED_DEBUG == 1
-		setLEDs(&GPIOInstance_Ptr, LED_6, 1);
-		#endif
+		  // Apply the control input to the plant model
+		  for(i=0;i<4;i++)
+		  { xdot[i] = A[i][0]*xhat[0] + A[i][1]*xhat[i] + A[i][2]*xhat[2] + A[i][3]*xhat[3] + B[i]*u; };
 
-		writeDAC(-u);
+
 
 	++printed; // allow to print
+	// Latancy measuring LED
+
+	#if LED_DEBUG == 1
+	XGpioPs_WritePin(&mio_emio_pmod2, LD6, 0x01);
+	#endif
+
+
 
 
 	if (u>10.) u=10.;
@@ -399,17 +431,19 @@ void swing_up_kalman(xTimerHandle pxTimer){
 		  xpre[ind]+=Bup[ind]*u;
 	  }
 	  /*if((sec1000%20000)<10000) theta_des=20*pi/180;
-	  else theta_des=-20*pi/180; */
-
-	  theta_des=-20*pi/180;
-
+	  else */theta_des=-20*pi/180;
+	 // theta_des=20*pi/180;//.*sin(2*pi*.0001*sec1000);
 	}
 
+	//output_V=u;
 
+	//theta_des=-20*pi/180;
+	/*if((sec1000%10000)<5000) theta_des=20*pi/180;
+	else theta_des=-20*pi/180;*/
 
 	// Timer LED
 	#if LED_DEBUG == 1
-		setLEDs(&GPIOInstance_Ptr, LED_7, 0);
+	XGpioPs_WritePin(&mio_emio_pmod2, LD7, 0x00);
 	#endif
 }
 
@@ -454,8 +488,6 @@ int main(void)
 		xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,kalman_filter);
 	#elif CONTROLLER_MODE == SWING_UP_STATEFEEDBACK
 		xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,swing_up_statefeedback);
-	#elif CONTROLLER_MODE == SWING_UP_KALMAN
-		xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,swing_up_kalman);
 	#endif
 	xTimerStart(ControllerTimerHandle, 0);
 

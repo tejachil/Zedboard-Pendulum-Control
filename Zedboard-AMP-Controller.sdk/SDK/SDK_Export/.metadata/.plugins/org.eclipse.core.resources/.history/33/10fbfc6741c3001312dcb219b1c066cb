@@ -23,7 +23,7 @@
 #include "amp.h"
 
 // MODE Defines for the precompiler options
-#define CONTROLLER_MODE		STATE_FEEDBACK
+#define CONTROLLER_MODE		SWING_UP_KALMAN
 #define PRINT_FREQ			5	// print every x value
 #define LED_DEBUG 			1	// Used to three LEDs to debug
 
