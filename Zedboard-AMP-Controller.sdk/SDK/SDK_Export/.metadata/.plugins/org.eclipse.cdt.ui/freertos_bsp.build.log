@@ -1,4 +1,4 @@
-17:15:43 **** Build of project freertos_bsp ****
+16:05:50 **** Build of project freertos_bsp ****
 make -k all 
 libgen -hw ../hw_platform_0/system.xml\
 	       -lp /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/sdk_repo\
@@ -769,5 +769,5 @@ Compiling cpu_cortexa9
 Running execs_generate.
 Finished building libraries
 
-17:15:58 Build Finished (took 14s.945ms)
+16:06:06 Build Finished (took 15s.160ms)
 
