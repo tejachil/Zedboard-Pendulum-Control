@@ -15,7 +15,10 @@ src/amp.d: ../src/amp.c ../src/amp.h \
  ../../freertos_bsp/ps7_cortexa9_1/include/xil_assert.h \
  ../../freertos_bsp/ps7_cortexa9_1/include/xil_exception.h \
  ../../freertos_bsp/ps7_cortexa9_1/include/sleep.h \
- ../../freertos_bsp/ps7_cortexa9_1/include/xpseudo_asm.h
+ ../../freertos_bsp/ps7_cortexa9_1/include/xpseudo_asm.h \
+ ../../freertos_bsp/ps7_cortexa9_1/include/xil_printf.h \
+ ../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h \
+ ../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h
 
 ../src/amp.h:
 
@@ -52,3 +55,9 @@ src/amp.d: ../src/amp.c ../src/amp.h \
 ../../freertos_bsp/ps7_cortexa9_1/include/sleep.h:
 
 ../../freertos_bsp/ps7_cortexa9_1/include/xpseudo_asm.h:
+
+../../freertos_bsp/ps7_cortexa9_1/include/xil_printf.h:
+
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters.h:
+
+../../freertos_bsp/ps7_cortexa9_1/include/xparameters_ps.h:

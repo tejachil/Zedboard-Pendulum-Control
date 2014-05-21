@@ -13,11 +13,8 @@
 #include "xil_mmu.h"
 
 
-#define COMM_VAL        (*(volatile unsigned long *)(0xFFFF8000))
 #define COMM_TX_FLAG    (*(volatile unsigned long *)(0xFFFF9000))
 #define COMM_TX_DATA    (*(volatile unsigned long *)(0xFFFF9004))
-#define COMM_RX_FLAG    (*(volatile unsigned long *)(0xFFFF9008))
-#define COMM_RX_DATA    (*(volatile unsigned long *)(0xFFFF900C))
 
 
 extern u32 MMUTable;

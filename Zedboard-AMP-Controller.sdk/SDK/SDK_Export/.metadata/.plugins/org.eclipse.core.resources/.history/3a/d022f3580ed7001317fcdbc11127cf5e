@@ -1,0 +1,108 @@
+/*
+ * File:   		main.c
+ * Author: 		Teja Chiluvuri
+ * Description: Source code for controlling inverted pendulum
+ * 				Extended Vivek's code to incorporate the FreeRTOS framework
+ * Date:		September 21, 2013
+*/
+
+/*************************** Header Files ***************************/
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+#include "timers.h"
+
+#include "AXI_SPI.h"
+#include "sleep.h"
+#include "xil_printf.h"
+
+#include "AXI_GPIO.h"
+#include "RemoteProcPrint.h"
+#include "PlantControl.h"
+#include "amp.h"
+
+// MODE Defines for the precompiler options
+#define PRINT_FREQ			5	// print every x value
+#define LED_DEBUG 			1	// Used to three LEDs to debug
+
+
+
+
+SpiStruct 			mySpi;
+RemoteProcStruct 	rpps;
+
+
+
+
+
+//INVERTED PENDULUM STABILIZATION
+
+/****************************** main() *******************************/
+int main(void)
+{
+	prvInitializeExceptions();
+
+	// configures the AMP setup
+	MyXil_SetTlbAttributes(0xFFFF0000,0x04de2);           // S=b0 TEX=b100 AP=b11, Domain=b1111, C=b0, B=b0
+
+	#if LED_DEBUG == 1
+	initLEDs();
+	#endif
+
+	// start the Remote processor print task
+	//startRPPTask(&rpps);
+
+	// Start the SPI monitor task
+	startSpiTask(&mySpi);
+
+	// initialize the encoders and start the plant control timer
+    startPlantControlTimer();
+
+    // work in progress
+    startPredictionTask();
+
+	// Start the tasks and timer running.
+	vTaskStartScheduler();
+	for( ;; );
+}
+
+
+/*-----------------------------------------------------------*/
+void vApplicationMallocFailedHook( void )
+{
+	/* vApplicationMallocFailedHook() will only be called if
+	configUSE_MALLOC_FAILED_HOOK is set to 1 in FreeRTOSConfig.h.  It is a hook
+	function that will get called if a call to pvPortMalloc() fails.
+	pvPortMalloc() is called internally by the kernel whenever a task, queue or
+	semaphore is created.  It is also called by various parts of the demo
+	application.  If heap_1.c or heap_2.c are used, then the size of the heap
+	available to pvPortMalloc() is defined by configTOTAL_HEAP_SIZE in
+	FreeRTOSConfig.h, and the xPortGetFreeHeapSize() API function can be used
+	to query the size of free heap space that remains (although it does not
+	provide information on how the remaining heap might be fragmented). */
+	taskDISABLE_INTERRUPTS();
+	for( ;; );
+}
+
+/*-----------------------------------------------------------*/
+void vApplicationStackOverflowHook( xTaskHandle *pxTask, signed char *pcTaskName )
+{
+	( void ) pcTaskName;
+	( void ) pxTask;
+
+	/* vApplicationStackOverflowHook() will only be called if
+	configCHECK_FOR_STACK_OVERFLOW is set to either 1 or 2.  The handle and name
+	of the offending task will be passed into the hook function via its
+	parameters.  However, when a stack has overflowed, it is possible that the
+	parameters will have been corrupted, in which case the pxCurrentTCB variable
+	can be inspected directly. */
+	taskDISABLE_INTERRUPTS();
+	for( ;; );
+}
+
+void vApplicationSetupHardware( void )
+{
+	/* Do nothing */
+}
+

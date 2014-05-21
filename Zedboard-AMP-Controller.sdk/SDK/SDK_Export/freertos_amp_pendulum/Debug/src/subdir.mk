@@ -6,6 +6,8 @@
 C_SRCS += \
 ../src/AXI_GPIO.c \
 ../src/AXI_SPI.c \
+../src/PlantControl.c \
+../src/RemoteProcPrint.c \
 ../src/adc_dac.c \
 ../src/amp.c \
 ../src/encoder.c \
@@ -17,6 +19,8 @@ LD_SRCS += \
 OBJS += \
 ./src/AXI_GPIO.o \
 ./src/AXI_SPI.o \
+./src/PlantControl.o \
+./src/RemoteProcPrint.o \
 ./src/adc_dac.o \
 ./src/amp.o \
 ./src/encoder.o \
@@ -25,6 +29,8 @@ OBJS += \
 C_DEPS += \
 ./src/AXI_GPIO.d \
 ./src/AXI_SPI.d \
+./src/PlantControl.d \
+./src/RemoteProcPrint.d \
 ./src/adc_dac.d \
 ./src/amp.d \
 ./src/encoder.d \

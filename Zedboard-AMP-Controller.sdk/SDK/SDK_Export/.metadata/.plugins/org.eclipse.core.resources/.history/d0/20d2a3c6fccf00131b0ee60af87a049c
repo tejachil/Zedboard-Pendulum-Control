@@ -1,0 +1,66 @@
+/*
+ * PlantControl.c
+ *
+ *  Created on: Apr 15, 2014
+ *      Author: chris
+ */
+
+
+#include "PlantControl.h"
+#include "FreeRTOS.h"
+#include "timers.h"
+#include "math.h"
+#include "adc_dac.h"
+#include "encoder.h"
+#include "RemoteProcPrint.h"
+#include "AXI_GPIO.h"
+
+typedef struct KalmanControlsParams{
+	float xpre[4];
+	float xhat[4];
+	float alphaR;
+	float thetaR;
+} KalmanControlParams;
+
+// Private Function Prototypes
+void timer_kalman(xTimerHandle pxTimer);
+void predictionTask(void *param);
+float calculateKalmanControlSignal(KalmanControlParams *params);
+
+
+
+void startPlantControlTimer(){
+	// Initialize Encoders and reset counter
+	initEncoder(ENCODER_S);
+	initEncoder(ENCODER_P);
+
+	// Write 0 to the motors
+	writeDAC(0);
+
+	// Create and start a timer with a period of 1ms
+	xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,timer_kalman);
+	xTimerStart(ControllerTimerHandle, portMAX_DELAY);
+}
+
+
+void startPredictionTask(){
+	// Start the prediction task
+	xTaskCreate(predictionTask, (signed char*) "Prediction Task", configMINIMAL_STACK_SIZE,(void *) NULL, prediction_TASK_PRIORITY, ( xTaskHandle * ) NULL );
+}
+
+void timer_kalman(xTimerHandle pxTimer){
+	static KalmanControlParams plantParams;
+}
+
+void predictionTask(void *param){
+	for(;;){
+
+
+	}
+}
+
+float calculateKalmanControlSignal(KalmanControlParams *params){
+	float u = 0;
+
+	return u;
+}

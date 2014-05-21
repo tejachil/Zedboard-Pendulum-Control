@@ -344,3 +344,59 @@
     Cable target is not connected to the host
  
 16:11:41.936 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:27:32.444 INFO  - Restoring local repository preferences: 
+		 /home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/sdk_repo 
+10:27:34.563 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+11:23:33.829 INFO  - Restoring local repository preferences: 
+		 /home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/sdk_repo 
+11:23:34.521 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+19:52:23.666 INFO  - Restoring local repository preferences: 
+		 /home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/sdk_repo 
+19:52:24.629 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+17:16:46.547 INFO  - Restoring local repository preferences: 
+		 /home/xps/Documents/AMP-Controller-Branch/Zedboard-Pendulum-Control/sdk_repo 
+14:02:46.197 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+15:09:17.679 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+15:09:44.584 INFO  - Settings changed on project freertos_bsp. Triggering a rebuild... 
+15:09:46.270 INFO  - Refreshed build settings on project freertos_amp_pendulum 
+15:13:09.346 INFO  - Saving repository preferences. 
+15:13:09.348 INFO  - Reading in cores from local repositories: 
+		 /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/sdk_repo 
+15:13:09.349 INFO  - Updating libgen.options on all BSP projects. 
+15:13:09.354 INFO  - Cleaning BSP projects in the workspace. 
+15:13:11.740 INFO  - Saving repository preferences. 
+15:15:11.571 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/unknown.mss. 
+15:17:00.155 INFO  - Project freertos_bsp was a BSP project. Please update references. 
+15:17:00.155 ERROR - SDK has detected that project freertos_bsp has been deleted (or renamed).
+If this project was a BSP referenced by other C/C++ applications, then those applications will fail to build now. Please right click on those applications and click 'Change Referenced BSP' to update those projects' BSP references. 
+15:17:27.140 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+15:17:39.084 INFO  - Refreshed build settings on project freertos_amp_pendulum 
+15:24:33.928 INFO  - Project freertos_bsp was a BSP project. Please update references. 
+15:24:33.929 ERROR - SDK has detected that project freertos_bsp has been deleted (or renamed).
+If this project was a BSP referenced by other C/C++ applications, then those applications will fail to build now. Please right click on those applications and click 'Change Referenced BSP' to update those projects' BSP references. 
+15:25:12.528 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+15:25:26.675 INFO  - Refreshed build settings on project freertos_amp_pendulum 
+15:30:03.223 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+15:34:27.807 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+15:34:44.304 INFO  - Settings changed on project freertos_bsp. Triggering a rebuild... 
+15:34:44.462 INFO  - Refreshed build settings on project freertos_amp_pendulum 
+16:29:25.296 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+16:30:14.942 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+16:30:14.959 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+16:30:14.975 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+16:30:14.992 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+16:30:14.997 INFO  - Settings changed on project freertos_bsp. Triggering a rebuild... 
+16:30:15.143 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+16:30:15.144 INFO  - Refreshed build settings on project freertos_amp_pendulum 
+16:30:15.161 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+16:30:47.385 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+16:30:47.422 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+16:30:47.432 WARN  - Unable to determine location of documentation for OS . 
+16:30:47.455 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+16:30:47.694 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+16:30:49.902 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+16:30:52.437 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+16:30:59.262 ERROR - Unable to read in MSS file /home/xps/Documents/AMP-Modular-Controller/Zedboard-Pendulum-Control/Zedboard-AMP-Controller.sdk/SDK/SDK_Export/freertos_bsp/system.mss. 
+17:15:26.463 WARN  - Unable to determine location of documentation for OS freertos_zynq. 
+17:15:43.245 INFO  - Settings changed on project freertos_bsp. Triggering a rebuild... 
+17:15:43.379 INFO  - Refreshed build settings on project freertos_amp_pendulum 

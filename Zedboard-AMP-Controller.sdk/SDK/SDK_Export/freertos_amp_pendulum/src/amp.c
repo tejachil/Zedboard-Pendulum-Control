@@ -5,12 +5,14 @@
  *      Author: chris
  */
 #include "amp.h"
-#include "xil_mmu.h"
 #include "xil_cache.h"
 #include "xil_exception.h"
 #include "xscugic.h"
 #include "sleep.h"
 #include "xpseudo_asm.h"
+#include "xil_printf.h"
+
+
 
 /**
  * Modified DCacheFlush to prevent L2 Cache controller access
@@ -45,6 +47,7 @@ void MyXil_SetTlbAttributes(u32 addr, u32 attrib)
 }
 
 
+
 /**
  * Function to send data to OCM which is consumed by Linux Application
  */
@@ -57,10 +60,15 @@ void myPutchar(char c){
 
 }
 
+
 /*
  * Since there is no STDIO assigned to the BSP, outbyte() is not created
  * by libgen. So add outbyte() call to myPutchar() to enable STDOUT functionality
  * for print() and xil_printf()
  */void outbyte(char c){
-	myPutchar(c);
+	//myPutchar(c);
+	// sendChar(c);
 }
+
+
+

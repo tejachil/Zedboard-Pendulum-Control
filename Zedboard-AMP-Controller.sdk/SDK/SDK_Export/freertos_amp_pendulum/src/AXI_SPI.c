@@ -28,7 +28,7 @@ void startSpiTask(SpiStruct* mySpi){
 
 	// Create the SPI queue
 	xil_printf("          Creating the SPI Queue...");
-	mySpi->inQ = xQueueCreate(30,sizeof(SpiParams));
+	mySpi->inQ = xQueueCreate(50,sizeof(SpiParams));
 	xil_printf("DONE\n");
 
 
@@ -37,7 +37,7 @@ void startSpiTask(SpiStruct* mySpi){
 
 	// Create the SPI task
 	xil_printf("          Creating the SPI Task...");
-	xTaskCreate(spiMonitorTask, (signed char*) "Spi Monitor", configMINIMAL_STACK_SIZE, (void *) &spiStruct, (tskIDLE_PRIORITY + 3), &xSpiTask);
+	xTaskCreate(spiMonitorTask, (signed char*) "Spi Monitor", configMINIMAL_STACK_SIZE+50, (void *) &spiStruct, (tskIDLE_PRIORITY + 3), &xSpiTask);
 	xil_printf("DONE\n");
 }
 

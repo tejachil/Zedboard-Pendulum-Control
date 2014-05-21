@@ -1,0 +1,183 @@
+/*
+ * File:   		RemoteProcPrint.c
+ * Author: 		Chris McCarty
+ * Description:
+ * Date:		April 2, 2014
+*/
+
+
+
+
+/*************************** Header Files ***************************/
+#include "RemoteProcPrint.h"
+#include "string.h"
+#include "xpseudo_asm.h"
+
+
+/********************* Constant Definitions *************************/
+RemoteProcStruct *RPPStruct; 		// contains the queue handle
+xTaskHandle xRPPTask;
+RPPDataStruct rppd;
+
+
+// Function prototype of the SPI monitor task
+static void rppMonitorTask(void *param);
+
+
+
+// Creates and starts the SPI monitor task that waits for new messages to send on the queue
+void startRPPTask(RemoteProcStruct* rps){
+
+	// Create the incoming message queues
+	rps->inQ = xQueueCreate(MessageQueueSize, sizeof(RPPMessageStruct));
+	rps->burst_data_inQ = xQueueCreate(30, sizeof(RPPDataStruct));
+
+	RPPStruct->idle_counter = 0;
+	RPPStruct->idle_flag = 0;
+	RPPStruct->buffer_index = 0;
+
+	RPPStruct = rps;
+
+	// Create the RemoteProcPrint task
+	xTaskCreate(rppMonitorTask, (signed char*) "RPP Monitor", configMINIMAL_STACK_SIZE, (void *) &RPPStruct, mainRPP_TASK_PRIORITY, &xRPPTask);
+}
+
+
+
+
+
+
+
+// Original writeSPI function from standalone implementation is now implemented in the SPI monitor
+static void rppMonitorTask( void *param ){
+
+	RPPMessageStruct rppm;
+	//RPPDataStruct rppd;
+
+	// Infinite loop for the RemoteProcPrint monitor task
+	for(;;){
+		 //xTaskGetTickCount();	  returns an		unsigned long
+		// Check for a new data burst on the inQ and yield if there is no new message
+		if(xQueueReceive(RPPStruct->burst_data_inQ, (void *)(&rppd), MAX_DATABURST_DELAY) == pdTRUE){
+			//wait for cpu0 to consume previous value
+			while(COMM_TX_FLAG){
+				taskYIELD();
+			}
+
+			COMM_TX_DATA = (volatile unsigned long)rppd.timestamp;
+
+			COMM_TX_DATA_A = (volatile unsigned long)rppd.value_a;
+			COMM_TX_DATA_B = (volatile unsigned long)rppd.value_b;
+			COMM_TX_DATA_C = (volatile unsigned long)rppd.value_c;
+			COMM_TX_DATA_D = (volatile unsigned long)rppd.value_d;
+			COMM_TX_DATA_E = (volatile unsigned long)rppd.value_e;
+			COMM_TX_DATA_F = (volatile unsigned long)rppd.value_f;
+			COMM_TX_DATA_G = (volatile unsigned long)rppd.value_g;
+			COMM_TX_DATA_H = (volatile unsigned long)rppd.value_h;
+			COMM_TX_DATA_I = (volatile unsigned long)rppd.value_i;
+			COMM_TX_DATA_J = (volatile unsigned long)rppd.value_j;
+
+			COMM_TX_DATA_K = (volatile unsigned long)rppd.value_k;
+			COMM_TX_DATA_L = (volatile unsigned long)rppd.value_l;
+			COMM_TX_DATA_M = (volatile unsigned long)rppd.value_m;
+			COMM_TX_DATA_N = (volatile unsigned long)rppd.value_n;
+			COMM_TX_DATA_O = (volatile unsigned long)rppd.value_o;
+			COMM_TX_DATA_P = (volatile unsigned long)rppd.value_p;
+
+			dmb();
+
+			COMM_TX_FLAG = 2;
+
+		}
+
+		// Check for a new message on the inQ and yield if there is no new message
+		if(xQueueReceive(RPPStruct->inQ, (void *)(&rppm), MAX_MESSAGE_DELAY) == pdTRUE){
+
+			//wait for cpu0 to consume previous value
+			while(COMM_TX_FLAG){
+				taskYIELD();
+			}
+
+			COMM_TX_DATA = (volatile unsigned long)rppm.value;
+			dmb();
+
+			// string data
+			if(rppm.type == 1){
+				COMM_TX_FLAG = 1;
+
+			// single numeric data
+			}else{
+				COMM_TX_FLAG = 3;
+			}
+		}
+	}// end for()
+}
+
+
+
+
+//
+void sendValue(unsigned long value, unsigned char type){
+	RPPMessageStruct rppmvs;
+
+	rppmvs.value = value;
+	rppmvs.type = type;
+
+	xQueueSend(RPPStruct->inQ, &rppmvs, MAX_ENQUEUE_DELAY);
+}
+
+
+// takes every 4 characters of the string and combines them into a single uint32_t to be sent
+void sendString(const char* string){
+
+	unsigned int string_length = strlen(string);
+	unsigned int i = 0;
+
+	if((MessageQueueSize - uxQueueMessagesWaiting(RPPStruct->inQ)) >= string_length){
+		while(i < string_length){
+			sendValue(string[i], 1);
+			i++;
+		}
+	}else{
+		//TODO else there is not enough space in the queue to receive the entire string
+	}
+//#endif
+}
+
+
+/*
+void sendBurstData(unsigned long timestamp, unsigned long* a, unsigned long* b, unsigned long* c,
+		unsigned long* d, unsigned long* e, unsigned long* f, unsigned long* g, unsigned long* h,
+		unsigned long* i, unsigned long* j){
+*/
+void sendBurstData(unsigned long timestamp, float* a, float* b, float* c,
+		float* d, float* e, float* f, float* g, float* h, float* i,
+		float* j, float* k, float* l, float* m, float* n, float* o, float* p){
+	rppd.timestamp = timestamp;
+	rppd.value_a = (unsigned long)(long)((*a)*m_factor);	// output_v
+	rppd.value_b = (unsigned long)(long)((*b)*m_factor);	// encoder 1
+	rppd.value_c = (unsigned long)(long)((*c)*m_factor);	// encoder 2
+	rppd.value_d = (unsigned long)(long)((*d)*m_factor);	// xhat[0]
+	rppd.value_e = (unsigned long)(long)((*e)*m_factor);	// xhat[1]
+	rppd.value_f = (unsigned long)(long)((*f)*m_factor);	// xhat[2]
+	rppd.value_g = (unsigned long)(long)((*g)*m_factor);	// xhat[3]
+	rppd.value_h = (unsigned long)(long)((*h)*m_factor);	//
+	rppd.value_i = (unsigned long)(long)((*i)*m_factor);	//
+	rppd.value_j = (unsigned long)(long)((*j)*m_factor);	//
+
+	rppd.value_k = (unsigned long)(long)((*k)*m_factor);	//
+	rppd.value_l = (unsigned long)(long)((*l)*m_factor);	//
+	rppd.value_m = (unsigned long)(long)((*m)*m_factor);	//
+	rppd.value_n = (unsigned long)(long)((*n)*m_factor);	//
+	rppd.value_o = (unsigned long)(long)((*o)*m_factor);	//
+	rppd.value_p = (unsigned long)(long)((*p)*m_factor);	//
+
+	xQueueSend(RPPStruct->burst_data_inQ, &rppd, MAX_ENQUEUE_DELAY);
+}
+
+
+
+
+
+
+

@@ -89,4 +89,3 @@ int encoderRead(target_t enc);
 
 
 #endif	/* ENCODER_H */
-

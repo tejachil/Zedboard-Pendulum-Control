@@ -1,0 +1,451 @@
+/*
+ * PlantControl.c
+ *
+ *  Created on: Apr 15, 2014
+ *      Author: chris
+ */
+
+
+#include "PlantControl.h"
+#include "FreeRTOS.h"
+#include "timers.h"
+#include "math.h"
+#include "adc_dac.h"
+#include "encoder.h"
+#include "RemoteProcPrint.h"
+#include "AXI_GPIO.h"
+
+
+/********************** Global variables for controller **********************/
+
+volatile unsigned sec1000; // This is updated 1000 times per second by interrupt handler
+volatile float output_V,theta_R,alpha_R,theta_des;
+volatile float thetaDot=0.,alphaDot=0.;
+static int printed;
+const float Kr2d=180./pi;        //radians to degrees
+const float Kpot=-352.*pi/180/10;    //radians/V for pot
+const float Kenc=pi/(2.*1024.);     //radians/count for encoder
+
+float u = 0,u1,u2;
+volatile float E; // Energy of the pendulum E = (1/2)Jp*alphadort^2 + (1-cos(alpha))*)1/2*mp*Lp*g)
+
+static int k=1; // added for sign of alphadot*cos(alpha) for swing up control
+static float thetaOld=0.,alphaOld=0.;
+
+int temp,ind,i,col;
+static int enc1, enc2, enc1_start;
+volatile float enc1_pr, enc2_pr;
+volatile float theta_R_p;
+//static float pot1;
+
+float xhat[4];
+static const float Kf[4][2]={
+	{0.9785,0},
+	{0,0.9785},
+	{0.0109,-0.0251},
+	{-0.0278,0.9473}
+};
+static const float Kc[4]={-5.1688,27.7667,-2.7224,3.1787};
+static const float Aup[4][4]={
+    {0.0215,0.000,0.0000,0.0000},
+    {0.0000,0.0215,0.0000,0.0000},
+    {-0.0109,0.1239,0.9443,-0.0010},
+    {0.0278,-0.7977,-0.0535,0.9972}
+};
+static const float Bup[4]={0,0,0.1013,0.0974};
+static float xpre[4]={0.,0.,0.,0.};
+static const float A[4][4] = {
+		{1,0.0001,0.0012,0},
+		{0,1.0001,-0.0000,0.0012},
+		{0,0.0988,0.9443,-0.0011},
+		{0,0.1497,-0.0536,0.9984}
+};
+static const float B[4] = {0.0001,0.0001,0.1013,0.0975};
+static const float C[2][4] =  {
+		{1,0,0,0},
+		{0,1,0,0}
+};
+
+static float xdot[4] = {0.,0.,0.,0.};
+static float yplant[2] = {0.,0.};
+static float del[2] = {0.,0.};
+static const eps[2] = {10,10};
+
+
+// timer callback prototypes
+void test_sequence(xTimerHandle pxTimer);
+void update_value(xTimerHandle pxTimer);
+void swing_up_kalman(xTimerHandle pxTimer);
+void predictionTask(void *param);
+
+
+void startPlantControlTimer(){
+
+	// Write 0 to the motors and initialize the encoder
+	writeDAC(0);
+	theta_des=0.;
+	initEncoder(ENCODER_P);
+	initEncoder(ENCODER_S);
+
+	printed = 0;
+
+	// Start a timer with a period of 1ms
+	// xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,update_value);
+	xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,swing_up_kalman);
+	//xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer", (1/portTICK_RATE_MS), pdTRUE, (void *) NULL, test_sequence);
+
+	xTimerStart(ControllerTimerHandle, portMAX_DELAY);
+}
+
+
+void startPredictionTask(){
+	xTaskCreate(predictionTask, (signed char*) "Prediction Task", configMINIMAL_STACK_SIZE,(void *) NULL, prediction_TASK_PRIORITY, ( xTaskHandle * ) NULL );
+}
+
+
+
+
+
+
+
+
+
+
+/************************PREDICTION************************/
+static float u_p;
+float xhat_p[4];
+float yplant_p[2];
+static float xpre_p[4]={0.,0.,0.,0.};
+
+void predictionTask(void *param){
+	int counter = 0;
+	for(;;){
+		if(counter >= 200){
+			counter = 0;
+			taskYIELD();
+		}
+		else if(counter == 0){
+			u_p = u;
+		}
+
+		// Apply the control input to the plant model
+		int j; //k,l;
+		float tempvec[4];
+		for(j = 0; j < 4; ++j){
+			tempvec[j] = A[j][0]*xhat[0] + A[j][1]*xhat[1] + A[j][2]*xhat[2]+ A[j][3]*xhat[3];
+		}
+		yplant[0] = tempvec[0]*C[0][0] + tempvec[1]*C[0][1] + tempvec[2]*C[0][2] + tempvec[3]*C[0][3] + C[0][0]*B[0]*u_p + C[0][1]*B[1]*u_p + C[0][2]*B[2]*u_p + C[0][3]*B[3]*u_p;
+		yplant[1] = tempvec[0]*C[1][0] + tempvec[1]*C[1][1] + tempvec[2]*C[1][2] + tempvec[3]*C[1][3] + C[1][0]*B[0]*u_p + C[1][1]*B[1]*u_p + C[1][2]*B[2]*u_p + C[1][3]*B[3]*u_p;
+
+		del[0] = theta_R - yplant[0];
+		del[1] = alpha_R - yplant[1];
+
+		if((del[0]>=0?del[0]:-del[0]) > eps[0]){
+			// IMPLEMENT CRANE
+			setLEDs(LED_4, 1);
+		}
+		if((del[1]>=0?del[1]:-del[1]) > eps[1]){
+			// IMPLEMENT CRANE
+			setLEDs(LED_5, 1);
+		}
+
+		int ind_p, col_p;
+		//precompute the part of xhat we can
+	  	for(ind_p = 0; ind_p < 4; ind_p++){
+	  		xpre_p[ind_p]=0.;
+	  	 	for(col_p = 0; col_p < 4; col_p++){
+	  	 		xpre_p[ind_p]+=Aup[ind_p][col_p]*xhat[col_p];
+	  	 	}
+	  	 	xpre_p[ind]+=Bup[ind_p]*u;
+	  	}
+
+	  	for(ind = 0; ind < 4; ind++){
+	  		xhat[ind]=xpre[ind]+Kf[ind][0]*yplant[0]+Kf[ind][1]*yplant[1];
+	  	}
+	  	//compute control
+	  	u_p = 0.;
+	  	for(ind = 0; ind < 4; ind++){
+	  		u_p += -Kc[ind]*xhat[ind]; // changed the sign for kc to positive
+	  	}
+	  	u_p += Kc[0]*theta_des; // changed the sign of kc to negative
+	  	//output_V=-u_p;
+	  	//u = u1;
+	  	//writeDAC(-u);
+
+	  	++counter;
+	}
+}
+
+
+void test_sequence(xTimerHandle pxTimer){
+	float temp = encoderRead(ENCODER_P)%4096;
+	float t = encoderRead(ENCODER_S)%4096;
+	float a = 5.7863325;
+	float b = -9.78625;
+
+	//sendBurstData((xTaskGetTickCount()/portTICK_RATE_MS), &temp, &t, &a, &b, &b, &b, &b, &b, &b, &b);
+}
+
+
+void update_value(xTimerHandle pxTimer){
+	// Timer LED
+	setLEDs(LED_7, 1);
+
+	sec1000++;            // Update global variable
+
+	//  code for simple inverted pendulum control -- follows Quanser, no Kalman Filter
+	//read positions and compute velocities by filtering
+
+
+
+	/*
+	theta_R=readADC()*Kpot;
+	//enc1 = encoderRead(ENCODER_S);
+	//temp = -enc1 % 4096;
+	//theta_R=temp*Kenc;
+
+
+	//temp=encoderRead()%4096;  //force encoder reading to be between 0 and 4096(2pi)
+
+	temp=encoderRead(ENCODER_P)%4096;  //force encoder reading to be between 0 and 4096(2pi)
+	enc2 = temp;
+
+	if (temp<0) temp+=4096;
+	alpha_R=(temp)*Kenc-pi;  //convert to up => alpha=0
+
+	thetaDot=0.9391*thetaDot+60.92*(theta_R-thetaOld);
+	alphaDot=0.9391*alphaDot+60.92*(alpha_R-alphaOld);
+	//need to negate u, so just use positive feedback, u=K*x
+	//u=-5.28*(theta_R-theta_des)+30.14*alpha_R-2.65*thetaDot+3.55*alphaDot;
+
+	// comparing plant output with the plant model
+	// Plant model and actual plant performance should be compared only for production controller, not for backup
+*/
+	/*if(u == u1)
+	{
+	for(i=0;i<4;i++)
+	{
+		del[i] = xhat[i] - xdot[i]; // Find the difference in the actual states and model states
+	}
+	if(del[0]> 10) // check the state of concern ( in this case theta) to ensure it is not more than allowable limit
+	{ u = 0;
+	writeDAC(u);
+	}
+	}*//*
+	// self erect control law
+	E = (0.00059937)*(alphaDot)*(alphaDot) + (0.2096)*(1-cos(alpha_R)); // calculation of enenrgy of pendulum
+	if((cos(alpha_R)*alphaDot)>=0) k = 1;
+	else k = -1;
+	u2= 3.8*(E- 0.42)*k;
+	alphaOld=alpha_R;
+	thetaOld=theta_R;
+
+	// KALMAN u1 calculated here
+		//check to see if we should be controlling.  If not, output 0
+			if ((alpha_R>=0?alpha_R:-alpha_R)>(20.*pi/180)) {
+				u2= 4*(E- 0.42)*k;
+				u = u2;
+				u1=0.;  //if we are not in range do nothing
+				writeDAC(u);
+				output_V=u1;
+				for(ind=0;ind<4;ind++) xpre[ind]=0.; //reset estimator
+
+			}
+			else {
+			  //update state estimate based on new input
+			  for(ind=0;ind<4;ind++) {
+				  xhat[ind]=xpre[ind]+Kf[ind][0]*theta_R+Kf[ind][1]*alpha_R;
+			  }
+			  //compute control
+			  u1=0.;
+			  for(ind=0;ind<4;ind++) {
+				  u1+= -Kc[ind]*xhat[ind]; // changed the sign for kc to positive
+			  }
+			  u1+= Kc[0]*theta_des; // changed the sign of kc to negative
+			  output_V=-u1;
+			  u = u1;
+			  writeDAC(-u);
+
+			  // Apply the control input to the plant model*/
+			 /*int j; //k,l;
+			  float tempvec[4];
+			  for (j = 0; j < 4; ++j)	tempvec[j] = A[j][0]*xhat[0] + A[j][1]*xhat[1] + A[j][2]*xhat[2]+ A[j][3]*xhat[3];
+			  yplant[0] = tempvec[0]*C[0][0] + tempvec[1]*C[0][1] + tempvec[2]*C[0][2] + tempvec[3]*C[0][3] + C[0][0]*B[0]*u + C[0][1]*B[1]*u + C[0][2]*B[2]*u + C[0][3]*B[3]*u;
+			  yplant[1] = tempvec[0]*C[1][0] + tempvec[1]*C[1][1] + tempvec[2]*C[1][2] + tempvec[3]*C[1][3] + C[1][0]*B[0]*u + C[1][1]*B[1]*u + C[1][2]*B[2]*u + C[1][3]*B[3]*u;
+
+			  del[0] = theta_R - yplant[0];
+			  del[1] = alphenc2a_R - yplant[1];
+
+			  if ((del[0]>=0?del[0]:-del[0]) > eps[0]){
+				  // IMPLEMENT CRANE
+				  setLEDs(&GPIOInstance_Ptr, LED_4, 1);
+			  }
+			  if ((del[1]>=0?del[1]:-del[1]) > eps[1]){
+				  setLEDs(&GPIOInstance_Ptr, LED_5, 1);
+			  }
+			*//*
+			  ++printed; // allow to print
+			  	// Latancy measuring LED
+
+			  	#if LED_DEBUG == 1
+			  setLEDs(&GPIOInstance_Ptr, LED_6, 1);
+			  	#endif
+
+
+
+
+			  	if (u>10.) u=10.;
+			  	else if (u<-10.) u=-10.;
+
+
+			  	  //precompute the part of xhat we can
+			  	  for(ind=0;ind<4;ind++) {
+			  		  xpre[ind]=0.;
+			  		  for(col=0;col<4;col++) {
+			  			  xpre[ind]+=Aup[ind][col]*xhat[col];
+			  		  }
+			  		  xpre[ind]+=Bup[ind]*u;
+			  	  }*/
+			  	  /*if((sec1000%20000)<10000) theta_des=20*pi/180;
+			  	  else *///theta_des=-20*pi/180;
+			  	 // theta_des=20*pi/180;//.*sin(2*pi*.0001*sec1000);
+			  	//}
+
+
+
+
+			/*sendBurstData((xTaskGetTickCount()/portTICK_RATE_MS), &theta_R,
+					&yplant[0], &alpha_R, &yplant[1], &u, &xhat[0], &xhat[1],
+					&xhat[2], &xhat[3], 0);*/
+
+
+
+
+			  	// Timer LED
+			  	#if LED_DEBUG == 1
+				setLEDs(&GPIOInstance_Ptr, LED_7, 0);
+			  	#endif
+			  }
+
+
+
+void swing_up_kalman(xTimerHandle pxTimer){
+	// Timer LED
+	setLEDs(LED_7, 1);
+
+	sec1000++;            // Update global variable
+
+	//  code for simple inverted pendulum control -- follows Quanser, no Kalman Filter
+	//read positions and compute velocities by filtering
+	theta_R_p = readADC()*Kpot;
+	//theta_R = theta_R_p;
+	temp = -encoderRead(ENCODER_S) % 4096;
+	enc1 = temp;
+	enc1_pr = (float)enc1;
+	theta_R=temp*Kenc;
+	temp = encoderRead(ENCODER_P)%4096;  //force encoder reading to be between 0 and 4096(2pi)
+	enc2=temp;
+	enc2_pr = (float)enc2;
+
+
+	if(temp < 0){
+		temp += 4096;
+	}
+	alpha_R = (temp)*Kenc-pi;  //convert to up => alpha=0
+
+	thetaDot = 0.9391*thetaDot+60.92*(theta_R-thetaOld);
+	alphaDot = 0.9391*alphaDot+60.92*(alpha_R-alphaOld);
+	//need to negate u, so just use positive feedback, u=K*x
+	//u=-5.28*(theta_R-theta_des)+30.14*alpha_R-2.65*thetaDot+3.55*alphaDot;
+
+	// self erect control law
+	E = (0.00059937)*(alphaDot)*(alphaDot) + (0.2096)*(1-cos(alpha_R)); // calculation of enenrgy of pendulum
+	if((cos(alpha_R)*alphaDot)>=0){
+		k = 1;
+	}else{
+		k = -1;
+	}
+	u2 = 4*(E- 0.42)*k;
+	alphaOld = alpha_R;
+	thetaOld = theta_R;
+	// KALMAN u1 calculated here
+	//check to see if we should be controlling.  If not, output 0
+	if((alpha_R >= 0 ? alpha_R:-alpha_R) > (30.*pi/180)){
+		u2 = 4*(E- 0.42)*k;
+		u = u2;
+		u1 = 0.;  //if we are not in range do nothing
+		//writeDAC(u); // use swingup
+		writeDAC(0);
+		output_V = u1;
+		for(ind = 0; ind < 4; ind++){
+			xpre[ind] = 0.; //reset estimator
+		}
+
+		if(u > 10.){
+			u = 10.;
+		}else if(u < -10.){
+			u = -10.;
+		}
+
+	}else{
+		//update state estimate based on new input
+		for(ind = 0; ind < 4; ind++){
+			xhat[ind] = xpre[ind]+Kf[ind][0]*theta_R+Kf[ind][1]*alpha_R;
+		}
+		//compute control
+		u1 = 0.;
+		for(ind = 0; ind < 4; ind++){
+			u1 += -Kc[ind]*xhat[ind]; // changed the sign for kc to positive
+		}
+		u1 += Kc[0]*theta_des; // changed the sign of kc to negative
+		output_V = -u1;
+		u = u1;
+
+		// Latancy measuring LED
+		setLEDs(LED_6, 1);
+
+		writeDAC(-u);
+
+		++printed; // allow to print
+
+
+		if(u > 10.){
+			u = 10.;
+		}else if(u < -10.){
+			u = -10.;
+		}
+
+		//precompute the part of xhat we can
+		for(ind = 0; ind < 4; ind++){
+			xpre[ind] = 0.;
+			for(col = 0; col < 4; col++){
+				xpre[ind] += Aup[ind][col]*xhat[col];
+			}
+			xpre[ind] += Bup[ind]*u;
+		}
+		/*if((sec1000%20000)<10000) theta_des=20*pi/180;
+	  	  else theta_des=-20*pi/180; */
+
+		theta_des = -20*pi/180;
+	}
+
+	// Apply the control input to the plant model*/
+	int j; //k,l;
+	float tempvec[4];
+	for (j = 0; j < 4; ++j)	tempvec[j] = A[j][0]*xhat[0] + A[j][1]*xhat[1] + A[j][2]*xhat[2]+ A[j][3]*xhat[3];
+	yplant[0] = tempvec[0]*C[0][0] + tempvec[1]*C[0][1] + tempvec[2]*C[0][2] + tempvec[3]*C[0][3] + C[0][0]*B[0]*u + C[0][1]*B[1]*u + C[0][2]*B[2]*u + C[0][3]*B[3]*u;
+	yplant[1] = tempvec[0]*C[1][0] + tempvec[1]*C[1][1] + tempvec[2]*C[1][2] + tempvec[3]*C[1][3] + C[1][0]*B[0]*u + C[1][1]*B[1]*u + C[1][2]*B[2]*u + C[1][3]*B[3]*u;
+
+
+	/*sendBurstData(unsigned long timestamp, 				float* a, 	float* b, 	float* c,
+			float* d, 	float* e, 	float* f, 	float* g, 	float* h, 	float* i,	float* j,
+			 float* k, 	float* l, 	float* m, 	float* n, 	float* o, 	float* p)*/
+
+	sendBurstData((xTaskGetTickCount()/portTICK_RATE_MS), 	&theta_R, 	&yplant[0],	&alpha_R,
+			&yplant[1],	&u,         &xhat[0], 	&xhat[1], 	&xhat[2], 	&xhat[3],	&enc1,
+			&enc2,		&theta_R_p,	&theta_R,	&enc1_pr,	&enc2_pr,		&yplant[0]);
+
+
+	// Timer LED
+	setLEDs(LED_7, 0);
+}

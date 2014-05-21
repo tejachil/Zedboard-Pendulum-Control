@@ -29,4 +29,3 @@ int writeDAC(float voltage);
 float readADC();
 
 #endif	/* ADC_DAC_H */
-

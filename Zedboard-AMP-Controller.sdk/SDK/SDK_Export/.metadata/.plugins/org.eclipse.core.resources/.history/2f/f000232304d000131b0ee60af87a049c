@@ -1,0 +1,164 @@
+/*
+ * PlantControl.c
+ *
+ *  Created on: Apr 15, 2014
+ *      Author: chris
+ */
+
+
+#include "PlantControl.h"
+#include "FreeRTOS.h"
+#include "timers.h"
+#include "math.h"
+#include "adc_dac.h"
+#include "encoder.h"
+#include "RemoteProcPrint.h"
+#include "AXI_GPIO.h"
+
+typedef struct KalmanControlsParams{
+	float xpre[4];
+	float xhat[4];
+	float alphaR;
+	float thetaR;
+} KalmanControlParams;
+
+const float Kr2d=180./pi;        	//radians to degrees
+const float Kpot=-352.*pi/180/10;	//radians/V for pot
+const float Kenc=pi/(2.*1024.);		//radians/count for encoder
+
+// Private Function Prototypes
+void timer_kalman(xTimerHandle pxTimer);
+void predictionTask(void *param);
+float calculateKalmanControlSignal(KalmanControlParams *params);
+
+static KalmanControlParams plantParams;
+
+void startPlantControlTimer(){
+	// Initialize Encoders and reset counter
+	initEncoder(ENCODER_S);
+	initEncoder(ENCODER_P);
+
+	// Write 0 to the motors
+	writeDAC(0);
+
+	// Initialize xpre and xhat
+	int i;
+	for(i = 0; i < 4; ++i){
+		plantParams.xpre[i] = 0.;
+		plantParams.xhat[i] = 0.;
+	}
+
+	// Create and start a timer with a period of 1ms
+	xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,timer_kalman);
+	xTimerStart(ControllerTimerHandle, portMAX_DELAY);
+}
+
+
+void startPredictionTask(){
+	// Start the prediction task
+	xTaskCreate(predictionTask, (signed char*) "Prediction Task", configMINIMAL_STACK_SIZE,(void *) NULL, prediction_TASK_PRIORITY, ( xTaskHandle * ) NULL );
+}
+
+void timer_kalman(xTimerHandle pxTimer){
+	setLEDs(LED_7, 1); 	// Timer LED
+
+	int enc1 = -encoderRead(ENCODER_S) % 4096;
+	plantParams.thetaR = enc1*Kenc;
+
+	int enc2 = encoderRead(ENCODER_P) % 4096;
+	plantParams.alphaR = enc2*Kenc-pi;
+
+	float u;
+	if((plantParams.alphaR >= 0 ? plantParams.alphaR:-plantParams.alphaR) > (20.*pi/180)){
+		u = 0;
+	}
+	else	u = -calculateKalmanControlSignal(&plantParams);
+
+	setLEDs(LED_6, 1); // Latancy LED
+	writeDAC(u);
+
+	float zero = 0.0;
+	sendBurstData((xTaskGetTickCount()/portTICK_RATE_MS),	// timestamp
+				&plantParams.thetaR, 						// a
+				&plantParams.alphaR,						// b
+				&u, 										// c
+				&plantParams.xhat[0], 						// d
+				&plantParams.xhat[1], 						// e
+				&plantParams.xhat[2], 						// f
+				&plantParams.xhat[3],						// g
+				&enc1,										// h
+				&enc2,										// i
+				&zero,										// j
+				&zero,										// k
+				&zero,										// l
+				&zero,										// m
+				&zero,										// n
+				&zero,										// o
+				&zero);										// p
+
+	setLEDs(LED_7, 0); 	// Timer LED
+}
+
+
+void predictionTask(void *param){
+	static KalmanControlParams predictionParams;
+	int i;
+	for(i = 0; i < 4; ++i){
+		predictionParams.xpre[i] = 0.;
+		predictionParams.xhat[i] = 0.;
+	}
+	for(;;){
+
+
+	}
+}
+
+float calculateKalmanControlSignal(KalmanControlParams *params){
+	static theta_des = 0;
+	/***** Kalman Filter Constants Start *****/
+	static const float Kf[4][2]={
+		{0.9785,0},
+		{0,0.9785},
+		{0.0109,-0.0251},
+		{-0.0278,0.9473}
+	};
+	static const float Kc[4]={-5.1688,27.7667,-2.7224,3.1787};
+	static const float Aup[4][4]={
+	    {0.0215,0.000,0.0000,0.0000},
+	    {0.0000,0.0215,0.0000,0.0000},
+	    {-0.0109,0.1239,0.9443,-0.0010},
+	    {0.0278,-0.7977,-0.0535,0.9972}
+	};
+	static const float Bup[4]={0,0,0.1013,0.0974};
+	/***** Kalman Filter Constants End *****/
+
+	int ind;
+	for(ind = 0; ind < 4; ind++){
+		params->xhat[ind] = params->xpre[ind] + Kf[ind][0]*params->thetaR + Kf[ind][1]*params->alphaR;
+	}
+
+	// compute control
+	float u = 0;
+	for(ind = 0; ind < 4; ind++){
+		u += -Kc[ind]*params->xhat[ind]; // changed the sign for kc to positive
+	}
+	u += Kc[0]*theta_des; // changed the sign of kc to negative
+
+	// Saturate signal at -10 or 10 volts
+	if(u > 10.)			u = 10.;
+	else if(u < -10.)	u = -10.;
+
+	//precompute the part of xhat we can
+	for(ind = 0; ind < 4; ind++){
+		params->xpre[ind] = 0.;
+		int col;
+		for(col = 0; col < 4; col++){
+			params->xpre[ind] += Aup[ind][col]*params->xhat[col];
+		}
+		params->xpre[ind] += Bup[ind]*u;
+	}
+
+	theta_des = -90*pi/180;
+
+	return u;
+}

@@ -26,7 +26,7 @@
 // Initialize the AXI GPIO and sets direction
 //Returns:
 //      status
-int initLEDs(XGpio *GPIOInstance_Ptr);
+int initLEDs();
 
 
 
@@ -34,7 +34,7 @@ int initLEDs(XGpio *GPIOInstance_Ptr);
 //Arguments:
 //      led: a 32 bit mask specifying which LEDs to set
 //      state: 0 for off, 1 for on
-void setLEDs(XGpio *GPIOInstance_Ptr, int led, int state);
+void setLEDs(int led, int state);
 
 
 #endif /* GPIO_H_ */

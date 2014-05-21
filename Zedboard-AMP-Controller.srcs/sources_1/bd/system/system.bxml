@@ -1,81 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Root MajorVersion="0" MinorVersion="27">
-  <CompositeFile CompositeFileTopName="system" CanBeSetAsTop="true" CanDisplayChildGraph="true">
-    <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED"/>
-    <Generation Name="SIMULATION" State="GENERATED"/>
-    <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="ip/system_processing_system7_0_0/system_processing_system7_0_0.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1395852503" IsTrackable="true"/>
-        <Library Name="work"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/system_axi_interconnect_0_0/system_axi_interconnect_0_0.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="false" Timestamp="1395852503" IsTrackable="true"/>
-        <Library Name="work"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/system_xbar_0/system_xbar_0.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1395852503" IsTrackable="true"/>
-        <Library Name="work"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1395852503" IsTrackable="true"/>
-        <Library Name="work"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/system_axi_gpio_1_1/system_axi_gpio_1_1.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1395852503" IsTrackable="true"/>
-        <Library Name="work"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="hdl/system.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false"/>
-        <Library Name="work"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1395855282" IsTrackable="true"/>
-        <Library Name="work"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/system_auto_pc_23/system_auto_pc_23.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="false" Timestamp="1395782755" IsTrackable="true"/>
-        <Library Name="work"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/system_auto_pc_37/system_auto_pc_37.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true"/>
-        <Library Name="work"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="system_ooc.xdc" Type="XDC">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false"/>
-        <Library Name="work"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="OUT_OF_CONTEXT"/>
-      </File>
-    </FileCollection>
-  </CompositeFile>
+<Root MajorVersion="0"
+		MinorVersion="27">
+	<CompositeFile CompositeFileTopName="system"
+			CanBeSetAsTop="true"
+			CanDisplayChildGraph="true">
+		<Description>Composite Fileset</Description>
+		<Generation Name="SYNTHESIS"
+				State="STALE"/>
+		<Generation Name="IMPLEMENTATION"
+				State="STALE"/>
+		<Generation Name="SIMULATION"
+				State="STALE"/>
+		<FileCollection Name="SOURCES"
+				Type="SOURCES">
+			<File Name="ip/system_processing_system7_0_0/system_processing_system7_0_0.xci"
+					Type="IP">
+				<Properties IsEditable="false"
+						IsVisible="true"
+						Timestamp="1395858063"
+						IsTrackable="true"/>
+				<Library Name="work"/>
+				<UsedIn Val="SYNTHESIS"/>
+				<UsedIn Val="IMPLEMENTATION"/>
+				<UsedIn Val="SIMULATION"/>
+			</File>
+			<File Name="ip/system_axi_interconnect_0_0/system_axi_interconnect_0_0.xci"
+					Type="IP">
+				<Properties IsEditable="false"
+						IsVisible="false"
+						Timestamp="1395858063"
+						IsTrackable="true"/>
+				<Library Name="work"/>
+				<UsedIn Val="SYNTHESIS"/>
+				<UsedIn Val="IMPLEMENTATION"/>
+				<UsedIn Val="SIMULATION"/>
+			</File>
+			<File Name="ip/system_xbar_0/system_xbar_0.xci"
+					Type="IP">
+				<Properties IsEditable="false"
+						IsVisible="true"
+						Timestamp="1395858064"
+						IsTrackable="true"/>
+				<Library Name="work"/>
+				<UsedIn Val="SYNTHESIS"/>
+				<UsedIn Val="IMPLEMENTATION"/>
+				<UsedIn Val="SIMULATION"/>
+			</File>
+			<File Name="ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xci"
+					Type="IP">
+				<Properties IsEditable="false"
+						IsVisible="true"
+						Timestamp="1395858063"
+						IsTrackable="true"/>
+				<Library Name="work"/>
+				<UsedIn Val="SYNTHESIS"/>
+				<UsedIn Val="IMPLEMENTATION"/>
+				<UsedIn Val="SIMULATION"/>
+			</File>
+			<File Name="ip/system_axi_gpio_1_1/system_axi_gpio_1_1.xci"
+					Type="IP">
+				<Properties IsEditable="false"
+						IsVisible="true"
+						Timestamp="1395858063"
+						IsTrackable="true"/>
+				<Library Name="work"/>
+				<UsedIn Val="SYNTHESIS"/>
+				<UsedIn Val="IMPLEMENTATION"/>
+				<UsedIn Val="SIMULATION"/>
+			</File>
+			<File Name="hdl/system.v"
+					Type="Verilog">
+				<Properties IsEditable="false"
+						IsVisible="true"
+						Timestamp="0"
+						IsTrackable="false"/>
+				<Library Name="work"/>
+				<UsedIn Val="SYNTHESIS"/>
+				<UsedIn Val="IMPLEMENTATION"/>
+				<UsedIn Val="SIMULATION"/>
+			</File>
+			<File Name="ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0.xci"
+					Type="IP">
+				<Properties IsEditable="false"
+						IsVisible="true"
+						Timestamp="1395858063"
+						IsTrackable="true"/>
+				<Library Name="work"/>
+				<UsedIn Val="SYNTHESIS"/>
+				<UsedIn Val="IMPLEMENTATION"/>
+				<UsedIn Val="SIMULATION"/>
+			</File>
+			<File Name="ip/system_auto_pc_37/system_auto_pc_37.xci"
+					Type="IP">
+				<Properties IsEditable="false"
+						IsVisible="true"
+						Timestamp="1395858063"
+						IsTrackable="true"/>
+				<Library Name="work"/>
+				<UsedIn Val="SYNTHESIS"/>
+				<UsedIn Val="IMPLEMENTATION"/>
+				<UsedIn Val="SIMULATION"/>
+			</File>
+			<File Name="system_ooc.xdc"
+					Type="XDC">
+				<Properties IsEditable="false"
+						IsVisible="true"
+						Timestamp="0"
+						IsTrackable="false"/>
+				<Library Name="work"/>
+				<UsedIn Val="SYNTHESIS"/>
+				<UsedIn Val="IMPLEMENTATION"/>
+				<UsedIn Val="OUT_OF_CONTEXT"/>
+			</File>
+		</FileCollection>
+	</CompositeFile>
 </Root>

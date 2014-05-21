@@ -1,0 +1,512 @@
+/*
+ * PlantControl.c
+ *
+ *  Created on: Apr 15, 2014
+ *      Author: chris
+ */
+
+
+#include "PlantControl.h"
+#include "FreeRTOS.h"
+#include "timers.h"
+#include "math.h"
+#include "adc_dac.h"
+#include "encoder.h"
+#include "RemoteProcPrint.h"
+#include "AXI_GPIO.h"
+
+typedef struct ControlsParams{
+	float xpre[4];
+	float xhat[4];
+	float alphaR;
+	float thetaR;
+	float u;
+	float theta_des;
+	xTimerHandle timerHandle;
+	long iteration;
+} ControlParams;
+
+typedef enum {PRODUCTION, GUARD_TRIGGERED, BACKUP} ControllerState;
+
+const float Kr2d=180./pi;        	//radians to degrees
+const float Kpot=-352.*pi/180/10;	//radians/V for pot
+const float Kenc=pi/(2.*1024.);		//radians/count for encoder
+
+// Private Function Prototypes
+void timer_production(xTimerHandle pxTimer);
+void timer_backup(xTimerHandle pxTimer);
+void predictionTask(void *param);
+float calculateKalmanControlSignal(ControlParams *params);
+float calculateSwingUpControlSignal(ControlParams *params);
+float calculateCraneControlSignal(ControlParams *params);
+float calculateBackupControlSignal(ControlParams *params);
+int muxedWriteDAC(xTimerHandle *handle, float voltage);
+
+static ControlParams plantParams, backupParams;
+static xTaskHandle predictionTaskHandle;
+static ControllerState currentState = PRODUCTION;
+
+void startPlantControlTimer(){
+	// Initialize Encoders and reset counter
+	initEncoder(ENCODER_S);
+	initEncoder(ENCODER_P);
+
+	// Defining timing requirements
+		// Write 0 to the motors
+	writeDAC(0);
+	// Initialize xpre and xhat
+	int i;
+	for(i = 0; i < 4; ++i){
+		plantParams.xpre[i] = 0.;
+		plantParams.xhat[i] = 0.;
+	}
+
+	// Create a timer with a period of 1.25ms for plant
+	plantParams.timerHandle = xTimerCreate((const signed char *)"Production Timer",(1/portTICK_RATE_MS),pdTRUE,(void *) NULL,timer_production);
+
+	// Create and start a timer with a period of 1ms
+	//xTimerHandle ControllerTimerHandle = xTimerCreate((const signed char *)"Controller Timer", 8,pdTRUE,(void *) NULL,timer_kalman);
+
+	xTimerStart(plantParams.timerHandle, portMAX_DELAY);
+}
+
+
+void startPredictionTask(){
+	backupParams.timerHandle = xTimerCreate((const signed char *)"Backup Timer",(1/(portTICK_RATE_MS)),pdTRUE,(void *) NULL,timer_backup);
+	// Start the prediction task
+	xTaskCreate(predictionTask, (signed char*) "Prediction Task", configMINIMAL_STACK_SIZE,(void *) NULL, prediction_TASK_PRIORITY, &predictionTaskHandle );
+}
+
+void timer_production(xTimerHandle pxTimer){
+	volatile unsigned sec1000; // This is updated 1000 times per second by interrupt handler
+	setLEDs(LED_0, 1); 	// Timer LED
+	sec1000++; // update variable
+
+	int enc1 = -encoderRead(ENCODER_S) % 4096;
+	plantParams.thetaR = enc1*Kenc;
+
+	int enc2 = encoderRead(ENCODER_P) % 4096;
+	plantParams.alphaR = enc2*Kenc-pi;
+
+	if((plantParams.alphaR >= 0 ? plantParams.alphaR:-plantParams.alphaR) < (30.*pi/180)){
+		//setLEDs(LED_7, 1);
+		plantParams.u = -calculateKalmanControlSignal(&plantParams);
+	}
+	/*else if((sec1000%30000)<10000){
+	setLEDs(LED_7, 0);
+	plantParams.u = calculateSwingUpControlSignal(&plantParams);
+	}
+
+	else{
+	plantParams.u = calculateCraneControlSignal(&plantParams);
+	}
+*/
+	else {
+		setLEDs(LED_7,0);
+		plantParams.u = 0;
+		//plantParams.u = calculateSwingUpControlSignal(&plantParams);
+	}
+
+	//setLEDs(LED_6, 1); // Latancy LED
+
+
+	//plantParams.u = calculateCraneControlSignal(&plantParams);
+
+	//writeDAC(plantParams.u);
+	muxedWriteDAC(&plantParams.timerHandle, plantParams.u);
+	plantParams.theta_des = -45*pi/180;
+
+	float zero = 0.0;
+	float enc1_print = enc1;
+	float enc2_print = enc2;
+	sendBurstData((xTaskGetTickCount()/portTICK_RATE_MS),	// timestamp
+				&plantParams.thetaR, 						// a
+				&plantParams.alphaR,						// b
+				&plantParams.u, 							// c
+				&plantParams.xhat[0], 						// d
+				&plantParams.xhat[1], 						// e
+				&plantParams.xhat[2], 						// f
+				&plantParams.xhat[3],						// g
+				&enc1_print,								// h
+				&enc2_print,								// i
+				&zero,										// j
+				&zero,										// k
+				&zero,										// l
+				&zero,										// m
+				&zero,										// n
+				&zero,										// o
+				&zero);										// p
+
+	setLEDs(LED_0, 0); 	// Timer LED
+	//setLEDs(LED_6, 0);
+}
+
+void timer_backup(xTimerHandle pxTimer){
+	/*static int toggle = 1;
+	setLEDs(LED_1, toggle);
+	if(toggle)	toggle = 0;
+	else	toggle = 1;
+	taskYIELD();*/
+	setLEDs(LED_1, 1); 	// Timer LED
+
+	int enc1 = -encoderRead(ENCODER_S) % 4096;
+	backupParams.thetaR = enc1*Kenc;
+
+	int enc2 = encoderRead(ENCODER_P) % 4096;
+	backupParams.alphaR = enc2*Kenc-pi;
+
+	if (backupParams.iteration < 10000){	// Crane mode for 10 secs but for now zero mode
+		backupParams.u = 0;
+		backupParams.iteration++;
+		setLEDs(LED_3, 1);
+		setLEDs(LED_4, 1);
+	}
+	else if((backupParams.alphaR >= 0 ? backupParams.alphaR:-backupParams.alphaR) < (30.*pi/180)){
+		setLEDs(LED_3, 0);
+		setLEDs(LED_4, 1);
+		backupParams.u = -calculateKalmanControlSignal(&backupParams);
+	}
+	else {
+		setLEDs(LED_3,0);
+		setLEDs(LED_4,0);
+		backupParams.u = calculateSwingUpControlSignal(&backupParams);
+	}
+
+	//writeDAC(backupParams.u);
+	muxedWriteDAC(&backupParams.timerHandle, backupParams.u);
+	backupParams.theta_des = -45*pi/180;
+
+	float zero = 0.0;
+	float enc1_print = enc1;
+	float enc2_print = enc2;
+	/*sendBurstData((xTaskGetTickCount()/portTICK_RATE_MS),	// timestamp
+				&backupParams.thetaR, 						// a
+				&backupParams.alphaR,						// b
+				&backupParams.u, 							// c
+				&backupParams.xhat[0], 						// d
+				&backupParams.xhat[1], 						// e
+				&backupParams.xhat[2], 						// f
+				&backupParams.xhat[3],						// g
+				&enc1_print,								// h
+				&enc2_print,								// i
+				&zero,										// j
+				&zero,										// k
+				&zero,										// l
+				&zero,										// m
+				&zero,										// n
+				&zero,										// o
+				&zero);										// p
+*/
+	setLEDs(LED_1, 0); 	// Timer LED
+	taskYIELD();
+}
+
+
+void predictionTask(void *param){
+	static ControlParams predictionParams;
+
+	/***** Plant Model Constants Start *****/
+	static const float A[4][4] = {
+		{1,0.0001,0.0012,0},
+		{0,1.0001,-0.0000,0.0012},
+		{0,0.0988,0.9443,-0.0011},
+		{0,0.1497,-0.0536,0.9984}
+	};
+	static const float B[4] = {0.0001,0.0001,0.1013,0.0975};
+	static const float C[2][4] =  {
+		{1,0,0,0},
+		{0,1,0,0}
+	};
+	/***** Plant Model Constants End *****/
+
+	static float yplant[2] = {0.,0.};
+	static float delThetaR, delAlphaR;
+
+	backupParams.iteration = 0;
+	predictionParams.iteration = 0;
+	for(;;){
+		setLEDs(LED_2, 1); // Prediction LED
+
+		int i;
+		if(currentState == BACKUP){
+
+			if(xTimerIsTimerActive(plantParams.timerHandle) == pdFALSE){
+				if(xTimerStart(backupParams.timerHandle, portMAX_DELAY) == pdPASS)	setLEDs(LED_6, 1);
+				else	setLEDs(LED_6,0);
+				vTaskSuspend(predictionTaskHandle);
+			}
+			else	setLEDs(LED_5, 1);
+			//taskYIELD();
+		}
+		else if (currentState == PRODUCTION){
+			//setLEDs(LED_5, 0);
+			if((plantParams.alphaR >= 0 ? plantParams.alphaR:-plantParams.alphaR) < (20.*pi/180)){
+				// Sync with plant params
+				if(predictionParams.iteration == 0){
+					static int toggle = 1;
+					setLEDs(LED_3, toggle);
+					if(toggle)	toggle = 0;
+					else	toggle = 1;
+
+					for(i = 0; i < 4; ++i){
+						predictionParams.xpre[i] = 0.;
+						predictionParams.xhat[i] = plantParams.xhat[i];
+					}
+					predictionParams.thetaR = plantParams.thetaR;
+					predictionParams.alphaR = plantParams.alphaR;
+					predictionParams.u = plantParams.u;
+					predictionParams.theta_des = plantParams.theta_des;
+				}
+
+				float tempvec[4];
+				for(i = 0; i < 4; ++i){
+					tempvec[i] = A[i][0]*predictionParams.xhat[0] + A[i][1]*predictionParams.xhat[1] + A[i][2]*predictionParams.xhat[2]+ A[i][3]*predictionParams.xhat[3];
+				}
+
+
+				yplant[0] = tempvec[0]*C[0][0] + tempvec[1]*C[0][1] + tempvec[2]*C[0][2] + tempvec[3]*C[0][3] + C[0][0]*B[0]*predictionParams.u
+						+ C[0][1]*B[1]*predictionParams.u + C[0][2]*B[2]*predictionParams.u + C[0][3]*B[3]*predictionParams.u;
+				yplant[1] = tempvec[0]*C[1][0] + tempvec[1]*C[1][1] + tempvec[2]*C[1][2] + tempvec[3]*C[1][3] + C[1][0]*B[0]*predictionParams.u
+						+ C[1][1]*B[1]*predictionParams.u + C[1][2]*B[2]*predictionParams.u + C[1][3]*B[3]*predictionParams.u;
+
+				//yplant[0] = predictionParams.xhat[0]+0.0001*predictionParams.xhat[1]+0.0012*predictionParams.xhat[2]+0.0001*predictionParams.u;
+				//yplant[1] = predictionParams.xhat[1]+0.0012*predictionParams.xhat[3]+0.0001*predictionParams.u;
+
+				// Currently doesnt predict into future but we need to set these to yplants for future failure prediction
+				predictionParams.thetaR = plantParams.xhat[0];
+				predictionParams.alphaR = plantParams.xhat[1];
+
+				predictionParams.u = calculateKalmanControlSignal(&predictionParams);
+
+				// Theta R check
+				delThetaR = predictionParams.thetaR - predictionParams.theta_des;
+				if((delThetaR>=0?delThetaR:-delThetaR)>(90.*pi/180)){
+					currentState = BACKUP;
+					xTimerStop(plantParams.timerHandle, portMAX_DELAY);
+					setLEDs(LED_4,1);
+				}
+				else	setLEDs(LED_4, 0);
+
+				/*// Alpha R check
+				delAlphaR = predictionParams.alphaR - plantParams.alphaR;
+				if((delAlphaR>=0?delAlphaR:-delAlphaR)>(20.*pi/180))	setLEDs(LED_5, 1); 	// error LED
+				else	setLEDs(LED_5, 0);*/
+
+				if(predictionParams.iteration >= 100)	predictionParams.iteration = 0;
+				else ++predictionParams.iteration;
+			}
+		}
+		setLEDs(LED_2, 0);  // Prediction LED
+		taskYIELD();
+	}
+}
+
+// Simulation of Junction Box
+int muxedWriteDAC(xTimerHandle *handle, float voltage){
+	if (currentState == PRODUCTION && (handle == &plantParams.timerHandle)){
+		setLEDs(LED_7, 1);
+		return writeDAC(voltage);
+	}
+	else if (currentState == BACKUP && (handle == &backupParams.timerHandle)){
+		setLEDs(LED_6, 1);
+		return writeDAC(voltage);
+	}
+	else {
+		setLEDs(LED_5, 1);
+		return 0;
+	}
+}
+
+float calculateSwingUpControlSignal(ControlParams *params){
+	int k;
+	float u = 0;
+	static float  alphaOld = 0, thetaOld = 0;
+	static float E = 0, alphaDot = 0, thetaDot = 0;
+	thetaDot=0.9391*thetaDot+60.92*(params->thetaR-thetaOld);
+	alphaDot=0.9391*alphaDot+60.92*(params->alphaR -alphaOld);
+	E = (0.00059937)*(alphaDot)*(alphaDot) + (0.2096)*(1-cos(params->alphaR)); // calculation of energy of pendulum
+	if((cos(params->alphaR)*alphaDot)>=0) k = 1;
+	else k = -1;
+	u = 2.2*(E- 0.42)*k;
+	alphaOld = params->alphaR;
+	thetaOld = params->thetaR;
+	return u;
+}
+
+
+float calculateCraneControlSignal(ControlParams *params){
+	//static const float Kc[4]={3.16,-7.76,0.71,0.54};
+	//static const float Kc[4] = {-2.0278,22.6802,-1.9898,2.3983};
+	/*static const float Kc[4] = {3.1467, -1.5892, 0.3059, 0.2197};
+	float u = 0;
+	params->alphaR += pi;
+	static float  alphaOld = 0, thetaOld = 0;
+	static float  alphaDot = 0, thetaDot = 0;
+	thetaDot=0.9391*thetaDot+60.92*(params->thetaR-thetaOld);
+	alphaDot=0.9391*alphaDot+60.92*(params->alphaR -alphaOld);
+	u = Kc[0]*(params->thetaR - params->theta_des) + Kc[1]*params->alphaR + Kc[2]*thetaDot + Kc[3]*alphaDot;
+	// Saturate signal at -10 or 10 volts
+	if(u > 5.)			u = 5.;
+	else if(u < -5.)	u = -5.;
+	return u;
+*/
+	/***** Kalman Filter Constants Start *****/
+	/*static const float Kf[4][2]={
+		{0.5475,0},
+		{0,0.9204},
+		{0.0060,0.0330},
+		{0.0163,0.8475}
+	};*/
+	static const float Kf[4][2]={
+			{0.9203,0},
+			{0,0.9204},
+			{0.0103,0.0346},
+			{0.0274,0.8417}
+	};
+	//static const float Kc[4]={-2.0211,22.6210,-1.9852,2.3930}; // wn = 2.5
+	//static const float Kc[4]={3.16,-7.76,0.71,0.54};
+	static const float Kc[4]={3.1298,-7.6833,0.7018,0.5248};
+	static const float Aup[4][4]={
+	    {0.4525,0.000,0.0004,0.0000},
+	    {0.0000,0.0796,0.0000,0.0001},
+	    {-0.0060,0.0465,0.9552,0.0009},
+	    {-0.0163,-0.9677,0.0431,0.9977}
+	};
+	/*static const float Aup[4][4]={
+		    {0.0797,0.000,0.0001,0.0000},
+		    {0.0000,0.0796,0.0000,0.0001},
+		    {-0.0103,0.0642,0.9443,0.0012},
+		    {-0.0274,-0.9913,0.0535,0.9971}
+	};*/
+	static const float Bup[4]={0,0,0.0815,-0.0784};
+	//static const float Bup[4]={0,0,0.1013,-0.0974};
+	/***** Kalman Filter Constants End *****/
+
+	params->alphaR += pi;
+
+	if (params->alphaR > pi)	params->alphaR -= 2*pi; // correction for encoder zeroing error
+
+	int ind;
+	for(ind = 0; ind < 4; ind++){
+		params->xhat[ind] = params->xpre[ind] + Kf[ind][0]*params->thetaR + Kf[ind][1]*params->alphaR;
+	}
+
+	// compute control
+	float u = 0;
+	for(ind = 0; ind < 4; ind++){
+		u += -Kc[ind]*params->xhat[ind]; // changed the sign for kc to positive
+	}
+	u += Kc[0]*params->theta_des; // changed the sign of kc to negative
+
+	// Saturate signal at -10 or 10 volts
+	if(u > 5.)			u = 5.;
+	else if(u < -5.)	u = -5.;
+
+	//precompute the part of xhat we can
+	for(ind = 0; ind < 4; ind++){
+		params->xpre[ind] = 0.;
+		int col;
+		for(col = 0; col < 4; col++){
+			params->xpre[ind] += Aup[ind][col]*params->xhat[col];
+		}
+		params->xpre[ind] += Bup[ind]*u;
+	}
+	return u;
+}
+
+
+float calculateKalmanControlSignal(ControlParams *params){
+	/***** Kalman Filter Constants Start *****/
+	static const float Kf[4][2]={
+		{0.9785,0},
+		{0,0.9785},
+		{0.0109,-0.0251},
+		{-0.0278,0.9473}
+	};
+	//static const float Kc[4]={-5.1688,27.7667,-2.7224,3.1787};
+	static const float Kc[4]={-2.0211,22.6210,-1.9852,2.3930}; // wn = 2.5
+	//static const float Kc[4]={-0.7283,19.5410,-1.3776,1.7419}; // wn = 1.5
+	static const float Aup[4][4]={
+	    {0.0215,0.000,0.0000,0.0000},
+	    {0.0000,0.0215,0.0000,0.0000},
+	    {-0.0109,0.1239,0.9443,-0.0010},
+	    {0.0278,-0.7977,-0.0535,0.9972}
+	};
+	static const float Bup[4]={0,0,0.1013,0.0974};
+	/***** Kalman Filter Constants End *****/
+
+	int ind;
+	for(ind = 0; ind < 4; ind++){
+		params->xhat[ind] = params->xpre[ind] + Kf[ind][0]*params->thetaR + Kf[ind][1]*params->alphaR;
+	}
+
+	// compute control
+	float u = 0;
+	for(ind = 0; ind < 4; ind++){
+		u += -Kc[ind]*params->xhat[ind]; // changed the sign for kc to positive
+	}
+	u += Kc[0]*params->theta_des; // changed the sign of kc to negative
+
+	// Saturate signal at -10 or 10 volts
+	if(u > 10.)			u = 10.;
+	else if(u < -10.)	u = -10.;
+
+	//precompute the part of xhat we can
+	for(ind = 0; ind < 4; ind++){
+		params->xpre[ind] = 0.;
+		int col;
+		for(col = 0; col < 4; col++){
+			params->xpre[ind] += Aup[ind][col]*params->xhat[col];
+		}
+		params->xpre[ind] += Bup[ind]*u;
+	}
+	return u;
+}
+
+float calculateBackupControlSignal(ControlParams *params){
+	/***** Kalman Filter Constants Start *****/
+	static const float Kf[4][2]={
+		{0.9785,0},
+		{0,0.9785},
+		{0.0109,-0.0251},
+		{-0.0278,0.9473}
+	};
+	//static const float Kc[4]={-5.1688,27.7667,-2.7224,3.1787};
+	static const float Kc[4]={-2.0211,22.6210,-1.9852,2.3930}; // wn = 2.5
+	//static const float Kc[4]={-0.7283,19.5410,-1.3776,1.7419}; // wn = 1.5
+	static const float Aup[4][4]={
+	    {0.0215,0.000,0.0000,0.0000},
+	    {0.0000,0.0215,0.0000,0.0000},
+	    {-0.0109,0.1239,0.9443,-0.0010},
+	    {0.0278,-0.7977,-0.0535,0.9972}
+	};
+	static const float Bup[4]={0,0,0.1013,0.0974};
+	/***** Kalman Filter Constants End *****/
+
+	int ind;
+	for(ind = 0; ind < 4; ind++){
+		params->xhat[ind] = params->xpre[ind] + Kf[ind][0]*params->thetaR + Kf[ind][1]*params->alphaR;
+	}
+
+	// compute control
+	float u = 0;
+	for(ind = 0; ind < 4; ind++){
+		u += -Kc[ind]*params->xhat[ind]; // changed the sign for kc to positive
+	}
+	u += Kc[0]*params->theta_des; // changed the sign of kc to negative
+
+	// Saturate signal at -10 or 10 volts
+	if(u > 10.)			u = 10.;
+	else if(u < -10.)	u = -10.;
+
+	//precompute the part of xhat we can
+	for(ind = 0; ind < 4; ind++){
+		params->xpre[ind] = 0.;
+		int col;
+		for(col = 0; col < 4; col++){
+			params->xpre[ind] += Aup[ind][col]*params->xhat[col];
+		}
+		params->xpre[ind] += Bup[ind]*u;
+	}
+	return u;
+}

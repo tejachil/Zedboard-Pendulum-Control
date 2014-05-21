@@ -25,11 +25,11 @@ src/main.d: ../src/main.c \
  ../../freertos_bsp/ps7_cortexa9_1/include/xpseudo_asm.h \
  ../../freertos_bsp/ps7_cortexa9_1/include/xreg_cortexa9.h \
  ../../freertos_bsp/ps7_cortexa9_1/include/xpseudo_asm_gcc.h \
- ../src/adc_dac.h ../src/encoder.h \
  ../../freertos_bsp/ps7_cortexa9_1/include/sleep.h \
  ../../freertos_bsp/ps7_cortexa9_1/include/xil_printf.h ../src/AXI_GPIO.h \
  ../../freertos_bsp/ps7_cortexa9_1/include/xgpio.h \
- ../../freertos_bsp/ps7_cortexa9_1/include/xgpio_l.h ../src/amp.h \
+ ../../freertos_bsp/ps7_cortexa9_1/include/xgpio_l.h \
+ ../src/RemoteProcPrint.h ../src/PlantControl.h ../src/amp.h \
  ../../freertos_bsp/ps7_cortexa9_1/include/xil_io.h \
  ../../freertos_bsp/ps7_cortexa9_1/include/xil_mmu.h
 
@@ -87,10 +87,6 @@ src/main.d: ../src/main.c \
 
 ../../freertos_bsp/ps7_cortexa9_1/include/xpseudo_asm_gcc.h:
 
-../src/adc_dac.h:
-
-../src/encoder.h:
-
 ../../freertos_bsp/ps7_cortexa9_1/include/sleep.h:
 
 ../../freertos_bsp/ps7_cortexa9_1/include/xil_printf.h:
@@ -100,6 +96,10 @@ src/main.d: ../src/main.c \
 ../../freertos_bsp/ps7_cortexa9_1/include/xgpio.h:
 
 ../../freertos_bsp/ps7_cortexa9_1/include/xgpio_l.h:
+
+../src/RemoteProcPrint.h:
+
+../src/PlantControl.h:
 
 ../src/amp.h:
 
